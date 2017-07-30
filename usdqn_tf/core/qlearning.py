@@ -190,7 +190,7 @@ def do_online_qlearning(env,
             if step % LOG_STEPS == 0:
                 print('\n', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
                 print('Episodes %d -> %d Done (%.3fs) ... ' % 
-                    (max(1, step + 1 - LOG_EPOCHS), step+1, time.time() - start_time))
+                    (max(1, step + 1 - LOG_STEPS), step+1, time.time() - start_time))
                 print('- Training loss: %.4f' % loss)
                 start_time = time.time()
 
