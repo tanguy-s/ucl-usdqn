@@ -5,7 +5,7 @@ from gym.utils import seeding
 import numpy as np
 
 from skimage.color import gray2rgb
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 RAD2DEG = 57.29577951308232
