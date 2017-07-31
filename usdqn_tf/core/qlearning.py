@@ -7,14 +7,14 @@ import tensorflow as tf
 from core.utils import evaluate, reward_value, do_obs_processing, reward_clip
 
 GAMMA = 0.99
-TRAINING_STEPS = 1000
-LOG_STEPS = 10
-LOSS_STEPS = 10
-EVAL_STEPS = 20
-SAVE_STEPS = 20
-TARGET_UPDATE = 10
-FRAME_WIDTH = 84
-FRAME_HEIGHT = 84
+TRAINING_STEPS = 30000
+LOG_STEPS = 10000
+LOSS_STEPS = 500
+EVAL_STEPS = 5000
+SAVE_STEPS = 5000
+TARGET_UPDATE = 1000
+FRAME_WIDTH = 28
+FRAME_HEIGHT = 28
 FRAME_BUFFER_SIZE = 4
 
 
@@ -35,7 +35,7 @@ def do_online_qlearning(env,
 
         # Create placeholders
         states_pl = tf.placeholder(tf.float32, 
-            shape=(None, FRAME_WIDTH, FRAME_HEIGHT, 4), name='states')
+            shape=(None, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE), name='states')
         actions_pl= tf.placeholder(tf.int32, shape=(None), name='actions')
         targets_pl = tf.placeholder(tf.float32, shape=(None), name='targets')
 
@@ -86,8 +86,8 @@ def do_online_qlearning(env,
 
         # Performance from untrained Q-learning
         if not training:
-            return evaluate(test_env, sess, prediction, 
-                                states_pl, 100, GAMMA, False)
+            return evaluate(test_env, sess, prediction, q_output, 
+                                states_pl, 1, GAMMA, False)
 
         start_time = time.time()
 
@@ -106,6 +106,7 @@ def do_online_qlearning(env,
 
         for step in range(TRAINING_STEPS):
             loss = 0
+
             # Stack observations in buffer of 4
             if len(observation_buffer) < FRAME_BUFFER_SIZE:
 
@@ -133,6 +134,7 @@ def do_online_qlearning(env,
                         states_pl: state.reshape(
                             [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
                     })
+
 
                 # action for next observation
                 observation, reward, done, info  = env.step(action[0])

@@ -111,13 +111,13 @@ if __name__ == '__main__':
                     num_episodes=num_episodes)
 
     elif FLAGS.notraining:
-        do_online_qlearning(env, test_env,
+        do_online_qlearning(env, env,
                             model=UsdqnModel(env.action_space.n), 
                             learning_rate=tenv['learning_rate'],
                             epsilon_s=epsilon_s, 
                             gpu_device=tenv['gpu_device'],
                             target_model=UsdqnModel(env.action_space.n, varscope='target'),
-                            replay_buffer=ExperienceReplayBuffer(500, 64),
+                            replay_buffer=ExperienceReplayBuffer(500, 16),
                             dpaths=None,
                             training=False)
 

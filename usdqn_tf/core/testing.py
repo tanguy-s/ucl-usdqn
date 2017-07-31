@@ -9,8 +9,8 @@ from core.utils import evaluate, reward_value, do_obs_processing, reward_clip
 
 GAMMA = 0.99
 TEST_STEPS = 100
-FRAME_WIDTH = 84
-FRAME_HEIGHT = 84
+FRAME_WIDTH = 28
+FRAME_HEIGHT = 28
 FRAME_BUFFER_SIZE = 4
 
 
@@ -21,7 +21,7 @@ def do_testing(env, model, target_model=None, dpaths=None, render=False, num_epi
 
     # Create placeholders
     states_pl = tf.placeholder(tf.float32, 
-        shape=(None, FRAME_WIDTH, FRAME_HEIGHT, 4), name='states')
+        shape=(None, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE), name='states')
     actions_pl= tf.placeholder(tf.int32, shape=(None), name='actions')
     targets_pl = tf.placeholder(tf.float32, shape=(None), name='targets')
 
@@ -51,7 +51,7 @@ def do_testing(env, model, target_model=None, dpaths=None, render=False, num_epi
 
     # Limit memory usage for multiple training at same time
     config = tf.ConfigProto(allow_soft_placement=True)
-    config.gpu_options.per_process_gpu_memory_fraction = 0.33
+    #config.gpu_options.per_process_gpu_memory_fraction = 0.33
 
     # Start Session
     with tf.Session(config=config) as sess:

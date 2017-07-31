@@ -8,20 +8,56 @@ try:
 except ImportError as e:
     reraise(prefix="Error occured while running `from pyglet.gl import *`",suffix="HINT: make sure you have OpenGL install. On Ubuntu, you can run 'apt-get install python-opengl'. If you're running on a server, you may need a virtual frame buffer; something like this should work: 'xvfb-run -s \"-screen 0 1400x900x24\" python <your_script.py>'")
 
+from gym.envs.classic_control.rendering import Geom
+import os
+
+class ImageData(Geom):
+    def __init__(self, array, width, height):
+        Geom.__init__(self)
+        self.width = width
+        self.height = height
+        img = pyglet.image.ImageData(width, height, 'G', array.tobytes())
+        self.img = img
+        self.flip = False
+    def render1(self):
+        self.img.blit(-self.width/2, -self.height/2, width=self.width, height=self.height)
+
+class MovieCapture(object):
+
+    def __init__(self, dirname):
+        assert os.path.isdir(dirname), (
+            "%s is not a valid directory" % dirname)
+        self.dirname = dirname
+        self.frame_no = 0
+
+    def capture(self):
+        """Capture the current window a file, 
+        return the file name"""
+        filename = 'frame-%05d.png'
+        while os.path.exists(os.path.join(
+            self.dirname, filename % self.frame_no)):
+            self.frame_no += 1
+        mgr = pyglet.image.get_buffer_manager()
+        mgr.get_color_buffer().save(
+            os.path.join(self.dirname, 
+            filename % self.frame_no))
+        return filename % self.frame_no
 
 class GrayImageViewer(object):
+
     def __init__(self, display=None):
         self.window = None
         self.isopen = False
         self.display = display
+
     def imshow(self, arr):
         if self.window is None:
-            height, width, channels = arr.shape
+            height, width= arr.shape
             self.window = pyglet.window.Window(width=width, height=height, display=self.display)
             self.width = width
             self.height = height
             self.isopen = True
-        assert arr.shape == (self.height, self.width, 1), "You passed in an image with the wrong number shape"
+        assert arr.shape == (self.height, self.width), "You passed in an image with the wrong number shape"
         image = pyglet.image.ImageData(self.width, self.height, 'L', arr.tobytes())
         self.window.clear()
         self.window.switch_to()
