@@ -39,5 +39,7 @@ class UsdqnModel(object):
             W_lin = weights([256, self.dim_out], '%slin' % self.varscope)
             b_lin = biases([self.dim_out], '%slin' % self.varscope)
             out = tf.matmul(out_fc, W_lin) + b_lin
+            if self.dim_out == 1:
+                out = tf.minimum(-3.05, tf.maximum(3.05, out))
 
         return out

@@ -82,13 +82,13 @@ if __name__ == '__main__':
             results_file = os.path.join(
                     dumps_dir, 'results.csv')
 
-            loss, means = do_online_qlearning(env, test_env,
+            loss, means = do_online_qlearning(env, env,
                                 model=UsdqnModel(env.action_space.n), 
                                 learning_rate=tenv['learning_rate'],
                                 epsilon_s=epsilon_s, 
                                 gpu_device=tenv['gpu_device'],
                                 target_model=UsdqnModel(env.action_space.n, varscope='target'),
-                                replay_buffer=ExperienceReplayBuffer(5000, 64),
+                                replay_buffer=ExperienceReplayBuffer(5000, 32),
                                 dpaths=os.path.join(dumps_dir, FLAGS.env))
 
             np.savetxt(losses_file, loss, delimiter=',')
@@ -111,7 +111,7 @@ if __name__ == '__main__':
                     num_episodes=num_episodes)
 
     elif FLAGS.notraining:
-        do_online_qlearning(env, env,
+        do_online_qlearning(env, test_env,
                             model=UsdqnModel(env.action_space.n), 
                             learning_rate=tenv['learning_rate'],
                             epsilon_s=epsilon_s, 

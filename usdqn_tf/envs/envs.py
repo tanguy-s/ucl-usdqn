@@ -35,28 +35,29 @@ class UsdqnOneDoFSimulator(object):
         if self.is_training:
             self.images = np.load('../data/1dof/usdqn-images-training.npy')
             self.labels = np.load('../data/1dof/usdqn-labels-training.npy')
-            self.goal_positions = np.array([
-                self.min_action + 90*(1/RAD2DEG),
-                self.min_action + 270*(1/RAD2DEG)
-            ])
+            
         else:
             self.images = np.load('../data/1dof/usdqn-images-testing.npy')
             self.labels = np.load('../data/1dof/usdqn-labels-testing.npy')
-            self.goal_positions = np.array([
-                -1.48979521 
+            # self.goal_positions = np.array([
+            #     -1.48979521 
+            # ])
+        self.goal_positions = np.array([
+                self.min_action + 90*(1/RAD2DEG),
+                self.min_action + 270*(1/RAD2DEG)
             ])
 
     def set_angle(self, action):
         # Find nearest observation in array
         action = self.discrete_actions[action]
         self.current_indx = (np.abs(self.labels - action)).argmin()
-
+        
     def is_done(self):
         #print(self.labels[self.current_indx])
         if np.any(np.abs(self.goal_positions - self.labels[self.current_indx]) < 0.01):
             print("## Done objective: %s" % np.abs(self.goal_positions - self.labels[self.current_indx]))
         return np.any(
-            (np.abs(self.goal_positions - self.labels[self.current_indx]) < 0.001))
+            (np.abs(self.goal_positions - self.labels[self.current_indx]) < 0.01))
 
     # def reset(self, np_random):
     #     print("## Reseting")
@@ -71,11 +72,14 @@ class UsdqnOneDoFSimulator(object):
         #print("- New random angle:", rnd_angle)
         #print("- Are labels sorted ?", is_sorted(self.labels))
         self.labels = self.labels + rnd_angle
-        self.goal_positions += [rnd_angle]
+        self.goal_positions += rnd_angle
+        if np.any(self.goal_positions > self.max_action):
+            goal_ind = np.where(self.goal_positions > self.max_action)[0]
+            self.goal_positions[goal_ind] -= (self.max_action - self.min_action)
         #print("- Goal positions:", self.goal_positions)
         over_ind = np.where(self.labels > self.max_action)[0]
         #print("- Over indexes:", over_ind)
-        self.labels[over_ind] = self.labels[over_ind] - (self.max_action - self.min_action)
+        self.labels[over_ind] -= (self.max_action - self.min_action)
         to_shift = len(over_ind)
         #print("- To shift:", to_shift)
         # Roll images and labels
