@@ -142,8 +142,8 @@ def do_online_qlearning(env,
                             [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
                     })
 
-                print('action taken:', action)
-                print('q debug:', q_deb)
+                # print('action taken:', action)
+                # print('q debug:', q_deb)
 
                 # action for next observation
                 observation, reward, done, info  = env.step(action[0])
@@ -164,7 +164,7 @@ def do_online_qlearning(env,
 
                 # If replay buffer is ready to be sampled
                 if replay_buffer.ready:
-                    print('train')
+                    # print('train')
                     # Train model on replay buffer
                     b_states, b_actions, b_reward, b_next_state, b_term_state = replay_buffer.next_transitions()
 
