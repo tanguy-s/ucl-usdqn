@@ -112,7 +112,7 @@ def do_online_qlearning(env,
 
         for step in range(TRAINING_STEPS):
             loss = 0
-
+            time_chkpt = time.time()
             # Stack observations in buffer of 4
             if len(observation_buffer) < FRAME_BUFFER_SIZE:
 
@@ -122,12 +122,15 @@ def do_online_qlearning(env,
                 # Collect next observation with uniformly random action
                 a_rnd = env.action_space.sample()
                 observation, _, done, _ = env.step(a_rnd)
-
+                print("#1 ", time.time() - time_chkpt)
+                time_chkpt = time.time()
             # Observations buffer is ready
             else:
                 # Stack observation buffer
                 state = np.stack(observation_buffer, axis=-1)
 
+                print("#2 ", time.time() - time_chkpt)
+                time_chkpt = time.time()
                 q_deb= None
                 # Epsilon greedy policy
                 if epsilon > np.random.rand(1):
@@ -142,6 +145,8 @@ def do_online_qlearning(env,
                             [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
                     })
 
+                print("#3 ", time.time() - time_chkpt)
+                time_chkpt = time.time()
                 # print('action taken:', action)
                 # print('q debug:', q_deb)
 
@@ -156,12 +161,17 @@ def do_online_qlearning(env,
                     do_obs_processing(observation, FRAME_WIDTH, FRAME_HEIGHT))
                 observation_buffer[0:1] = []
 
+                print("#4 ", time.time() - time_chkpt)
+                time_chkpt = time.time()
+
                 next_state = np.stack(observation_buffer, axis=-1)
                 action = action.reshape([-1]).astype('int32')
 
                 # Add transition to replay buffer
                 replay_buffer.add((state, action, r, next_state, done))
 
+                print("#5 ", time.time() - time_chkpt)
+                time_chkpt = time.time()
                 # If replay buffer is ready to be sampled
                 if replay_buffer.ready:
                     # print('train')
@@ -174,6 +184,8 @@ def do_online_qlearning(env,
                         })
                     q_out_max = np.amax(q_out, axis=1)
                     q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
+                    print("#6 ", time.time() - time_chkpt)
+                    time_chkpt = time.time()
 
                     # Run training Op on batch of replay experience
                     loss, _ = sess.run([loss_op, train_op], 
@@ -182,6 +194,8 @@ def do_online_qlearning(env,
                             actions_pl: b_actions,
                             targets_pl: q_target.astype('float32')
                         })
+                    print("#7 ", time.time() - time_chkpt)
+                    time_chkpt = time.time()
     
             if done:
                 observation = env.reset()
@@ -195,9 +209,15 @@ def do_online_qlearning(env,
                 for var in target_net_vars:
                     sess.run(var)
 
+            print("#8 ", time.time() - time_chkpt)
+            time_chkpt = time.time()
+
             if step % LOSS_STEPS == 0:
                 # Save loss
                 losses.append(loss)
+
+            print("#9 ", time.time() - time_chkpt)
+            time_chkpt = time.time()
 
             if step % LOG_STEPS == 0:
                 print('\n', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
@@ -209,6 +229,9 @@ def do_online_qlearning(env,
                 # Force flush for nohup
                 sys.stdout.flush()
 
+            print("#10 ", time.time() - time_chkpt)
+            time_chkpt = time.time()
+
             if step % EVAL_STEPS == 0:
                 silent = (step % LOG_STEPS != 0)
                 cur_means, cur_stds = evaluate(test_env, sess, prediction, 
@@ -217,10 +240,18 @@ def do_online_qlearning(env,
                 # Save means
                 means.append(cur_means)
 
+            print("#11 ", time.time() - time_chkpt)
+            time_chkpt = time.time()
+
             # Save models
             if dpaths is not None and step % SAVE_STEPS == 0:
                 saver.save(sess, dpaths, global_step=step)
-             
+
+            print("#12 ", time.time() - time_chkpt)
+            time_chkpt = time.time()
+            
+            sys.stdout.flush()
+            
         # Save models
         if dpaths is not None:
             saver.save(sess, dpaths)
