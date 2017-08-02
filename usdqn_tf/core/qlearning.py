@@ -83,12 +83,13 @@ def do_online_qlearning(env,
     init_op = tf.global_variables_initializer()
 
     # Limit memory usage for multiple training at same time
-    config = tf.ConfigProto(allow_soft_placement=True)
+    config = tf.ConfigProto()
     #config.gpu_options.per_process_gpu_memory_fraction = 0.33
 
     # Start Session
     with tf.Session(config=config) as sess:
         sess.run(init_op)
+        sess.graph.finalize() 
 
         # Performance from untrained Q-learning
         if not training:
