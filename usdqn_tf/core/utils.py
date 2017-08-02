@@ -7,8 +7,8 @@ from skimage.transform import resize
 #import matplotlib.pyplot as plt
 
 
-FRAME_WIDTH = 28
-FRAME_HEIGHT = 28
+FRAME_WIDTH = 84
+FRAME_HEIGHT = 84
 FRAME_BUFFER_SIZE = 4
 MAX_EPISODE = 500
 
@@ -83,6 +83,7 @@ def evaluate(env,
                 sess, 
                 prediction_op, 
                 states_pl, 
+                #q_output,
                 num_episodes, 
                 gamma, 
                 silent=False,
@@ -117,8 +118,8 @@ def evaluate(env,
                     do_obs_processing(observation, FRAME_WIDTH, FRAME_HEIGHT))
 
                 # Collect next observation with uniformly random action
-                #a_rnd = env.action_space.sample()
-                #observation, _, done, _ = env.step(a_rnd)
+                a_rnd = env.action_space.sample()
+                observation, _, done, _ = env.step(a_rnd)
 
 
             # Observations buffer is ready
@@ -130,6 +131,12 @@ def evaluate(env,
                     states_pl: state.reshape(
                         [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
                 })
+
+                # test = sess.run(q_output, feed_dict={
+                #     states_pl: state.reshape(
+                #         [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
+                # })
+                # print("Test q is:", test)
 
                 # q_test = sess.run(q_output, feed_dict={
                 #     states_pl: state.reshape(

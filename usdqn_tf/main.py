@@ -23,7 +23,7 @@ ENVS = {
     '1dof': {
         'env_name': 'Continuous 1 DoF',
         'env_cls': Continuous_UsdqnOneDoFEnv,
-        'learning_rate': 0.0001,
+        'learning_rate': 0.01,
         'gpu_device': '/gpu:0'
     },
 }
@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
     env = tenv['env_cls'](is_training=True)
     test_env = tenv['env_cls'](is_training=False)
-    epsilon_s = { 'start': 0.5, 'end': 0.005, 'decay': 2000 }
+    epsilon_s = { 'start': 0.8, 'end': 0.01, 'decay': 250000 }
 
     if FLAGS.train:
         for i in range(NUM_RUNS):
@@ -83,12 +83,13 @@ if __name__ == '__main__':
                     dumps_dir, 'results.csv')
 
             loss, means = do_online_qlearning(env, env,
-                                model=UsdqnModel(env.action_space.n), 
+                                #model=UsdqnModel(1),
+                                model=UsdqnModel(1), 
                                 learning_rate=tenv['learning_rate'],
                                 epsilon_s=epsilon_s, 
                                 gpu_device=tenv['gpu_device'],
-                                target_model=UsdqnModel(env.action_space.n, varscope='target'),
-                                replay_buffer=ExperienceReplayBuffer(5000, 32),
+                                target_model=UsdqnModel(1, varscope='target'),
+                                replay_buffer=ExperienceReplayBuffer(100000, 62),
                                 dpaths=os.path.join(dumps_dir, FLAGS.env))
 
             np.savetxt(losses_file, loss, delimiter=',')
@@ -104,19 +105,19 @@ if __name__ == '__main__':
             num_episodes = FLAGS.episodes
 
         do_testing(env,
-                    model=UsdqnModel(env.action_space.n), 
-                    target_model=UsdqnModel(env.action_space.n, varscope='target'),
+                    model=UsdqnModel(1), 
+                    target_model=UsdqnModel(1, varscope='target'),
                     dpaths=dpaths, 
                     render=FLAGS.render, 
                     num_episodes=num_episodes)
 
     elif FLAGS.notraining:
         do_online_qlearning(env, test_env,
-                            model=UsdqnModel(env.action_space.n), 
+                            model=UsdqnModel(1), 
                             learning_rate=tenv['learning_rate'],
                             epsilon_s=epsilon_s, 
                             gpu_device=tenv['gpu_device'],
-                            target_model=UsdqnModel(env.action_space.n, varscope='target'),
+                            target_model=UsdqnModel(1, varscope='target'),
                             replay_buffer=ExperienceReplayBuffer(500, 16),
                             dpaths=None,
                             training=False)

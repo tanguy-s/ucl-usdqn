@@ -23,8 +23,8 @@ class UsdqnOneDoFSimulator(object):
         self.min_action = -3.05
         self.max_action = 3.05
 
-        self.discrete_actions = np.arange(self.min_action, 
-            self.max_action, 0.01)
+        # self.discrete_actions = np.arange(self.min_action, 
+        #     self.max_action, 0.01)
 
         self.goal_positions = None
         self.current_indx = None
@@ -33,11 +33,11 @@ class UsdqnOneDoFSimulator(object):
 
     def load_dataset(self):
         if self.is_training:
-            self.images = np.load('../data/1dof/usdqn-images-training.npy')
+            self.images = np.load('../data/1dof/usdqn-images-training.npy') / 255
             self.labels = np.load('../data/1dof/usdqn-labels-training.npy')
             
         else:
-            self.images = np.load('../data/1dof/usdqn-images-testing.npy')
+            self.images = np.load('../data/1dof/usdqn-images-testing.npy') / 255
             self.labels = np.load('../data/1dof/usdqn-labels-testing.npy')
             # self.goal_positions = np.array([
             #     -1.48979521 
@@ -49,13 +49,21 @@ class UsdqnOneDoFSimulator(object):
 
     def set_angle(self, action):
         # Find nearest observation in array
-        action = self.discrete_actions[action]
+        #action = self.discrete_actions[action]
+        #k = abs(int(action / self.max_action))
+        if action > self.max_action:
+            #action -= k*self.max_action
+            action = action - (np.ceil(action / self.max_action))*self.max_action
+        elif action < self.min_action:
+            #action += k*self.max_action
+            action = action - (np.floor(action / self.max_action))*self.max_action
+        #print('Env action: ', action)
         self.current_indx = (np.abs(self.labels - action)).argmin()
         
     def is_done(self):
         #print(self.labels[self.current_indx])
-        if np.any(np.abs(self.goal_positions - self.labels[self.current_indx]) < 0.01):
-            print("## Done objective: %s" % np.abs(self.goal_positions - self.labels[self.current_indx]))
+        # if np.any(np.abs(self.goal_positions - self.labels[self.current_indx]) < 0.01):
+        #     print("## Done objective: %s" % np.abs(self.goal_positions - self.labels[self.current_indx]))
         return np.any(
             (np.abs(self.goal_positions - self.labels[self.current_indx]) < 0.01))
 
@@ -68,10 +76,10 @@ class UsdqnOneDoFSimulator(object):
     def reset(self, np_random):
         # Random angle in range 0->175
         rnd_angle = np_random.uniform(low=0, high=self.max_action)
-        print("## Reseting")
+        #print("## Reseting")
         #print("- New random angle:", rnd_angle)
         #print("- Are labels sorted ?", is_sorted(self.labels))
-        self.labels = self.labels + rnd_angle
+        self.labels += rnd_angle
         self.goal_positions += rnd_angle
         if np.any(self.goal_positions > self.max_action):
             goal_ind = np.where(self.goal_positions > self.max_action)[0]
@@ -117,10 +125,10 @@ class Continuous_UsdqnOneDoFEnv(gym.Env):
 
         self.viewer = None
 
-        # self.action_space = spaces.Box(self.usdqn_sim.min_action, 
-        #     self.usdqn_sim.max_action, shape=(1,))
-        self.action_space = spaces.Discrete(len(self.usdqn_sim.discrete_actions))
-        self.observation_space = spaces.Box(low=0, high=255, shape=(84, 84, 1))
+        self.action_space = spaces.Box(self.usdqn_sim.min_action, 
+            self.usdqn_sim.max_action, shape=(1,))
+        #self.action_space = spaces.Discrete(len(self.usdqn_sim.discrete_actions))
+        self.observation_space = spaces.Box(low=0, high=1, shape=(84, 84, 1))
 
         self._seed()
         #self.reset()
@@ -130,7 +138,7 @@ class Continuous_UsdqnOneDoFEnv(gym.Env):
         return [seed]
 
     def _step(self, action):
-        assert self.action_space.contains(action), "%r (%s) invalid" % (action, type(action))
+        #assert self.action_space.contains(action), "%r (%s) invalid" % (action, type(action))
         
         self.usdqn_sim.set_angle(action)
 
@@ -210,3 +218,15 @@ class Continuous_UsdqnOneDoFEnv(gym.Env):
 
             #imgplot = plt.imshow(img)
             #plt.show()
+
+# Evaluation of policy
+# - Return stats:
+#  Mean: -75.558822 std: 37.779411
+# - Scores stats:
+#  Mean: -396.800000 std: 198.400000
+
+# Evaluation of policy
+# - Return stats:
+#  Mean: -94.448527 std: 0.000000
+# - Scores stats:
+#  Mean: -496.000000 std: 0.000000

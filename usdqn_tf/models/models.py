@@ -38,8 +38,19 @@ class UsdqnModel(object):
         with tf.variable_scope('linear'):
             W_lin = weights([256, self.dim_out], '%slin' % self.varscope)
             b_lin = biases([self.dim_out], '%slin' % self.varscope)
-            out = tf.matmul(out_fc, W_lin) + b_lin
-            if self.dim_out == 1:
-                out = tf.minimum(-3.05, tf.maximum(3.05, out))
+            out1 = tf.matmul(out_fc, W_lin) + b_lin
+            out = tf.maximum(tf.minimum(-3.05, out1), 3.05)
+            # clip_min = tf.minimum(-3.05, out)
+            # out = tf.group(clip_max, clip_min)
+            # clip_b = out
+            # clip = tf.group(clip_W, clip_b)
 
-        return out
+            # amax = tf.constant(3.05)
+            # amin = tf.constant(-3.05)
+            # def f1(): return out
+            # def f21(): return tf.add(out, 6.10)
+            # def f22(): return tf.add(out, -6.10)
+            # def f2(): return tf.cond(tf.less(out, tf.constant(0)), f21, f22)
+            # out = tf.cond(tf.less(tf.abs(out), amax), f1, f2)
+
+        return out1, out1

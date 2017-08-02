@@ -7,14 +7,21 @@ import tensorflow as tf
 from core.utils import evaluate, reward_value, do_obs_processing, reward_clip
 
 GAMMA = 0.99
-TRAINING_STEPS = 50000
-LOG_STEPS = 1000
+# TRAINING_STEPS = 500000
+# LOG_STEPS = 1000
+# LOSS_STEPS = 1000
+# EVAL_STEPS = 25000
+# SAVE_STEPS = 5000
+# TARGET_UPDATE = 1000
+TRAINING_STEPS = 1000000
+LOG_STEPS = 5000
 LOSS_STEPS = 1000
-EVAL_STEPS = 25000
-SAVE_STEPS = 5000
-TARGET_UPDATE = 2000
-FRAME_WIDTH = 28
-FRAME_HEIGHT = 28
+EVAL_STEPS = 50000
+SAVE_STEPS = 50000
+TARGET_UPDATE = 5000
+
+FRAME_WIDTH = 84
+FRAME_HEIGHT = 84
 FRAME_BUFFER_SIZE = 4
 
 
@@ -36,14 +43,14 @@ def do_online_qlearning(env,
         # Create placeholders
         states_pl = tf.placeholder(tf.float32, 
             shape=(None, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE), name='states')
-        actions_pl= tf.placeholder(tf.int32, shape=(None), name='actions')
+        actions_pl= tf.placeholder(tf.float32, shape=(None), name='actions')
         targets_pl = tf.placeholder(tf.float32, shape=(None), name='targets')
 
         # Value function approximator network
-        q_output = model.graph(states_pl)
+        q_output, q_debug = model.graph(states_pl)
 
         # Build target network
-        q_target_net = target_model.graph(states_pl)
+        q_target_net, q_targ_debug = target_model.graph(states_pl)
 
         tf_train = tf.trainable_variables()
         num_tf_train = len(tf_train)
@@ -52,13 +59,11 @@ def do_online_qlearning(env,
             target_net_vars.append(tf_train[i + num_tf_train // 2].assign(var.value()))
 
         # Compute Q from current q_output and one hot actions
-        Q = tf.reduce_sum(
-                tf.multiply(q_output, 
-                    tf.one_hot(actions_pl, env.action_space.n, dtype=tf.float32)
-                ), axis=1)
+        # Q = tf.reduce_sum(
+        #         tf.multiply(q_output, actions_pl), axis=1)
 
         # Loss operation 
-        loss_op = tf.reduce_mean(tf.square(targets_pl - Q) / 2)
+        loss_op = tf.reduce_mean(tf.square(targets_pl - q_output) / 2)
 
         # Optimizer Op
         #optimizer = tf.train.RMSPropOptimizer(learning_rate=learning_rate)
@@ -68,7 +73,8 @@ def do_online_qlearning(env,
         train_op = optimizer.minimize(loss_op)
 
         # Prediction Op
-        prediction = tf.argmax(q_output, 1)
+        #prediction = tf.argmax(q_output, 1)
+        prediction = q_output
 
     # Model Saver
     saver = tf.train.Saver()
@@ -86,7 +92,7 @@ def do_online_qlearning(env,
 
         # Performance from untrained Q-learning
         if not training:
-            return evaluate(test_env, sess, prediction, q_output, 
+            return evaluate(test_env, sess, prediction,
                                 states_pl, 1, GAMMA, False)
 
         start_time = time.time()
@@ -122,19 +128,22 @@ def do_online_qlearning(env,
                 # Stack observation buffer
                 state = np.stack(observation_buffer, axis=-1)
 
+                q_deb= None
                 # Epsilon greedy policy
                 if epsilon > np.random.rand(1):
                     # Exploration
                     # Use uniformly sampled action from env
-                    action = np.array(env.action_space.sample(), dtype=np.int32).reshape((-1))
+                    action = np.array(env.action_space.sample(), dtype=np.float32).reshape((-1))
                 else:
                     # Exploitation 
                     # Use model predicted action 
-                    action = sess.run(prediction, feed_dict={
+                    action, q_deb = sess.run([prediction, q_debug], feed_dict={
                         states_pl: state.reshape(
                             [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
                     })
 
+                print('action taken:', action)
+                print('q debug:', q_deb)
 
                 # action for next observation
                 observation, reward, done, info  = env.step(action[0])
@@ -155,6 +164,7 @@ def do_online_qlearning(env,
 
                 # If replay buffer is ready to be sampled
                 if replay_buffer.ready:
+                    print('train')
                     # Train model on replay buffer
                     b_states, b_actions, b_reward, b_next_state, b_term_state = replay_buffer.next_transitions()
 

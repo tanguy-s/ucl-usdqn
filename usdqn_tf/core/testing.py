@@ -9,8 +9,8 @@ from core.utils import evaluate, reward_value, do_obs_processing, reward_clip
 
 GAMMA = 0.99
 TEST_STEPS = 100
-FRAME_WIDTH = 28
-FRAME_HEIGHT = 28
+FRAME_WIDTH = 84
+FRAME_HEIGHT = 84
 FRAME_BUFFER_SIZE = 4
 
 
@@ -32,16 +32,17 @@ def do_testing(env, model, target_model=None, dpaths=None, render=False, num_epi
     q_target_net = target_model.graph(states_pl)
 
     # Compute Q from current q_output and one hot actions
-    Q = tf.reduce_sum(
-            tf.multiply(q_output, 
-                tf.one_hot(actions_pl, env.action_space.n, dtype=tf.float32)
-            ), axis=1)
+    # Q = tf.reduce_sum(
+    #         tf.multiply(q_output, 
+    #             tf.one_hot(actions_pl, env.action_space.n, dtype=tf.float32)
+    #         ), axis=1)
 
     # Loss operation 
-    loss_op = tf.reduce_mean(tf.square(targets_pl - Q) / 2)
+    loss_op = tf.reduce_mean(tf.square(targets_pl - q_output) / 2)
 
     # Prediction Op
-    prediction = tf.argmax(q_output, 1)
+    #prediction = tf.argmax(q_output, 1)
+    prediction = q_output
 
     # Model Saver
     saver = tf.train.Saver()
