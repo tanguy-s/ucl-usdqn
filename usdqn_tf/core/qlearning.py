@@ -111,6 +111,7 @@ def do_online_qlearning(env,
         epsilon = epsilon_s['start']
 
         for step in range(TRAINING_STEPS):
+            print("## Step :", step)
             loss = 0
             time_chkpt = time.time()
             # Stack observations in buffer of 4
@@ -251,7 +252,7 @@ def do_online_qlearning(env,
             time_chkpt = time.time()
             
             sys.stdout.flush()
-            
+
         # Save models
         if dpaths is not None:
             saver.save(sess, dpaths)
