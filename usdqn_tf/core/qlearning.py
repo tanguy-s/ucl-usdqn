@@ -47,10 +47,10 @@ def do_online_qlearning(env,
         targets_pl = tf.placeholder(tf.float32, shape=(None), name='targets')
 
         # Value function approximator network
-        q_output, q_debug = model.graph(states_pl)
+        q_output = model.graph(states_pl)
 
         # Build target network
-        q_target_net, q_targ_debug = target_model.graph(states_pl)
+        q_target_net = target_model.graph(states_pl)
 
         tf_train = tf.trainable_variables()
         num_tf_train = len(tf_train)
@@ -74,7 +74,7 @@ def do_online_qlearning(env,
 
         # Prediction Op
         #prediction = tf.argmax(q_output, 1)
-        prediction = q_output
+        #prediction = q_output
 
     # Model Saver
     saver = tf.train.Saver()
@@ -93,7 +93,7 @@ def do_online_qlearning(env,
 
         # Performance from untrained Q-learning
         if not training:
-            return evaluate(test_env, sess, prediction,
+            return evaluate(test_env, sess, q_output,
                                 states_pl, 1, GAMMA, False)
 
         start_time = time.time()
@@ -133,7 +133,7 @@ def do_online_qlearning(env,
 
                 print("#2 ", time.time() - time_chkpt)
                 time_chkpt = time.time()
-                q_deb= None
+                #q_deb= None
                 # Epsilon greedy policy
                 if epsilon > np.random.rand(1):
                     # Exploration
@@ -142,7 +142,7 @@ def do_online_qlearning(env,
                 else:
                     # Exploitation 
                     # Use model predicted action 
-                    action, q_deb = sess.run([prediction, q_debug], feed_dict={
+                    action = sess.run(q_output, feed_dict={
                         states_pl: state.reshape(
                             [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
                     })
@@ -167,6 +167,7 @@ def do_online_qlearning(env,
                 time_chkpt = time.time()
 
                 next_state = np.stack(observation_buffer, axis=-1)
+                print(action)
                 action = action.reshape([-1]).astype('int32')
 
                 # Add transition to replay buffer
@@ -236,7 +237,7 @@ def do_online_qlearning(env,
 
             if step % EVAL_STEPS == 0:
                 silent = (step % LOG_STEPS != 0)
-                cur_means, cur_stds = evaluate(test_env, sess, prediction, 
+                cur_means, cur_stds = evaluate(test_env, sess, q_output, 
                                         states_pl, 5, GAMMA, silent)
 
                 # Save means
