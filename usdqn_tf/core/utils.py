@@ -10,7 +10,7 @@ from skimage.transform import resize
 FRAME_WIDTH = 84
 FRAME_HEIGHT = 84
 FRAME_BUFFER_SIZE = 4
-MAX_EPISODE = 500
+MAX_EPISODE = 700
 
 
 def reward_clip(reward):
