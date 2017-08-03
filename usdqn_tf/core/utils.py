@@ -114,8 +114,7 @@ def evaluate(env,
             # Stack observations in buffer of 4
             if len(observation_buffer) < FRAME_BUFFER_SIZE:
 
-                observation_buffer.append(
-                    do_obs_processing(observation, FRAME_WIDTH, FRAME_HEIGHT))
+                observation_buffer.append(observation)
 
                 # Collect next observation with uniformly random action
                 a_rnd = env.action_space.sample()
@@ -166,8 +165,7 @@ def evaluate(env,
                 retval += pow(gamma, t)*r
                 score += r
 
-                observation_buffer.append(
-                    do_obs_processing(observation, FRAME_WIDTH, FRAME_HEIGHT))
+                observation_buffer.append(observation)
                 observation_buffer[0:1] = []
 
             if render:         

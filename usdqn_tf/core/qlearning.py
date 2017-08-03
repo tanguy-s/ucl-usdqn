@@ -13,7 +13,7 @@ GAMMA = 0.99
 # EVAL_STEPS = 25000
 # SAVE_STEPS = 5000
 # TARGET_UPDATE = 1000
-TRAINING_STEPS = 1000000
+TRAINING_STEPS = 100000
 LOG_STEPS = 5000
 LOSS_STEPS = 5000
 EVAL_STEPS = 50000
@@ -117,8 +117,7 @@ def do_online_qlearning(env,
             # Stack observations in buffer of 4
             if len(observation_buffer) < FRAME_BUFFER_SIZE:
 
-                observation_buffer.append(
-                    do_obs_processing(observation, FRAME_WIDTH, FRAME_HEIGHT))
+                observation_buffer.append(observation)
 
                 # Collect next observation with uniformly random action
                 a_rnd = env.action_space.sample()
@@ -154,8 +153,7 @@ def do_online_qlearning(env,
                 r = reward_clip(reward)
 
                 # Update observation buffer
-                observation_buffer.append(
-                    do_obs_processing(observation, FRAME_WIDTH, FRAME_HEIGHT))
+                observation_buffer.append(observation)
                 observation_buffer[0:1] = []
 
                 
