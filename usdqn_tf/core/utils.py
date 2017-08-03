@@ -41,7 +41,7 @@ def evaluate_random(env,
         score = 0
         t = 0
 
-        while not done and t < MAX_EPISODE:
+        while not done:
             t += 1
 
             a_rnd = env.action_space.sample()

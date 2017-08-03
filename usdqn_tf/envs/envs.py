@@ -33,11 +33,11 @@ class UsdqnOneDoFSimulator(object):
 
     def load_dataset(self):
         if self.is_training:
-            self.images = np.load('../data/1dof/usdqn-images-training.npy') / 255
+            self.images = np.load('../data/1dof/usdqn-images-training.npy')
             self.labels = np.load('../data/1dof/usdqn-labels-training.npy')
             
         else:
-            self.images = np.load('../data/1dof/usdqn-images-testing.npy') / 255
+            self.images = np.load('../data/1dof/usdqn-images-testing.npy')
             self.labels = np.load('../data/1dof/usdqn-labels-testing.npy')
             # self.goal_positions = np.array([
             #     -1.48979521 

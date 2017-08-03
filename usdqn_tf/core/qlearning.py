@@ -73,8 +73,8 @@ def do_online_qlearning(env,
         train_op = optimizer.minimize(loss_op)
 
         # Prediction Op
-        #prediction = tf.argmax(q_output, 1)
-        #prediction = q_output
+        prediction = tf.argmax(q_output, 1)
+        prediction = q_output
 
     # Model Saver
     saver = tf.train.Saver()
@@ -128,7 +128,6 @@ def do_online_qlearning(env,
                 # Stack observation buffer
                 state = np.stack(observation_buffer, axis=-1)
 
-
                 # Epsilon greedy policy
                 if epsilon > np.random.rand(1):
                     # Exploration
@@ -139,13 +138,9 @@ def do_online_qlearning(env,
                     # Use model predicted action 
                     action = sess.run(q_output, feed_dict={
                         states_pl: state.reshape(
-                            [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
+                            [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32') / 255
                     })
-
                 
-                # print('action taken:', action)
-                # print('q debug:', q_deb)
-
                 # action for next observation
                 observation, reward, done, info  = env.step(action[0])
 
@@ -156,34 +151,35 @@ def do_online_qlearning(env,
                 observation_buffer.append(observation)
                 observation_buffer[0:1] = []
 
-                
-
                 next_state = np.stack(observation_buffer, axis=-1)
                 action = action.reshape([-1]).astype('int32')
 
-                # Add transition to replay buffer
-                replay_buffer.add((state, action, r, next_state, done))
+                # print("State:", state.shape)
+                # print("Action:", action.shape)
+                # print("Rew:", r.shape, r)
+                # print("Next state:", next_state.shape)
+                # print("Done:", done.shape, done)
 
+                # Add transition to replay buffer
+                replay_buffer.add((state.astype('uint8'), action, r, next_state.astype('uint8'), done))
                 
                 # If replay buffer is ready to be sampled
                 if replay_buffer.ready:
-                    # print('train')
                     # Train model on replay buffer
                     b_states, b_actions, b_reward, b_next_state, b_term_state = replay_buffer.next_transitions()
 
-                    # Run training on batch
+                    #Run training on batch
                     q_out = sess.run(q_target_net, feed_dict={
-                            states_pl: b_next_state
+                            states_pl: b_next_state / 255
                         })
                     q_out_max = np.amax(q_out, axis=1)
                     q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
-    
-                
+
 
                     # Run training Op on batch of replay experience
                     loss, _ = sess.run([loss_op, train_op], 
                         feed_dict={
-                            states_pl: b_states,
+                            states_pl: b_states / 255,
                             actions_pl: b_actions,
                             targets_pl: q_target.astype('float32')
                         })
@@ -232,8 +228,6 @@ def do_online_qlearning(env,
             if dpaths is not None and step % SAVE_STEPS == 0:
                 saver.save(sess, dpaths, global_step=step)
             
-            
-            sys.stdout.flush()
 
         # Save models
         if dpaths is not None:

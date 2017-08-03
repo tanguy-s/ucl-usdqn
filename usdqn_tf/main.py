@@ -68,6 +68,11 @@ if __name__ == '__main__':
     test_env = tenv['env_cls'](is_training=False)
     epsilon_s = { 'start': 0.8, 'end': 0.01, 'decay': 250000 }
 
+    if not FLAGS.episodes:
+        num_episodes = 100
+    else:
+        num_episodes = FLAGS.episodes
+
     if FLAGS.train:
         for i in range(NUM_RUNS):
             print('Running %s run %d/%d ...' % (tenv['env_name'], (i+1), NUM_RUNS))
@@ -82,14 +87,13 @@ if __name__ == '__main__':
             results_file = os.path.join(
                     dumps_dir, 'results.csv')
 
-            loss, means = do_online_qlearning(env, env,
-                                #model=UsdqnModel(1),
+            loss, means = do_online_qlearning(env, test_env,
                                 model=UsdqnModel(1), 
                                 learning_rate=tenv['learning_rate'],
                                 epsilon_s=epsilon_s, 
                                 gpu_device=tenv['gpu_device'],
                                 target_model=UsdqnModel(1, varscope='target'),
-                                replay_buffer=ExperienceReplayBuffer(50000, 32),
+                                replay_buffer=ExperienceReplayBuffer(100000, 64),
                                 dpaths=os.path.join(dumps_dir, FLAGS.env))
 
             np.savetxt(losses_file, loss, delimiter=',')
@@ -98,11 +102,6 @@ if __name__ == '__main__':
     elif FLAGS.test:
         dpaths = [os.path.join(main_dumps_dir, '1'), 
             os.path.join(main_dumps_dir, '1', '%s.meta' % FLAGS.env)]
-
-        if not FLAGS.episodes:
-            num_episodes = 100
-        else:
-            num_episodes = FLAGS.episodes
 
         do_testing(env,
                     model=UsdqnModel(1), 
@@ -123,8 +122,9 @@ if __name__ == '__main__':
                             training=False)
 
     elif FLAGS.random:
+
         evaluate_random(env,
-                num_episodes=100, 
+                num_episodes=num_episodes, 
                 gamma=0.99, 
                 silent=False,
                 render=FLAGS.render)
