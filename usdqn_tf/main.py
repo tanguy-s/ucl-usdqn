@@ -66,7 +66,7 @@ if __name__ == '__main__':
 
     env = tenv['env_cls'](is_training=True)
     test_env = tenv['env_cls'](is_training=False)
-    epsilon_s = { 'start': 0.8, 'end': 0.01, 'decay': 250000 }
+    epsilon_s = { 'start': 0.5, 'end': 0.1, 'decay': 100000 }
 
     if not FLAGS.episodes:
         num_episodes = 100
@@ -88,11 +88,11 @@ if __name__ == '__main__':
                     dumps_dir, 'results.csv')
 
             loss, means = do_online_qlearning(env, test_env,
-                                model=UsdqnModel(1), 
+                                model=UsdqnModel(env.action_space.n), 
                                 learning_rate=tenv['learning_rate'],
                                 epsilon_s=epsilon_s, 
                                 gpu_device=tenv['gpu_device'],
-                                target_model=UsdqnModel(1, varscope='target'),
+                                target_model=UsdqnModel(env.action_space.n, varscope='target'),
                                 replay_buffer=ExperienceReplayBuffer(80000, 64),
                                 dpaths=os.path.join(dumps_dir, FLAGS.env))
 

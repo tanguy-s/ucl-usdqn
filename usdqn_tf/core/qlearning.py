@@ -43,7 +43,7 @@ def do_online_qlearning(env,
         # Create placeholders
         states_pl = tf.placeholder(tf.float32, 
             shape=(None, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE), name='states')
-        actions_pl= tf.placeholder(tf.float32, shape=(None), name='actions')
+        actions_pl= tf.placeholder(tf.int32, shape=(None), name='actions')
         targets_pl = tf.placeholder(tf.float32, shape=(None), name='targets')
 
         # Value function approximator network
@@ -62,8 +62,16 @@ def do_online_qlearning(env,
         # Q = tf.reduce_sum(
         #         tf.multiply(q_output, actions_pl), axis=1)
 
+        Q = tf.reduce_sum(
+                tf.multiply(q_output, 
+                    tf.one_hot(actions_pl, env.action_space.n, dtype=tf.float32)
+                ), axis=1)
+
         # Loss operation 
-        loss_op = tf.reduce_mean(tf.square(targets_pl - q_output) / 2)
+        loss_op = tf.reduce_mean(tf.square(targets_pl - Q) / 2)
+
+        # Loss operation 
+        #loss_op = tf.reduce_mean(tf.square(targets_pl - q_output) / 2)
 
         # Optimizer Op
         #optimizer = tf.train.RMSPropOptimizer(learning_rate=learning_rate)
@@ -74,7 +82,7 @@ def do_online_qlearning(env,
 
         # Prediction Op
         prediction = tf.argmax(q_output, 1)
-        prediction = q_output
+        #prediction = q_output
 
     # Model Saver
     saver = tf.train.Saver()
@@ -93,7 +101,7 @@ def do_online_qlearning(env,
 
         # Performance from untrained Q-learning
         if not training:
-            return evaluate(test_env, sess, q_output,
+            return evaluate(test_env, sess, prediction,
                                 states_pl, 1, GAMMA, False)
 
         start_time = time.time()
@@ -136,12 +144,13 @@ def do_online_qlearning(env,
                 else:
                     # Exploitation 
                     # Use model predicted action 
-                    action = sess.run(q_output, feed_dict={
+                    action = sess.run(prediction, feed_dict={
                         states_pl: state.reshape(
                             [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32') / 255
                     })
                 
                 # action for next observation
+                action = action.reshape([-1]).astype('int32')
                 observation, reward, done, info  = env.step(action[0])
 
                 # Clip reward
@@ -152,7 +161,7 @@ def do_online_qlearning(env,
                 observation_buffer[0:1] = []
 
                 next_state = np.stack(observation_buffer, axis=-1)
-                action = action.reshape([-1]).astype('int32')
+                
 
                 # print("State:", state.shape)
                 # print("Action:", action.shape)
@@ -217,7 +226,7 @@ def do_online_qlearning(env,
 
             if step % EVAL_STEPS == 0:
                 silent = (step % LOG_STEPS != 0)
-                cur_means, cur_stds = evaluate(test_env, sess, q_output, 
+                cur_means, cur_stds = evaluate(test_env, sess, prediction, 
                                         states_pl, 5, GAMMA, silent)
 
                 # Save means

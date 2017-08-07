@@ -23,8 +23,8 @@ class UsdqnOneDoFSimulator(object):
         self.min_action = -3.05
         self.max_action = 3.05
 
-        # self.discrete_actions = np.arange(self.min_action, 
-        #     self.max_action, 0.01)
+        self.discrete_actions = np.arange(self.min_action, 
+            self.max_action, 0.01)
 
         self.goal_positions = None
         self.current_indx = None
@@ -49,21 +49,22 @@ class UsdqnOneDoFSimulator(object):
 
     def set_angle(self, action):
         # Find nearest observation in array
-        #action = self.discrete_actions[action]
+        action = self.discrete_actions[action]
+
         #k = abs(int(action / self.max_action))
-        if action > self.max_action:
-            #action -= k*self.max_action
-            action = action - (np.ceil(action / self.max_action))*self.max_action
-        elif action < self.min_action:
-            #action += k*self.max_action
-            action = action - (np.floor(action / self.max_action))*self.max_action
+        # if action > self.max_action:
+        #     #action -= k*self.max_action
+        #     action = action - (np.ceil(action / self.max_action))*self.max_action
+        # elif action < self.min_action:
+        #     #action += k*self.max_action
+        #     action = action - (np.floor(action / self.max_action))*self.max_action
         #print('Env action: ', action)
         self.current_indx = (np.abs(self.labels - action)).argmin()
         
     def is_done(self):
         #print(self.labels[self.current_indx])
-        # if np.any(np.abs(self.goal_positions - self.labels[self.current_indx]) < 0.01):
-        #     print("## Done objective: %s" % np.abs(self.goal_positions - self.labels[self.current_indx]))
+        if np.any(np.abs(self.goal_positions - self.labels[self.current_indx]) < 0.01):
+            print("## Done objective: %s" % np.abs(self.goal_positions - self.labels[self.current_indx]))
         return np.any(
             (np.abs(self.goal_positions - self.labels[self.current_indx]) < 0.01))
 
@@ -105,6 +106,8 @@ class UsdqnOneDoFSimulator(object):
     def get_reward(self):
         if self.current_indx is None:
             raise
+        if self.is_done():
+            return 0
         return -1
 
     def get_angle(self):
@@ -125,9 +128,9 @@ class Continuous_UsdqnOneDoFEnv(gym.Env):
 
         self.viewer = None
 
-        self.action_space = spaces.Box(self.usdqn_sim.min_action, 
-            self.usdqn_sim.max_action, shape=(1,))
-        #self.action_space = spaces.Discrete(len(self.usdqn_sim.discrete_actions))
+        #self.action_space = spaces.Box(self.usdqn_sim.min_action, 
+        #    self.usdqn_sim.max_action, shape=(1,))
+        self.action_space = spaces.Discrete(len(self.usdqn_sim.discrete_actions))
         self.observation_space = spaces.Box(low=0, high=1, shape=(84, 84, 1))
 
         self._seed()
