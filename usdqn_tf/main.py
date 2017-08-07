@@ -93,7 +93,7 @@ if __name__ == '__main__':
                                 epsilon_s=epsilon_s, 
                                 gpu_device=tenv['gpu_device'],
                                 target_model=UsdqnModel(1, varscope='target'),
-                                replay_buffer=ExperienceReplayBuffer(100000, 64),
+                                replay_buffer=ExperienceReplayBuffer(80000, 64),
                                 dpaths=os.path.join(dumps_dir, FLAGS.env))
 
             np.savetxt(losses_file, loss, delimiter=',')
