@@ -1,0 +1,6 @@
+model_checkpoint_path: "1dof"
+all_model_checkpoint_paths: "1dof-1800000"
+all_model_checkpoint_paths: "1dof-1850000"
+all_model_checkpoint_paths: "1dof-1900000"
+all_model_checkpoint_paths: "1dof-1950000"
+all_model_checkpoint_paths: "1dof"
