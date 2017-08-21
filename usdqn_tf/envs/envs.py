@@ -58,7 +58,7 @@ class UsdqnOneDoFSimulator(object):
         # elif action < self.min_action:
         #     #action += k*self.max_action
         #     action = action - (np.floor(action / self.max_action))*self.max_action
-        #print('Env action: ', action)
+        print('Env action: ', action)
         self.current_indx = (np.abs(self.labels - action)).argmin()
         
     def is_done(self):
