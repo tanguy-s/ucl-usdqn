@@ -50,7 +50,7 @@ ENVS = {
         'learning_rate': 0.0001,
         'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(500000, 32),
-        'epsilon': { 'start': 0.5, 'end': 0.1, 'decay': 800000 },
+        'epsilon': { 'start': 0.6, 'end': 0.1, 'decay': 400000 },
         'params': {
             'TRAINING_STEPS':1000000,
             'LOG_STEPS':5000,
@@ -83,9 +83,9 @@ ENVS = {
         'env_cls': Continuous_UsdqnOneDoFEnv,
         'sim_cls': UsdqnOneDoFSimulatorDiscreteActions,
         'learning_rate': 0.00015, #0.00025
-        'gpu_device': '/gpu:0',
+        'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(500000, 64),
-        'epsilon': { 'start': 1, 'end': 0.1, 'decay': 800000 },
+        'epsilon': { 'start': 1, 'end': 0.1, 'decay': 600000 },
         'params': {
             'TRAINING_STEPS':1000000,
             'LOG_STEPS':5000,
