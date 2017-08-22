@@ -144823,3 +144823,3429 @@ Episodes 1990001 -> 1995001 Done (93.663s) ...
 ## Done objective: [ 2.95082522  0.00758213]
 ## Done objective: [ 2.95082522  0.00758213]
 ## Done objective: [ 2.95082522  0.00758213]
+2017-08-22 20:41:05.386402: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-22 20:41:05.386420: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-22 20:41:05.386425: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-22 20:41:05.386428: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-22 20:41:05.386431: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-22 20:41:05.555592: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-08-22 20:41:05.555979: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 0 with properties: 
+name: GeForce GTX 1070
+major: 6 minor: 1 memoryClockRate (GHz) 1.683
+pciBusID 0000:01:00.0
+Total memory: 7.92GiB
+Free memory: 7.50GiB
+2017-08-22 20:41:05.663721: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x392c5a0 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2017-08-22 20:41:05.663989: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-08-22 20:41:05.664345: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 1 with properties: 
+name: GeForce GTX 1070
+major: 6 minor: 1 memoryClockRate (GHz) 1.683
+pciBusID 0000:02:00.0
+Total memory: 7.92GiB
+Free memory: 7.83GiB
+2017-08-22 20:41:05.664857: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 1 
+2017-08-22 20:41:05.664866: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y Y 
+2017-08-22 20:41:05.664869: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 1:   Y Y 
+2017-08-22 20:41:05.664874: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+2017-08-22 20:41:05.664878: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:1) -> (device: 1, name: GeForce GTX 1070, pci bus id: 0000:02:00.0)
+Running Continuous 1 DoF run 1/1 ...
+
+ 2017-08-22 20:41:05
+Episodes 1 -> 1 Done (0.004s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -65.126359 std: 24.246433
+- Scores stats:
+ Mean: -144.800000 std: 79.586808
+
+ 2017-08-22 20:41:53
+Episodes 1 -> 5001 Done (47.803s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 20:42:38
+Episodes 5001 -> 10001 Done (45.237s) ... 
+- Training loss: 0.4912
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -67.087171 std: 22.497558
+- Scores stats:
+ Mean: -157.050000 std: 87.049110
+
+ 2017-08-22 20:43:26
+Episodes 10001 -> 15001 Done (47.747s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 20:44:11
+Episodes 15001 -> 20001 Done (45.192s) ... 
+- Training loss: 0.4772
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -73.115778 std: 23.211582
+- Scores stats:
+ Mean: -191.550000 std: 91.902380
+
+ 2017-08-22 20:45:00
+Episodes 20001 -> 25001 Done (48.458s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 20:45:45
+Episodes 25001 -> 30001 Done (45.498s) ... 
+- Training loss: 0.4718
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -72.364155 std: 21.321210
+- Scores stats:
+ Mean: -180.600000 std: 85.709043
+
+ 2017-08-22 20:46:33
+Episodes 30001 -> 35001 Done (47.525s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 20:47:19
+Episodes 35001 -> 40001 Done (45.909s) ... 
+- Training loss: 0.4624
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -62.058782 std: 28.364045
+- Scores stats:
+ Mean: -148.800000 std: 98.416259
+
+ 2017-08-22 20:48:06
+Episodes 40001 -> 45001 Done (47.697s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 20:48:52
+Episodes 45001 -> 50001 Done (45.121s) ... 
+- Training loss: 0.4532
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -70.593416 std: 25.299421
+- Scores stats:
+ Mean: -176.750000 std: 86.868795
+
+ 2017-08-22 20:49:40
+Episodes 50001 -> 55001 Done (48.134s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 20:50:26
+Episodes 55001 -> 60001 Done (46.126s) ... 
+- Training loss: 0.4441
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -64.644335 std: 26.243420
+- Scores stats:
+ Mean: -156.650000 std: 97.370054
+
+ 2017-08-22 20:51:14
+Episodes 60001 -> 65001 Done (47.942s) ... 
+- Training loss: 0.0003
+
+ 2017-08-22 20:51:59
+Episodes 65001 -> 70001 Done (45.254s) ... 
+- Training loss: 0.4340
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -67.413854 std: 26.221058
+- Scores stats:
+ Mean: -165.900000 std: 93.738413
+
+ 2017-08-22 20:52:46
+Episodes 70001 -> 75001 Done (46.617s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 20:53:27
+Episodes 75001 -> 80001 Done (41.507s) ... 
+- Training loss: 0.4260
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -62.249063 std: 27.011565
+- Scores stats:
+ Mean: -145.300000 std: 93.766785
+
+ 2017-08-22 20:54:11
+Episodes 80001 -> 85001 Done (43.836s) ... 
+- Training loss: 0.0018
+
+ 2017-08-22 20:54:52
+Episodes 85001 -> 90001 Done (40.964s) ... 
+- Training loss: 0.4181
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -66.197914 std: 25.232069
+- Scores stats:
+ Mean: -155.200000 std: 85.924735
+
+ 2017-08-22 20:55:35
+Episodes 90001 -> 95001 Done (43.287s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 20:56:16
+Episodes 95001 -> 100001 Done (40.913s) ... 
+- Training loss: 0.4099
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -56.776363 std: 30.443715
+- Scores stats:
+ Mean: -128.500000 std: 92.458369
+
+ 2017-08-22 20:56:59
+Episodes 100001 -> 105001 Done (43.082s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 20:57:40
+Episodes 105001 -> 110001 Done (41.040s) ... 
+- Training loss: 0.3634
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -58.749521 std: 26.925752
+- Scores stats:
+ Mean: -126.800000 std: 82.608474
+
+ 2017-08-22 20:58:23
+Episodes 110001 -> 115001 Done (43.023s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 20:59:04
+Episodes 115001 -> 120001 Done (41.087s) ... 
+- Training loss: 0.3944
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -60.419720 std: 23.286549
+- Scores stats:
+ Mean: -128.050000 std: 79.004731
+
+ 2017-08-22 20:59:48
+Episodes 120001 -> 125001 Done (43.396s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:00:29
+Episodes 125001 -> 130001 Done (40.901s) ... 
+- Training loss: 0.3628
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -68.498350 std: 22.395388
+- Scores stats:
+ Mean: -164.300000 std: 90.336648
+
+ 2017-08-22 21:01:12
+Episodes 130001 -> 135001 Done (43.381s) ... 
+- Training loss: 0.0012
+
+ 2017-08-22 21:01:53
+Episodes 135001 -> 140001 Done (40.857s) ... 
+- Training loss: 0.3785
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -66.702612 std: 22.135182
+- Scores stats:
+ Mean: -153.800000 std: 85.045047
+
+ 2017-08-22 21:02:36
+Episodes 140001 -> 145001 Done (43.329s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:03:17
+Episodes 145001 -> 150001 Done (41.075s) ... 
+- Training loss: 0.3714
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -57.844118 std: 32.622634
+- Scores stats:
+ Mean: -143.050000 std: 106.142110
+
+ 2017-08-22 21:04:01
+Episodes 150001 -> 155001 Done (43.325s) ... 
+- Training loss: 0.0020
+
+ 2017-08-22 21:04:42
+Episodes 155001 -> 160001 Done (41.668s) ... 
+- Training loss: 0.3599
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -67.389525 std: 25.871338
+- Scores stats:
+ Mean: -166.250000 std: 95.322545
+
+ 2017-08-22 21:05:25
+Episodes 160001 -> 165001 Done (42.895s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:06:07
+Episodes 165001 -> 170001 Done (41.598s) ... 
+- Training loss: 0.3521
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -56.707125 std: 29.160860
+- Scores stats:
+ Mean: -128.250000 std: 95.450445
+
+ 2017-08-22 21:06:50
+Episodes 170001 -> 175001 Done (42.772s) ... 
+- Training loss: 0.0012
+
+ 2017-08-22 21:07:31
+Episodes 175001 -> 180001 Done (41.067s) ... 
+- Training loss: 0.3498
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.340339 std: 26.274182
+- Scores stats:
+ Mean: -146.650000 std: 90.548481
+
+ 2017-08-22 21:08:13
+Episodes 180001 -> 185001 Done (42.856s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:08:55
+Episodes 185001 -> 190001 Done (41.934s) ... 
+- Training loss: 0.3388
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -74.563732 std: 22.087668
+- Scores stats:
+ Mean: -196.650000 std: 89.039472
+
+ 2017-08-22 21:09:39
+Episodes 190001 -> 195001 Done (44.097s) ... 
+- Training loss: 0.0008
+
+ 2017-08-22 21:10:21
+Episodes 195001 -> 200001 Done (41.562s) ... 
+- Training loss: 0.3341
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -57.063659 std: 26.245430
+- Scores stats:
+ Mean: -120.550000 std: 82.635631
+
+ 2017-08-22 21:11:04
+Episodes 200001 -> 205001 Done (43.106s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:11:45
+Episodes 205001 -> 210001 Done (41.176s) ... 
+- Training loss: 0.3291
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -60.054460 std: 25.563461
+- Scores stats:
+ Mean: -131.800000 std: 85.567868
+
+ 2017-08-22 21:12:28
+Episodes 210001 -> 215001 Done (43.075s) ... 
+- Training loss: 0.0078
+
+ 2017-08-22 21:13:10
+Episodes 215001 -> 220001 Done (41.634s) ... 
+- Training loss: 0.1934
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -65.986288 std: 24.415127
+- Scores stats:
+ Mean: -154.300000 std: 86.127290
+
+ 2017-08-22 21:13:54
+Episodes 220001 -> 225001 Done (43.630s) ... 
+- Training loss: 0.0006
+
+ 2017-08-22 21:14:35
+Episodes 225001 -> 230001 Done (41.247s) ... 
+- Training loss: 0.3152
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -71.861430 std: 18.301701
+- Scores stats:
+ Mean: -174.200000 std: 85.029171
+
+ 2017-08-22 21:15:19
+Episodes 230001 -> 235001 Done (43.642s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:16:00
+Episodes 235001 -> 240001 Done (41.575s) ... 
+- Training loss: 0.3114
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.876843 std: 25.501764
+- Scores stats:
+ Mean: -142.250000 std: 79.733854
+
+ 2017-08-22 21:16:43
+Episodes 240001 -> 245001 Done (43.023s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:17:25
+Episodes 245001 -> 250001 Done (41.357s) ... 
+- Training loss: 0.3044
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -72.906424 std: 22.252268
+- Scores stats:
+ Mean: -183.050000 std: 83.307548
+
+ 2017-08-22 21:18:09
+Episodes 250001 -> 255001 Done (44.348s) ... 
+- Training loss: 0.0245
+
+ 2017-08-22 21:18:51
+Episodes 255001 -> 260001 Done (41.691s) ... 
+- Training loss: 0.2946
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -58.369217 std: 30.188391
+- Scores stats:
+ Mean: -132.500000 std: 89.834014
+
+ 2017-08-22 21:19:33
+Episodes 260001 -> 265001 Done (42.863s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:20:16
+Episodes 265001 -> 270001 Done (42.082s) ... 
+- Training loss: 0.2691
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -71.636502 std: 22.253181
+- Scores stats:
+ Mean: -175.350000 std: 82.492591
+
+ 2017-08-22 21:21:00
+Episodes 270001 -> 275001 Done (44.461s) ... 
+- Training loss: 0.0002
+
+ 2017-08-22 21:21:41
+Episodes 275001 -> 280001 Done (41.370s) ... 
+- Training loss: 0.2876
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.352751 std: 26.243982
+- Scores stats:
+ Mean: -145.350000 std: 86.925413
+
+ 2017-08-22 21:22:25
+Episodes 280001 -> 285001 Done (43.231s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:23:06
+Episodes 285001 -> 290001 Done (41.433s) ... 
+- Training loss: 0.2808
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -66.858195 std: 23.816466
+- Scores stats:
+ Mean: -157.950000 std: 88.050256
+
+ 2017-08-22 21:23:50
+Episodes 290001 -> 295001 Done (44.390s) ... 
+- Training loss: 0.0006
+
+ 2017-08-22 21:24:32
+Episodes 295001 -> 300001 Done (41.375s) ... 
+- Training loss: 0.2756
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -55.551988 std: 28.296118
+- Scores stats:
+ Mean: -123.500000 std: 92.618303
+
+ 2017-08-22 21:25:15
+Episodes 300001 -> 305001 Done (43.656s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:25:57
+Episodes 305001 -> 310001 Done (41.336s) ... 
+- Training loss: 0.2704
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -64.269847 std: 25.869836
+- Scores stats:
+ Mean: -150.300000 std: 89.657180
+
+ 2017-08-22 21:26:41
+Episodes 310001 -> 315001 Done (44.563s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:27:23
+Episodes 315001 -> 320001 Done (41.336s) ... 
+- Training loss: 0.2641
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -62.700995 std: 28.524498
+- Scores stats:
+ Mean: -148.950000 std: 93.014770
+
+ 2017-08-22 21:28:06
+Episodes 320001 -> 325001 Done (43.783s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:28:49
+Episodes 325001 -> 330001 Done (42.732s) ... 
+- Training loss: 0.2368
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -66.199816 std: 24.697305
+- Scores stats:
+ Mean: -158.750000 std: 92.794329
+
+ 2017-08-22 21:29:33
+Episodes 330001 -> 335001 Done (43.656s) ... 
+- Training loss: 0.0001
+
+ 2017-08-22 21:30:14
+Episodes 335001 -> 340001 Done (41.344s) ... 
+- Training loss: 0.2544
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -61.110699 std: 27.239278
+- Scores stats:
+ Mean: -140.950000 std: 91.731933
+
+ 2017-08-22 21:30:58
+Episodes 340001 -> 345001 Done (43.888s) ... 
+- Training loss: 0.0033
+
+ 2017-08-22 21:31:40
+Episodes 345001 -> 350001 Done (42.173s) ... 
+- Training loss: 0.2486
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -72.799375 std: 18.456681
+- Scores stats:
+ Mean: -179.050000 std: 84.196482
+
+ 2017-08-22 21:32:24
+Episodes 350001 -> 355001 Done (44.127s) ... 
+- Training loss: 0.0003
+
+ 2017-08-22 21:33:06
+Episodes 355001 -> 360001 Done (41.946s) ... 
+- Training loss: 0.2444
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -62.766964 std: 27.103682
+- Scores stats:
+ Mean: -145.950000 std: 90.960692
+
+ 2017-08-22 21:33:51
+Episodes 360001 -> 365001 Done (44.883s) ... 
+- Training loss: 0.0001
+
+ 2017-08-22 21:34:33
+Episodes 365001 -> 370001 Done (41.831s) ... 
+- Training loss: 0.2395
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -62.040185 std: 29.641202
+- Scores stats:
+ Mean: -153.300000 std: 103.198886
+
+ 2017-08-22 21:35:18
+Episodes 370001 -> 375001 Done (44.945s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:36:00
+Episodes 375001 -> 380001 Done (41.864s) ... 
+- Training loss: 0.2293
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.177666 std: 25.424255
+- Scores stats:
+ Mean: -144.250000 std: 87.898166
+
+ 2017-08-22 21:36:44
+Episodes 380001 -> 385001 Done (43.904s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:37:26
+Episodes 385001 -> 390001 Done (41.917s) ... 
+- Training loss: 16.4131
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -60.470920 std: 29.008066
+- Scores stats:
+ Mean: -143.100000 std: 98.669600
+
+ 2017-08-22 21:38:10
+Episodes 390001 -> 395001 Done (43.851s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:38:51
+Episodes 395001 -> 400001 Done (41.773s) ... 
+- Training loss: 0.1982
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -66.730281 std: 21.929636
+- Scores stats:
+ Mean: -155.000000 std: 86.573668
+
+ 2017-08-22 21:39:36
+Episodes 400001 -> 405001 Done (44.637s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:40:18
+Episodes 405001 -> 410001 Done (42.037s) ... 
+- Training loss: 0.2215
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -67.239366 std: 19.026230
+- Scores stats:
+ Mean: -147.500000 std: 74.999000
+
+ 2017-08-22 21:41:02
+Episodes 410001 -> 415001 Done (44.101s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:41:44
+Episodes 415001 -> 420001 Done (42.147s) ... 
+- Training loss: 0.2077
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -60.491301 std: 28.465637
+- Scores stats:
+ Mean: -136.150000 std: 86.008880
+
+ 2017-08-22 21:42:28
+Episodes 420001 -> 425001 Done (44.198s) ... 
+- Training loss: 0.0031
+
+ 2017-08-22 21:43:11
+Episodes 425001 -> 430001 Done (42.228s) ... 
+- Training loss: 0.2131
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -66.543358 std: 25.753114
+- Scores stats:
+ Mean: -160.250000 std: 92.167171
+
+ 2017-08-22 21:43:55
+Episodes 430001 -> 435001 Done (44.330s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:44:38
+Episodes 435001 -> 440001 Done (42.844s) ... 
+- Training loss: 0.2031
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -67.349230 std: 24.269189
+- Scores stats:
+ Mean: -161.950000 std: 90.273736
+
+ 2017-08-22 21:45:22
+Episodes 440001 -> 445001 Done (44.387s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:46:04
+Episodes 445001 -> 450001 Done (42.247s) ... 
+- Training loss: 0.1555
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -76.054532 std: 16.048352
+- Scores stats:
+ Mean: -191.950000 std: 78.971181
+
+ 2017-08-22 21:46:50
+Episodes 450001 -> 455001 Done (45.682s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:47:33
+Episodes 455001 -> 460001 Done (42.402s) ... 
+- Training loss: 0.1636
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -55.605519 std: 28.534403
+- Scores stats:
+ Mean: -119.850000 std: 87.365482
+
+ 2017-08-22 21:48:17
+Episodes 460001 -> 465001 Done (44.048s) ... 
+- Training loss: 0.0328
+
+ 2017-08-22 21:49:00
+Episodes 465001 -> 470001 Done (43.084s) ... 
+- Training loss: 0.1937
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -59.361798 std: 24.855531
+- Scores stats:
+ Mean: -130.850000 std: 90.611961
+
+ 2017-08-22 21:49:47
+Episodes 470001 -> 475001 Done (47.209s) ... 
+- Training loss: 0.0001
+
+ 2017-08-22 21:50:31
+Episodes 475001 -> 480001 Done (43.990s) ... 
+- Training loss: 0.1875
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.279826 std: 25.011811
+- Scores stats:
+ Mean: -142.900000 std: 85.432956
+
+ 2017-08-22 21:51:18
+Episodes 480001 -> 485001 Done (47.268s) ... 
+- Training loss: 0.0358
+
+ 2017-08-22 21:52:03
+Episodes 485001 -> 490001 Done (45.221s) ... 
+- Training loss: 0.1263
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -59.709225 std: 31.214715
+- Scores stats:
+ Mean: -147.900000 std: 105.733580
+
+ 2017-08-22 21:52:52
+Episodes 490001 -> 495001 Done (49.108s) ... 
+- Training loss: 0.0001
+
+ 2017-08-22 21:53:43
+Episodes 495001 -> 500001 Done (50.914s) ... 
+- Training loss: 0.1015
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -59.982878 std: 25.234910
+- Scores stats:
+ Mean: -130.100000 std: 84.445189
+
+ 2017-08-22 21:54:34
+Episodes 500001 -> 505001 Done (50.380s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 21:55:21
+Episodes 505001 -> 510001 Done (47.671s) ... 
+- Training loss: 0.1836
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -55.815746 std: 21.101769
+- Scores stats:
+ Mean: -105.450000 std: 63.806328
+
+ 2017-08-22 21:56:10
+Episodes 510001 -> 515001 Done (49.069s) ... 
+- Training loss: 0.0001
+
+ 2017-08-22 21:56:58
+Episodes 515001 -> 520001 Done (47.885s) ... 
+- Training loss: 0.1501
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -55.764175 std: 27.553065
+- Scores stats:
+ Mean: -119.550000 std: 86.108347
+
+ 2017-08-22 21:57:48
+Episodes 520001 -> 525001 Done (49.790s) ... 
+- Training loss: 0.0009
+
+ 2017-08-22 21:58:38
+Episodes 525001 -> 530001 Done (49.713s) ... 
+- Training loss: 0.0738
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -72.829887 std: 18.365800
+- Scores stats:
+ Mean: -178.600000 std: 84.182183
+
+ 2017-08-22 21:59:28
+Episodes 530001 -> 535001 Done (50.156s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 22:00:17
+Episodes 535001 -> 540001 Done (48.769s) ... 
+- Training loss: 0.1392
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -59.763237 std: 27.271785
+- Scores stats:
+ Mean: -139.800000 std: 98.808704
+
+ 2017-08-22 22:01:07
+Episodes 540001 -> 545001 Done (50.691s) ... 
+- Training loss: 0.0573
+
+ 2017-08-22 22:01:57
+Episodes 545001 -> 550001 Done (49.480s) ... 
+- Training loss: 0.1665
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -67.787767 std: 24.292854
+- Scores stats:
+ Mean: -161.400000 std: 86.480287
+
+ 2017-08-22 22:02:48
+Episodes 550001 -> 555001 Done (50.872s) ... 
+- Training loss: 0.0001
+
+ 2017-08-22 22:03:35
+Episodes 555001 -> 560001 Done (47.328s) ... 
+- Training loss: 0.1706
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -66.605115 std: 20.818147
+- Scores stats:
+ Mean: -150.050000 std: 81.569893
+
+ 2017-08-22 22:04:26
+Episodes 560001 -> 565001 Done (50.828s) ... 
+- Training loss: 0.0145
+
+ 2017-08-22 22:05:12
+Episodes 565001 -> 570001 Done (46.248s) ... 
+- Training loss: 0.1672
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.173438 std: 26.007158
+- Scores stats:
+ Mean: -149.300000 std: 95.052670
+
+ 2017-08-22 22:06:02
+Episodes 570001 -> 575001 Done (49.632s) ... 
+- Training loss: 0.0250
+
+ 2017-08-22 22:06:50
+Episodes 575001 -> 580001 Done (47.726s) ... 
+- Training loss: 0.0759
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -65.160540 std: 24.628724
+- Scores stats:
+ Mean: -151.350000 std: 87.552427
+
+ 2017-08-22 22:07:40
+Episodes 580001 -> 585001 Done (50.084s) ... 
+- Training loss: 0.0628
+
+ 2017-08-22 22:08:26
+Episodes 585001 -> 590001 Done (46.810s) ... 
+- Training loss: 0.1608
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -60.190030 std: 26.658888
+- Scores stats:
+ Mean: -132.500000 std: 85.213555
+
+ 2017-08-22 22:09:17
+Episodes 590001 -> 595001 Done (50.139s) ... 
+- Training loss: 0.0293
+
+ 2017-08-22 22:10:03
+Episodes 595001 -> 600001 Done (46.019s) ... 
+- Training loss: 0.1532
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -56.699347 std: 25.927798
+- Scores stats:
+ Mean: -116.900000 std: 77.410529
+
+ 2017-08-22 22:10:51
+Episodes 600001 -> 605001 Done (48.161s) ... 
+- Training loss: 0.0164
+
+ 2017-08-22 22:11:38
+Episodes 605001 -> 610001 Done (47.231s) ... 
+- Training loss: 0.1130
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.602748 std: 24.598669
+- Scores stats:
+ Mean: -143.300000 std: 86.097677
+
+ 2017-08-22 22:12:27
+Episodes 610001 -> 615001 Done (49.238s) ... 
+- Training loss: 0.0003
+
+ 2017-08-22 22:13:15
+Episodes 615001 -> 620001 Done (47.291s) ... 
+- Training loss: 0.1031
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -72.147115 std: 17.082066
+- Scores stats:
+ Mean: -168.300000 std: 72.363043
+
+ 2017-08-22 22:14:05
+Episodes 620001 -> 625001 Done (50.728s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 22:14:52
+Episodes 625001 -> 630001 Done (47.033s) ... 
+- Training loss: 0.1404
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -65.092386 std: 21.120042
+- Scores stats:
+ Mean: -141.050000 std: 74.416715
+
+ 2017-08-22 22:15:42
+Episodes 630001 -> 635001 Done (49.703s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 22:16:30
+Episodes 635001 -> 640001 Done (47.541s) ... 
+- Training loss: 0.1466
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -68.601748 std: 23.544441
+- Scores stats:
+ Mean: -165.300000 std: 88.522370
+
+ 2017-08-22 22:17:19
+Episodes 640001 -> 645001 Done (49.886s) ... 
+- Training loss: 0.0336
+
+ 2017-08-22 22:18:07
+Episodes 645001 -> 650001 Done (47.897s) ... 
+- Training loss: 0.1040
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -69.489420 std: 22.617484
+- Scores stats:
+ Mean: -168.000000 std: 87.419677
+
+ 2017-08-22 22:18:56
+Episodes 650001 -> 655001 Done (48.743s) ... 
+- Training loss: 0.0053
+
+ 2017-08-22 22:19:43
+Episodes 655001 -> 660001 Done (47.002s) ... 
+- Training loss: 33.8535
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.873767 std: 22.836112
+- Scores stats:
+ Mean: -142.350000 std: 85.058965
+
+ 2017-08-22 22:20:32
+Episodes 660001 -> 665001 Done (48.608s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 22:21:18
+Episodes 665001 -> 670001 Done (46.489s) ... 
+- Training loss: 0.1405
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -90.539520 std: 19.494451
+- Scores stats:
+ Mean: -661.500000 std: 150.382014
+
+ 2017-08-22 22:22:14
+Episodes 670001 -> 675001 Done (55.737s) ... 
+- Training loss: 0.0215
+
+ 2017-08-22 22:23:00
+Episodes 675001 -> 680001 Done (46.008s) ... 
+- Training loss: 0.1294
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -64.324703 std: 24.110944
+- Scores stats:
+ Mean: -144.450000 std: 83.097217
+
+ 2017-08-22 22:23:47
+Episodes 680001 -> 685001 Done (47.383s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 22:24:34
+Episodes 685001 -> 690001 Done (46.231s) ... 
+- Training loss: 0.1294
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -69.713025 std: 21.501051
+- Scores stats:
+ Mean: -162.300000 std: 77.068865
+
+ 2017-08-22 22:25:21
+Episodes 690001 -> 695001 Done (47.392s) ... 
+- Training loss: 0.0746
+
+ 2017-08-22 22:26:07
+Episodes 695001 -> 700001 Done (46.544s) ... 
+- Training loss: 0.1309
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.614812 std: 25.135546
+- Scores stats:
+ Mean: -142.650000 std: 84.049554
+
+ 2017-08-22 22:26:55
+Episodes 700001 -> 705001 Done (47.298s) ... 
+- Training loss: 0.0001
+
+ 2017-08-22 22:27:41
+Episodes 705001 -> 710001 Done (46.132s) ... 
+- Training loss: 0.1296
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -69.654755 std: 25.169845
+- Scores stats:
+ Mean: -173.700000 std: 91.419965
+
+ 2017-08-22 22:28:28
+Episodes 710001 -> 715001 Done (47.526s) ... 
+- Training loss: 0.0002
+
+ 2017-08-22 22:29:14
+Episodes 715001 -> 720001 Done (45.563s) ... 
+- Training loss: 0.1271
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -65.549173 std: 26.693215
+- Scores stats:
+ Mean: -158.250000 std: 93.213129
+
+ 2017-08-22 22:30:01
+Episodes 720001 -> 725001 Done (47.205s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 22:30:47
+Episodes 725001 -> 730001 Done (45.403s) ... 
+- Training loss: 0.0870
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -62.304062 std: 23.638695
+- Scores stats:
+ Mean: -136.300000 std: 83.605084
+
+ 2017-08-22 22:31:34
+Episodes 730001 -> 735001 Done (47.385s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 22:32:19
+Episodes 735001 -> 740001 Done (45.104s) ... 
+- Training loss: 0.1060
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -73.666860 std: 17.944926
+- Scores stats:
+ Mean: -179.500000 std: 77.873295
+
+ 2017-08-22 22:33:08
+Episodes 740001 -> 745001 Done (48.894s) ... 
+- Training loss: 0.0215
+
+ 2017-08-22 22:33:53
+Episodes 745001 -> 750001 Done (45.123s) ... 
+- Training loss: 0.1194
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -59.778604 std: 27.722104
+- Scores stats:
+ Mean: -135.050000 std: 90.092439
+
+ 2017-08-22 22:34:40
+Episodes 750001 -> 755001 Done (47.001s) ... 
+- Training loss: 0.0006
+
+ 2017-08-22 22:35:26
+Episodes 755001 -> 760001 Done (45.687s) ... 
+- Training loss: 0.1087
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -66.335928 std: 22.450998
+- Scores stats:
+ Mean: -152.450000 std: 84.530749
+
+ 2017-08-22 22:36:13
+Episodes 760001 -> 765001 Done (47.249s) ... 
+- Training loss: 0.0005
+
+ 2017-08-22 22:36:59
+Episodes 765001 -> 770001 Done (45.655s) ... 
+- Training loss: 0.0698
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -69.560888 std: 20.188678
+- Scores stats:
+ Mean: -158.850000 std: 74.053545
+
+ 2017-08-22 22:37:46
+Episodes 770001 -> 775001 Done (47.518s) ... 
+- Training loss: 0.0081
+
+ 2017-08-22 22:38:32
+Episodes 775001 -> 780001 Done (45.672s) ... 
+- Training loss: 0.1143
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -75.115744 std: 14.858885
+- Scores stats:
+ Mean: -183.750000 std: 75.651091
+
+ 2017-08-22 22:39:20
+Episodes 780001 -> 785001 Done (48.054s) ... 
+- Training loss: 0.0450
+
+ 2017-08-22 22:40:06
+Episodes 785001 -> 790001 Done (46.512s) ... 
+- Training loss: 0.0614
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -67.236649 std: 24.063885
+- Scores stats:
+ Mean: -160.150000 std: 88.973746
+
+ 2017-08-22 22:40:54
+Episodes 790001 -> 795001 Done (47.676s) ... 
+- Training loss: 0.1771
+
+ 2017-08-22 22:41:39
+Episodes 795001 -> 800001 Done (45.215s) ... 
+- Training loss: 0.0873
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -62.316164 std: 25.236074
+- Scores stats:
+ Mean: -140.500000 std: 86.578577
+
+ 2017-08-22 22:42:27
+Episodes 800001 -> 805001 Done (47.626s) ... 
+- Training loss: 0.0029
+
+ 2017-08-22 22:43:12
+Episodes 805001 -> 810001 Done (44.982s) ... 
+- Training loss: 0.1114
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -67.653403 std: 24.125120
+- Scores stats:
+ Mean: -162.650000 std: 89.623811
+
+ 2017-08-22 22:43:59
+Episodes 810001 -> 815001 Done (47.397s) ... 
+- Training loss: 0.0101
+
+ 2017-08-22 22:44:44
+Episodes 815001 -> 820001 Done (44.561s) ... 
+- Training loss: 0.0875
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -56.374170 std: 28.481455
+- Scores stats:
+ Mean: -123.850000 std: 89.013637
+
+ 2017-08-22 22:45:31
+Episodes 820001 -> 825001 Done (46.799s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 22:46:15
+Episodes 825001 -> 830001 Done (44.479s) ... 
+- Training loss: 0.0799
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -69.340920 std: 23.207687
+- Scores stats:
+ Mean: -170.100000 std: 91.243575
+
+ 2017-08-22 22:47:03
+Episodes 830001 -> 835001 Done (47.406s) ... 
+- Training loss: 0.0001
+
+ 2017-08-22 22:47:47
+Episodes 835001 -> 840001 Done (44.779s) ... 
+- Training loss: 0.1043
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -70.868250 std: 20.502223
+- Scores stats:
+ Mean: -172.950000 std: 87.598216
+
+ 2017-08-22 22:48:35
+Episodes 840001 -> 845001 Done (47.353s) ... 
+- Training loss: 0.0017
+
+ 2017-08-22 22:49:19
+Episodes 845001 -> 850001 Done (44.663s) ... 
+- Training loss: 0.0812
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -68.456398 std: 23.703877
+- Scores stats:
+ Mean: -162.800000 std: 84.688606
+
+ 2017-08-22 22:50:07
+Episodes 850001 -> 855001 Done (47.674s) ... 
+- Training loss: 0.0048
+
+ 2017-08-22 22:50:52
+Episodes 855001 -> 860001 Done (44.808s) ... 
+- Training loss: 0.1025
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -68.046962 std: 19.762488
+- Scores stats:
+ Mean: -154.500000 std: 81.066331
+
+ 2017-08-22 22:51:40
+Episodes 860001 -> 865001 Done (47.636s) ... 
+- Training loss: 0.0172
+
+ 2017-08-22 22:52:25
+Episodes 865001 -> 870001 Done (45.964s) ... 
+- Training loss: 0.0500
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -60.963197 std: 29.143362
+- Scores stats:
+ Mean: -146.900000 std: 100.702483
+
+ 2017-08-22 22:53:14
+Episodes 870001 -> 875001 Done (48.922s) ... 
+- Training loss: 0.0098
+
+ 2017-08-22 22:54:00
+Episodes 875001 -> 880001 Done (45.290s) ... 
+- Training loss: 0.0982
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.448992 std: 26.888493
+- Scores stats:
+ Mean: -145.850000 std: 88.265664
+
+ 2017-08-22 22:54:48
+Episodes 880001 -> 885001 Done (48.101s) ... 
+- Training loss: 0.0001
+
+ 2017-08-22 22:55:34
+Episodes 885001 -> 890001 Done (45.887s) ... 
+- Training loss: 0.0979
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -62.045761 std: 30.259463
+- Scores stats:
+ Mean: -155.100000 std: 103.830102
+
+ 2017-08-22 22:56:23
+Episodes 890001 -> 895001 Done (49.143s) ... 
+- Training loss: 0.0000
+
+ 2017-08-22 22:57:10
+Episodes 895001 -> 900001 Done (47.104s) ... 
+- Training loss: 0.0553
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -67.105096 std: 23.651212
+- Scores stats:
+ Mean: -155.800000 std: 83.772669
+
+ 2017-08-22 22:57:58
+Episodes 900001 -> 905001 Done (48.418s) ... 
+- Training loss: 0.0122
+
+ 2017-08-22 22:58:45
+Episodes 905001 -> 910001 Done (46.753s) ... 
+- Training loss: 0.0560
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -56.516103 std: 24.146884
+- Scores stats:
+ Mean: -113.850000 std: 74.506560
+
+ 2017-08-22 22:59:34
+Episodes 910001 -> 915001 Done (48.983s) ... 
+- Training loss: 0.2215
+
+ 2017-08-22 23:00:22
+Episodes 915001 -> 920001 Done (48.168s) ... 
+- Training loss: 0.0457
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -62.667240 std: 26.201547
+- Scores stats:
+ Mean: -148.100000 std: 96.548382
+
+ 2017-08-22 23:01:11
+Episodes 920001 -> 925001 Done (49.146s) ... 
+- Training loss: 0.0006
+
+ 2017-08-22 23:02:00
+Episodes 925001 -> 930001 Done (48.506s) ... 
+- Training loss: 0.0628
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -63.862345 std: 27.295717
+- Scores stats:
+ Mean: -147.700000 std: 87.244541
+
+ 2017-08-22 23:02:49
+Episodes 930001 -> 935001 Done (49.104s) ... 
+- Training loss: 0.0677
+
+ 2017-08-22 23:03:37
+Episodes 935001 -> 940001 Done (48.320s) ... 
+- Training loss: 0.0928
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -64.299369 std: 26.260908
+- Scores stats:
+ Mean: -151.050000 std: 91.225257
+
+ 2017-08-22 23:04:27
+Episodes 940001 -> 945001 Done (49.802s) ... 
+- Training loss: 0.0009
+
+ 2017-08-22 23:05:15
+Episodes 945001 -> 950001 Done (47.418s) ... 
+- Training loss: 0.0909
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -62.953096 std: 26.288433
+- Scores stats:
+ Mean: -146.850000 std: 91.641844
+
+ 2017-08-22 23:06:05
+Episodes 950001 -> 955001 Done (50.885s) ... 
+- Training loss: 0.0078
+
+ 2017-08-22 23:06:53
+Episodes 955001 -> 960001 Done (47.582s) ... 
+- Training loss: 0.0776
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -73.541170 std: 18.090287
+- Scores stats:
+ Mean: -175.150000 std: 72.594955
+
+ 2017-08-22 23:07:43
+Episodes 960001 -> 965001 Done (50.055s) ... 
+- Training loss: 0.0360
+
+ 2017-08-22 23:08:30
+Episodes 965001 -> 970001 Done (46.889s) ... 
+- Training loss: 0.0424
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -66.501163 std: 26.267484
+- Scores stats:
+ Mean: -158.550000 std: 88.891212
+
+ 2017-08-22 23:09:19
+Episodes 970001 -> 975001 Done (49.359s) ... 
+- Training loss: 0.0010
+
+ 2017-08-22 23:10:05
+Episodes 975001 -> 980001 Done (45.825s) ... 
+- Training loss: 0.0866
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -65.696607 std: 23.611278
+- Scores stats:
+ Mean: -148.950000 std: 81.350768
+
+ 2017-08-22 23:10:54
+Episodes 980001 -> 985001 Done (48.726s) ... 
+- Training loss: 0.0225
+
+ 2017-08-22 23:11:41
+Episodes 985001 -> 990001 Done (46.776s) ... 
+- Training loss: 0.0844
+Evaluation num episodes:  20
+Episode 0/20
+Episode 1/20
+Episode 2/20
+Episode 3/20
+Episode 4/20
+Episode 5/20
+Episode 6/20
+Episode 7/20
+Episode 8/20
+Episode 9/20
+Episode 10/20
+Episode 11/20
+Episode 12/20
+Episode 13/20
+Episode 14/20
+Episode 15/20
+Episode 16/20
+Episode 17/20
+Episode 18/20
+Episode 19/20
+# Evaluation of policy
+- Return stats:
+ Mean: -74.517272 std: 18.854466
+- Scores stats:
+ Mean: -185.300000 std: 77.729081
+
+ 2017-08-22 23:12:28
+Episodes 990001 -> 995001 Done (47.763s) ... 
+- Training loss: 0.0124
