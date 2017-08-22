@@ -13,21 +13,31 @@ GAMMA = 0.99
 # EVAL_STEPS = 25000
 # SAVE_STEPS = 5000
 # TARGET_UPDATE = 1000
-TRAINING_STEPS = 2000000
-LOG_STEPS = 5000
-LOSS_STEPS = 1000
-EVAL_STEPS = 50000
-SAVE_STEPS = 50000
-TARGET_UPDATE = 5000
+# TRAINING_STEPS = 2000000
+# LOG_STEPS = 5000
+# LOSS_STEPS = 1000
+# EVAL_STEPS = 50000
+# SAVE_STEPS = 50000
+# TARGET_UPDATE = 5000
 
-FRAME_WIDTH = 84
-FRAME_HEIGHT = 84
+# TRAINING_STEPS = 401000
+# LOG_STEPS = 2000
+# LOSS_STEPS = 1000
+# EVAL_STEPS = 2000
+# SAVE_STEPS = 10000
+# TARGET_UPDATE = 5000
+
+
+
+FRAME_WIDTH = 80
+FRAME_HEIGHT = 80
 FRAME_BUFFER_SIZE = 4
 
 
 def do_online_qlearning(env, 
                         test_env,    
                         model, 
+                        params,
                         learning_rate, 
                         epsilon_s,
                         gpu_device,
@@ -92,7 +102,7 @@ def do_online_qlearning(env,
 
     # Limit memory usage for multiple training at same time
     config = tf.ConfigProto()
-    #config.gpu_options.per_process_gpu_memory_fraction = 0.33
+    config.gpu_options.per_process_gpu_memory_fraction = 0.50
 
     # Start Session
     with tf.Session(config=config) as sess:
@@ -102,7 +112,7 @@ def do_online_qlearning(env,
         # Performance from untrained Q-learning
         if not training:
             return evaluate(test_env, sess, prediction,
-                                states_pl, 1, GAMMA, False)
+                                states_pl, 20, GAMMA, False, False)
 
         start_time = time.time()
 
@@ -119,7 +129,7 @@ def do_online_qlearning(env,
         #init epsilon
         epsilon = epsilon_s['start']
 
-        for step in range(TRAINING_STEPS):
+        for step in range(params['TRAINING_STEPS']):
             loss = 0
             
             # Stack observations in buffer of 4
@@ -161,13 +171,6 @@ def do_online_qlearning(env,
                 observation_buffer[0:1] = []
 
                 next_state = np.stack(observation_buffer, axis=-1)
-                
-
-                # print("State:", state.shape)
-                # print("Action:", action.shape)
-                # print("Rew:", r.shape, r)
-                # print("Next state:", next_state.shape)
-                # print("Done:", done.shape, done)
 
                 # Add transition to replay buffer
                 replay_buffer.add((state.astype('uint8'), action, r, next_state.astype('uint8'), done))
@@ -181,6 +184,9 @@ def do_online_qlearning(env,
                     q_out = sess.run(q_target_net, feed_dict={
                             states_pl: b_next_state / 255
                         })
+                    # q_out = sess.run(q_output, feed_dict={
+                    #          states_pl: b_next_state / 255
+                    #      })
                     q_out_max = np.amax(q_out, axis=1)
                     q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
 
@@ -203,20 +209,20 @@ def do_online_qlearning(env,
                 epsilon -= (epsilon_s['start'] - epsilon_s['end']) / epsilon_s['decay']
 
             # Copy variables target network
-            if (step + 1) % TARGET_UPDATE == 0:
+            if (step + 1) % params['TARGET_UPDATE'] == 0:
                 for var in target_net_vars:
                     sess.run(var)
             
 
-            if step % LOSS_STEPS == 0:
+            if step % params['LOSS_STEPS'] == 0:
                 # Save loss
                 losses.append(loss)
             
 
-            if step % LOG_STEPS == 0:
+            if step % params['LOG_STEPS'] == 0:
                 print('\n', time.strftime('%Y-%m-%d %H:%M:%S', time.localtime()))
                 print('Episodes %d -> %d Done (%.3fs) ... ' % 
-                    (max(1, step + 1 - LOG_STEPS), step+1, time.time() - start_time))
+                    (max(1, step + 1 - params['LOG_STEPS']), step+1, time.time() - start_time))
                 print('- Training loss: %.4f' % loss)
                 start_time = time.time()
 
@@ -224,8 +230,8 @@ def do_online_qlearning(env,
                 sys.stdout.flush()
             
 
-            if step % EVAL_STEPS == 0:
-                silent = (step % LOG_STEPS != 0)
+            if step % params['EVAL_STEPS'] == 0:
+                silent = (step % params['LOG_STEPS'] != 0)
                 cur_means, cur_stds = evaluate(test_env, sess, prediction, 
                                         states_pl, 5, GAMMA, silent)
 
@@ -234,7 +240,7 @@ def do_online_qlearning(env,
             
 
             # Save models
-            if dpaths is not None and step % SAVE_STEPS == 0:
+            if dpaths is not None and step % params['SAVE_STEPS'] == 0:
                 saver.save(sess, dpaths, global_step=step)
             
 

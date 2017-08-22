@@ -7,8 +7,8 @@ from skimage.transform import resize
 #import matplotlib.pyplot as plt
 
 
-FRAME_WIDTH = 84
-FRAME_HEIGHT = 84
+FRAME_WIDTH = 80
+FRAME_HEIGHT = 80
 FRAME_BUFFER_SIZE = 4
 MAX_EPISODE = 700
 
@@ -45,14 +45,15 @@ def evaluate_random(env,
             t += 1
 
             a_rnd = env.action_space.sample()
+            #print("A random:", a_rnd)
             observation, reward, done, _ = env.step(a_rnd)
 
             # Clip reward
-            r = reward_clip(reward)
+            #r = reward_clip(reward)
 
             # Return value
-            retval += pow(gamma, t)*r
-            score += r
+            retval += pow(gamma, t)*reward
+            score += reward
 
             if render:         
                 env.render()
@@ -109,13 +110,12 @@ def evaluate(env,
 
         while not done and t < MAX_EPISODE:
             t += 1
-            #print("eval step:", t)
+
             
             # Stack observations in buffer of 4
             if len(observation_buffer) < FRAME_BUFFER_SIZE:
 
                 observation_buffer.append(observation)
-
                 # Collect next observation with uniformly random action
                 a_rnd = env.action_space.sample()
                 observation, _, done, _ = env.step(a_rnd)
@@ -130,6 +130,7 @@ def evaluate(env,
                     states_pl: state.reshape(
                         [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
                 })
+                #print(action)
 
                 # test = sess.run(q_output, feed_dict={
                 #     states_pl: state.reshape(
