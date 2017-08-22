@@ -6,13 +6,13 @@ from gym.utils import seeding
 import numpy as np
 
 from skimage.color import gray2rgb
-import matplotlib.pyplot as plt
+#import matplotlib.pyplot as plt
 
 
 
 RAD2DEG = 57.29577951308232
 
-f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
+#f, (ax1, ax2) = plt.subplots(1, 2, sharey=True)
 # f2, (ax11, ax22) = plt.subplots(1, 2, sharey=True)
 
 def is_sorted(l):
