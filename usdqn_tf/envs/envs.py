@@ -32,7 +32,7 @@ def nearest_neighbors(x, y) :
 
     return nearest_neighbor
 
-class UsdqnOneDoFSimulator(object):
+class UsdqnOneDoFSimulatorDiscreteActions(object):
 
     def __init__(self, is_training=True):
         self.is_training = is_training
@@ -89,7 +89,7 @@ class UsdqnOneDoFSimulator(object):
         self.labels = np.zeros_like(self.raw_labels)
         self.labels[goal_indx] = 1
 
-        print("GOALS LENGTH: ", self.labels.shape)
+        #print("GOALS LENGTH: ", self.labels.shape)
 
         self.data_discrete = np.arange(-3.05, 3.05, 0.01)
         disc_indx = nearest_neighbors(self.data_discrete, self.raw_labels)
@@ -97,11 +97,11 @@ class UsdqnOneDoFSimulator(object):
         self.labels = self.labels[disc_indx]
         self.images = self.raw_images[disc_indx, 2:-2, 2:-2]
 
-        print("INIT GOALS INDX: ", np.argwhere(self.labels == 1))
+        # print("INIT GOALS INDX: ", np.argwhere(self.labels == 1))
 
-        print("labels shape: ", self.labels.shape)
-        print("labels has 2 goals: ", np.count_nonzero(self.labels))
-        print("Image shape:", self.images.shape)
+        # print("labels shape: ", self.labels.shape)
+        # print("labels has 2 goals: ", np.count_nonzero(self.labels))
+        # print("Image shape:", self.images.shape)
 
 
 
@@ -154,7 +154,7 @@ class UsdqnOneDoFSimulator(object):
         # else:
         #     return False
         if self.labels[self.current_indx] == 1:
-            print("## Done objective")
+            #print("## Done objective")
             return True
         else:
             return False
@@ -173,7 +173,7 @@ class UsdqnOneDoFSimulator(object):
     def reset(self, np_random):
         # Random angle in range 0->175
         #rnd_angle = np_random.uniform(low=0, high=180*(1/RAD2DEG))
-        rnd_angle = np_random.randint(low=0, high=174)
+        rnd_angle = np_random.randint(low=0, high=175)
         #print("## Reseting")
         #print("- New random angle:", rnd_angle)
         #print("- Are labels sorted ?", is_sorted(self.labels))
@@ -190,9 +190,9 @@ class UsdqnOneDoFSimulator(object):
         #print("- To shift:", to_shift)
         # Roll images and labels
 
-        print("# Resetting, shifting: ", rnd_angle)
-        print("# First objective: ", np.argwhere(self.labels == 1)[0][0])
-        print("# Is finishable: ", np.argwhere(self.labels == 1)[0][0] < len(self.discrete_actions))
+        # print("# Resetting, shifting: ", rnd_angle)
+        # print("# First objective: ", np.argwhere(self.labels == 1)[0][0])
+        # print("# Is finishable: ", np.argwhere(self.labels == 1)[0][0] < len(self.discrete_actions))
 
         self.labels = np.roll(self.labels, rnd_angle)
         self.images = np.roll(self.images, rnd_angle, axis=0) 

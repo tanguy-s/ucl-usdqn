@@ -17,6 +17,7 @@ from core.utils import evaluate_random
 
 from envs.envs import (
     Continuous_UsdqnOneDoFEnv,
+    UsdqnOneDoFSimulatorDiscreteActions,
     UsdqnOneDoFSimulatorTwoActions,
     UsdqnOneDoFSimulatorSixActions,
 )
@@ -68,6 +69,23 @@ ENVS = {
         'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(500000, 32),
         'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 800000 },
+        'params': {
+            'TRAINING_STEPS':1000000,
+            'LOG_STEPS':5000,
+            'LOSS_STEPS':2000,
+            'EVAL_STEPS':10000,
+            'SAVE_STEPS':50000,
+            'TARGET_UPDATE':10000,
+        }
+    },
+    '1dof_Da': {
+        'env_name': 'Continuous 1 DoF',
+        'env_cls': Continuous_UsdqnOneDoFEnv,
+        'sim_cls': UsdqnOneDoFSimulatorDiscreteActions,
+        'learning_rate': 0.00015, #0.00025
+        'gpu_device': '/gpu:0',
+        'exp_replay': ExperienceReplayBuffer(500000, 64),
+        'epsilon': { 'start': 1, 'end': 0.1, 'decay': 800000 },
         'params': {
             'TRAINING_STEPS':1000000,
             'LOG_STEPS':5000,
