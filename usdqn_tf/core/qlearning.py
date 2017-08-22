@@ -233,7 +233,7 @@ def do_online_qlearning(env,
             if step % params['EVAL_STEPS'] == 0:
                 silent = (step % params['LOG_STEPS'] != 0)
                 cur_means, cur_stds = evaluate(test_env, sess, prediction, 
-                                        states_pl, 5, GAMMA, silent)
+                                        states_pl, 20, GAMMA, silent)
 
                 # Save means
                 means.append(cur_means)
