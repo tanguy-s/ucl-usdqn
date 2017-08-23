@@ -433,6 +433,124 @@ class UsdqnOneDoFSimulatorTwoActionsSl(object):
         return np.argwhere(self.labels == 1)[0][0] * 0.01
 
 
+class UsdqnOneDoFSimulatorTwoActionsSlStay(object):
+
+    def __init__(self, is_training=True):
+        self.is_training = is_training
+        self.min_action = -3.05
+        #self.max_action = 3.05
+        self.max_action = -3.05 + 180*(1/RAD2DEG)
+
+        #self.discrete_actions = np.array([-90, -30, -1, 1, 30, 90])
+        self.discrete_actions = np.array([-1, 0, 1])
+
+        self.goal_positions = None
+        self.current_indx = None
+        self.goal_indx = None
+        self.dist_to_goal_old = None
+        self.dist_to_goal_new = None
+        self.time_on_goal = None
+
+        self.load_dataset()
+
+    def load_dataset(self):
+
+        self.raw_images = np.load('../data/1dof/usdqn-images-training.npy')
+        self.raw_labels = np.load('../data/1dof/usdqn-labels-training.npy')
+
+        self.goal_positions = np.array([
+                self.min_action + 90*(1/RAD2DEG) - 2*(1/RAD2DEG),
+                self.min_action + 270*(1/RAD2DEG)
+            ])
+
+        goal_indx = list()
+        for g in self.goal_positions:
+            goal_indx.append((np.abs(self.raw_labels - g)).argmin())
+
+        self.labels = np.zeros_like(self.raw_labels)
+        self.labels[goal_indx] = 1
+
+
+        self.data_discrete = np.arange(-3.05, 3.05, 0.01)
+        disc_indx = nearest_neighbors(self.data_discrete, self.raw_labels)
+
+        self.labels = self.labels[disc_indx]
+        self.images = self.raw_images[disc_indx, 2:-2, 2:-2]
+
+
+    def set_angle(self, action):
+        action = self.discrete_actions[action]
+        self.dist_to_goal_new = self.dist_to_goal_old + action
+        # action is -1 or 1
+        #print("action: ", action)
+        #self.labels = np.roll(self.labels, action)
+        #self.images = np.roll(self.images, action, axis=0)
+        self.current_indx += action
+
+        
+    def is_done(self):
+        # if self.labels.take(self.current_indx, mode='wrap') == 1:
+        #     #print("## Done objective")
+        #     return True
+        # else:
+        #     return False
+        if self.time_on_goal == 100:
+            return True
+        else:
+            return False
+
+    def get_dist_to_goal(self):
+        # if the first objective is in the first quadrant then it is the closest
+        # otherwise the closest objective is in the 4 quadrant
+        goals = np.argwhere(self.labels == 1)
+        if goals[0][0] < int(len(self.labels) / 4):
+            return goals[0][0]
+        else:
+            return len(self.labels) - goals[1][0]
+
+
+    def reset(self, np_random):
+        rnd_angle = np_random.randint(low=0, high=174)
+
+        self.labels = np.roll(self.labels, rnd_angle)
+        self.images = np.roll(self.images, rnd_angle, axis=0)
+
+        self.current_indx = 0
+        self.time_on_goal = 0 
+        self.dist_to_goal_old = self.get_dist_to_goal()
+
+
+    def get_image(self):
+        if self.current_indx is None:
+            raise 
+        return self.images.take(self.current_indx, axis=0, mode='wrap')
+
+    def get_reward(self):
+        if self.current_indx is None:
+            raise
+
+        # if self.is_done():
+        #     return 0
+
+        if self.dist_to_goal_new == 0:
+            self.time_on_goal += 1 
+            return +1
+        elif self.dist_to_goal_new > self.dist_to_goal_old:
+            self.time_on_goal = 0 
+            return -1
+        else:
+            self.time_on_goal = 0 
+            return 0
+
+    def get_angle(self):
+        if self.current_indx is None:
+            raise 
+        return self.current_indx * 0.01
+
+    def get_goal_angle(self):
+        return np.argwhere(self.labels == 1)[0][0] * 0.01
+
+
 class UsdqnOneDoFSimulatorSixActions(object):
 
     def __init__(self, is_training=True):
