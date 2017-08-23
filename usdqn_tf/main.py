@@ -88,7 +88,7 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 0.5, 'end': 0.05, 'decay': 800000 },
         'params': {
-            'TRAINING_STEPS':1000000,
+            'TRAINING_STEPS':100000,
             'LOG_STEPS':5000,
             'LOSS_STEPS':2000,
             'EVAL_STEPS':10000,
