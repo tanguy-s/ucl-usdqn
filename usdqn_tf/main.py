@@ -19,6 +19,7 @@ from envs.envs import (
     Continuous_UsdqnOneDoFEnv,
     UsdqnOneDoFSimulatorDiscreteActions,
     UsdqnOneDoFSimulatorTwoActions,
+    UsdqnOneDoFSimulatorTwoActionsSl,
     UsdqnOneDoFSimulatorSixActions,
 )
 
@@ -76,6 +77,23 @@ ENVS = {
             'EVAL_STEPS':10000,
             'SAVE_STEPS':50000,
             'TARGET_UPDATE':10000,
+        }
+    },
+    '1dof_2a_sl': {
+        'env_name': 'Continuous 1 DoF',
+        'env_cls': Continuous_UsdqnOneDoFEnv,
+        'sim_cls': UsdqnOneDoFSimulatorTwoActionsSl,
+        'learning_rate': 0.00025, #0.00025
+        'gpu_device': '/gpu:1',
+        'exp_replay': ExperienceReplayBuffer(200000, 32),
+        'epsilon': { 'start': 0.5, 'end': 0.05, 'decay': 800000 },
+        'params': {
+            'TRAINING_STEPS':1000000,
+            'LOG_STEPS':5000,
+            'LOSS_STEPS':2000,
+            'EVAL_STEPS':10000,
+            'SAVE_STEPS':50000,
+            'TARGET_UPDATE':5000,
         }
     },
     '1dof_Da': {
