@@ -154529,3 +154529,11429 @@ Episode 99/100
  2017-08-23 13:43:30
 Episodes 90001 -> 95001 Done (53.017s) ... 
 - Training loss: 0.0000
+2017-08-23 14:11:37.726081: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-23 14:11:37.726107: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-23 14:11:37.726111: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-23 14:11:37.726116: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX2 instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-23 14:11:37.726119: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use FMA instructions, but these are available on your machine and could speed up CPU computations.
+2017-08-23 14:11:37.836445: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-08-23 14:11:37.836833: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 0 with properties: 
+name: GeForce GTX 1070
+major: 6 minor: 1 memoryClockRate (GHz) 1.683
+pciBusID 0000:01:00.0
+Total memory: 7.92GiB
+Free memory: 7.39GiB
+2017-08-23 14:11:37.949540: W tensorflow/stream_executor/cuda/cuda_driver.cc:523] A non-primary context 0x3cde770 exists before initializing the StreamExecutor. We haven't verified StreamExecutor works with that.
+2017-08-23 14:11:37.949804: I tensorflow/stream_executor/cuda/cuda_gpu_executor.cc:893] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero
+2017-08-23 14:11:37.950228: I tensorflow/core/common_runtime/gpu/gpu_device.cc:955] Found device 1 with properties: 
+name: GeForce GTX 1070
+major: 6 minor: 1 memoryClockRate (GHz) 1.683
+pciBusID 0000:02:00.0
+Total memory: 7.92GiB
+Free memory: 7.83GiB
+2017-08-23 14:11:37.950759: I tensorflow/core/common_runtime/gpu/gpu_device.cc:976] DMA: 0 1 
+2017-08-23 14:11:37.950767: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 0:   Y Y 
+2017-08-23 14:11:37.950770: I tensorflow/core/common_runtime/gpu/gpu_device.cc:986] 1:   Y Y 
+2017-08-23 14:11:37.950775: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:0) -> (device: 0, name: GeForce GTX 1070, pci bus id: 0000:01:00.0)
+2017-08-23 14:11:37.950779: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1045] Creating TensorFlow device (/gpu:1) -> (device: 1, name: GeForce GTX 1070, pci bus id: 0000:02:00.0)
+Running Continuous 1 DoF run 1/1 ...
+
+ 2017-08-23 14:11:38
+Episodes 1 -> 1 Done (0.005s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: -95.011854 std: 0.000000
+- Scores stats:
+ Mean: -696.000000 std: 0.000000
+
+ 2017-08-23 14:13:09
+Episodes 1 -> 5001 Done (90.954s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:13:51
+Episodes 5001 -> 10001 Done (42.046s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:15:20
+Episodes 10001 -> 15001 Done (89.313s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:16:03
+Episodes 15001 -> 20001 Done (42.593s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:17:33
+Episodes 20001 -> 25001 Done (90.002s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:18:15
+Episodes 25001 -> 30001 Done (42.766s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 14:19:45
+Episodes 30001 -> 35001 Done (89.767s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:20:27
+Episodes 35001 -> 40001 Done (42.372s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 14:21:57
+Episodes 40001 -> 45001 Done (89.730s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:22:39
+Episodes 45001 -> 50001 Done (42.077s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:24:09
+Episodes 50001 -> 55001 Done (89.868s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:24:51
+Episodes 55001 -> 60001 Done (42.206s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:26:21
+Episodes 60001 -> 65001 Done (90.159s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:27:04
+Episodes 65001 -> 70001 Done (42.899s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:28:35
+Episodes 70001 -> 75001 Done (90.219s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:29:17
+Episodes 75001 -> 80001 Done (42.353s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 14:30:47
+Episodes 80001 -> 85001 Done (89.599s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:31:29
+Episodes 85001 -> 90001 Done (42.849s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:33:00
+Episodes 90001 -> 95001 Done (90.123s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:33:42
+Episodes 95001 -> 100001 Done (41.982s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:35:12
+Episodes 100001 -> 105001 Done (90.475s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:35:55
+Episodes 105001 -> 110001 Done (42.832s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.599381 std: 5.963764
+- Scores stats:
+ Mean: 0.990000 std: 9.850376
+
+ 2017-08-23 14:37:24
+Episodes 110001 -> 115001 Done (89.426s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:38:06
+Episodes 115001 -> 120001 Done (42.073s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:39:37
+Episodes 120001 -> 125001 Done (90.265s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:40:20
+Episodes 125001 -> 130001 Done (43.501s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.595829 std: 5.928426
+- Scores stats:
+ Mean: 0.980000 std: 9.750877
+
+ 2017-08-23 14:41:49
+Episodes 130001 -> 135001 Done (89.016s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:42:31
+Episodes 135001 -> 140001 Done (42.079s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:44:01
+Episodes 140001 -> 145001 Done (89.903s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:44:44
+Episodes 145001 -> 150001 Done (42.740s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.599381 std: 5.963764
+- Scores stats:
+ Mean: 0.990000 std: 9.850376
+
+ 2017-08-23 14:46:13
+Episodes 150001 -> 155001 Done (89.404s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:46:56
+Episodes 155001 -> 160001 Done (42.303s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:48:25
+Episodes 160001 -> 165001 Done (89.608s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:49:07
+Episodes 165001 -> 170001 Done (42.002s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:50:37
+Episodes 170001 -> 175001 Done (89.542s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:51:19
+Episodes 175001 -> 180001 Done (42.169s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 14:52:48
+Episodes 180001 -> 185001 Done (89.162s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:53:31
+Episodes 185001 -> 190001 Done (42.644s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 14:55:00
+Episodes 190001 -> 195001 Done (89.511s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:55:42
+Episodes 195001 -> 200001 Done (42.126s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:57:13
+Episodes 200001 -> 205001 Done (91.083s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 14:57:56
+Episodes 205001 -> 210001 Done (42.702s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 14:59:27
+Episodes 210001 -> 215001 Done (90.421s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:00:10
+Episodes 215001 -> 220001 Done (43.204s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:01:40
+Episodes 220001 -> 225001 Done (90.212s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:02:22
+Episodes 225001 -> 230001 Done (42.482s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:03:53
+Episodes 230001 -> 235001 Done (90.570s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:04:36
+Episodes 235001 -> 240001 Done (43.448s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:06:07
+Episodes 240001 -> 245001 Done (90.153s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:06:49
+Episodes 245001 -> 250001 Done (42.884s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 15:08:20
+Episodes 250001 -> 255001 Done (90.734s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:09:03
+Episodes 255001 -> 260001 Done (43.276s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 15:10:34
+Episodes 260001 -> 265001 Done (90.395s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:11:17
+Episodes 265001 -> 270001 Done (43.069s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:12:48
+Episodes 270001 -> 275001 Done (91.075s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:13:31
+Episodes 275001 -> 280001 Done (43.097s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:15:01
+Episodes 280001 -> 285001 Done (90.200s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:15:44
+Episodes 285001 -> 290001 Done (43.141s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:17:15
+Episodes 290001 -> 295001 Done (90.692s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:17:58
+Episodes 295001 -> 300001 Done (42.773s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 15:19:29
+Episodes 300001 -> 305001 Done (90.869s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:20:12
+Episodes 305001 -> 310001 Done (43.158s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:21:42
+Episodes 310001 -> 315001 Done (90.550s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:22:26
+Episodes 315001 -> 320001 Done (43.106s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:23:57
+Episodes 320001 -> 325001 Done (91.197s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:24:40
+Episodes 325001 -> 330001 Done (43.166s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:26:11
+Episodes 330001 -> 335001 Done (90.693s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:26:54
+Episodes 335001 -> 340001 Done (43.178s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:28:25
+Episodes 340001 -> 345001 Done (90.942s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:29:08
+Episodes 345001 -> 350001 Done (43.112s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 15:30:39
+Episodes 350001 -> 355001 Done (91.313s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:31:23
+Episodes 355001 -> 360001 Done (43.502s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:32:54
+Episodes 360001 -> 365001 Done (91.072s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:33:37
+Episodes 365001 -> 370001 Done (43.115s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:35:08
+Episodes 370001 -> 375001 Done (91.586s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:35:51
+Episodes 375001 -> 380001 Done (42.942s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.599381 std: 5.963764
+- Scores stats:
+ Mean: 0.990000 std: 9.850376
+
+ 2017-08-23 15:37:22
+Episodes 380001 -> 385001 Done (90.758s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:38:05
+Episodes 385001 -> 390001 Done (43.099s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:39:37
+Episodes 390001 -> 395001 Done (91.441s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:40:20
+Episodes 395001 -> 400001 Done (43.346s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 15:41:51
+Episodes 400001 -> 405001 Done (91.183s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:42:35
+Episodes 405001 -> 410001 Done (43.327s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:44:06
+Episodes 410001 -> 415001 Done (91.712s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:44:50
+Episodes 415001 -> 420001 Done (43.482s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:46:21
+Episodes 420001 -> 425001 Done (90.745s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:47:04
+Episodes 425001 -> 430001 Done (43.168s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 15:48:35
+Episodes 430001 -> 435001 Done (90.885s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:49:18
+Episodes 435001 -> 440001 Done (43.393s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.588618 std: 5.856675
+- Scores stats:
+ Mean: 0.960000 std: 9.551879
+
+ 2017-08-23 15:50:49
+Episodes 440001 -> 445001 Done (91.392s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:51:33
+Episodes 445001 -> 450001 Done (43.591s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:53:04
+Episodes 450001 -> 455001 Done (91.494s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:53:49
+Episodes 455001 -> 460001 Done (44.507s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.599381 std: 5.963764
+- Scores stats:
+ Mean: 0.990000 std: 9.850376
+
+ 2017-08-23 15:55:20
+Episodes 460001 -> 465001 Done (91.339s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:56:04
+Episodes 465001 -> 470001 Done (43.668s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:57:36
+Episodes 470001 -> 475001 Done (91.578s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 15:58:19
+Episodes 475001 -> 480001 Done (43.282s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 15:59:51
+Episodes 480001 -> 485001 Done (92.010s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:00:34
+Episodes 485001 -> 490001 Done (43.613s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:02:06
+Episodes 490001 -> 495001 Done (91.811s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:02:50
+Episodes 495001 -> 500001 Done (43.952s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:04:23
+Episodes 500001 -> 505001 Done (92.943s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:05:07
+Episodes 505001 -> 510001 Done (43.801s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:06:39
+Episodes 510001 -> 515001 Done (92.399s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:07:23
+Episodes 515001 -> 520001 Done (43.728s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:08:56
+Episodes 520001 -> 525001 Done (92.553s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:09:40
+Episodes 525001 -> 530001 Done (44.484s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:11:12
+Episodes 530001 -> 535001 Done (91.897s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:11:56
+Episodes 535001 -> 540001 Done (43.593s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 16:13:27
+Episodes 540001 -> 545001 Done (91.266s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:14:11
+Episodes 545001 -> 550001 Done (44.069s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:15:43
+Episodes 550001 -> 555001 Done (92.471s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:16:28
+Episodes 555001 -> 560001 Done (44.252s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.599381 std: 5.963764
+- Scores stats:
+ Mean: 0.990000 std: 9.850376
+
+ 2017-08-23 16:17:59
+Episodes 560001 -> 565001 Done (91.277s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:18:43
+Episodes 565001 -> 570001 Done (43.843s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:20:15
+Episodes 570001 -> 575001 Done (92.062s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:20:59
+Episodes 575001 -> 580001 Done (43.896s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:22:31
+Episodes 580001 -> 585001 Done (92.430s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:23:16
+Episodes 585001 -> 590001 Done (44.628s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:24:48
+Episodes 590001 -> 595001 Done (92.181s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:25:32
+Episodes 595001 -> 600001 Done (44.477s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 1.790896 std: 10.184008
+- Scores stats:
+ Mean: 2.950000 std: 16.776993
+
+ 2017-08-23 16:27:03
+Episodes 600001 -> 605001 Done (90.747s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:27:47
+Episodes 605001 -> 610001 Done (44.126s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:29:20
+Episodes 610001 -> 615001 Done (93.022s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:30:04
+Episodes 615001 -> 620001 Done (44.102s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:31:37
+Episodes 620001 -> 625001 Done (92.949s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:32:22
+Episodes 625001 -> 630001 Done (44.837s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:33:55
+Episodes 630001 -> 635001 Done (92.573s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:34:39
+Episodes 635001 -> 640001 Done (44.195s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:36:12
+Episodes 640001 -> 645001 Done (92.574s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:36:56
+Episodes 645001 -> 650001 Done (44.344s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 16:38:28
+Episodes 650001 -> 655001 Done (91.969s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:39:12
+Episodes 655001 -> 660001 Done (44.188s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 1.198726 std: 8.391232
+- Scores stats:
+ Mean: 1.980000 std: 13.860721
+
+ 2017-08-23 16:40:45
+Episodes 660001 -> 665001 Done (92.689s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:41:29
+Episodes 665001 -> 670001 Done (44.182s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:43:02
+Episodes 670001 -> 675001 Done (93.245s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:43:47
+Episodes 675001 -> 680001 Done (44.472s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 1.195139 std: 8.366310
+- Scores stats:
+ Mean: 1.970000 std: 13.791632
+
+ 2017-08-23 16:45:18
+Episodes 680001 -> 685001 Done (91.211s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:46:03
+Episodes 685001 -> 690001 Done (44.938s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:47:35
+Episodes 690001 -> 695001 Done (92.450s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:48:20
+Episodes 695001 -> 700001 Done (44.726s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:49:52
+Episodes 700001 -> 705001 Done (92.266s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:50:37
+Episodes 705001 -> 710001 Done (45.007s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:52:09
+Episodes 710001 -> 715001 Done (92.113s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:52:54
+Episodes 715001 -> 720001 Done (44.391s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:54:26
+Episodes 720001 -> 725001 Done (92.492s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:55:11
+Episodes 725001 -> 730001 Done (44.487s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 16:56:44
+Episodes 730001 -> 735001 Done (93.384s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:57:29
+Episodes 735001 -> 740001 Done (44.570s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 16:59:02
+Episodes 740001 -> 745001 Done (92.915s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 16:59:47
+Episodes 745001 -> 750001 Done (45.058s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:01:20
+Episodes 750001 -> 755001 Done (92.997s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:02:04
+Episodes 755001 -> 760001 Done (44.621s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:03:38
+Episodes 760001 -> 765001 Done (93.657s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:04:23
+Episodes 765001 -> 770001 Done (44.746s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:05:56
+Episodes 770001 -> 775001 Done (93.584s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:06:41
+Episodes 775001 -> 780001 Done (45.162s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:08:14
+Episodes 780001 -> 785001 Done (92.765s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:09:00
+Episodes 785001 -> 790001 Done (45.415s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.592242 std: 5.892731
+- Scores stats:
+ Mean: 0.970000 std: 9.651378
+
+ 2017-08-23 17:10:33
+Episodes 790001 -> 795001 Done (93.464s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:11:18
+Episodes 795001 -> 800001 Done (45.171s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:12:52
+Episodes 800001 -> 805001 Done (93.618s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:13:37
+Episodes 805001 -> 810001 Done (45.287s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:15:11
+Episodes 810001 -> 815001 Done (93.443s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:15:56
+Episodes 815001 -> 820001 Done (45.338s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:17:30
+Episodes 820001 -> 825001 Done (93.885s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:18:15
+Episodes 825001 -> 830001 Done (44.797s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 17:19:48
+Episodes 830001 -> 835001 Done (93.004s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:20:33
+Episodes 835001 -> 840001 Done (45.033s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:22:06
+Episodes 840001 -> 845001 Done (93.486s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:22:52
+Episodes 845001 -> 850001 Done (45.586s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:24:25
+Episodes 850001 -> 855001 Done (93.706s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:25:11
+Episodes 855001 -> 860001 Done (46.044s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:26:45
+Episodes 860001 -> 865001 Done (93.570s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:27:30
+Episodes 865001 -> 870001 Done (44.953s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:29:03
+Episodes 870001 -> 875001 Done (92.962s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:29:48
+Episodes 875001 -> 880001 Done (45.356s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:31:21
+Episodes 880001 -> 885001 Done (92.975s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:32:06
+Episodes 885001 -> 890001 Done (44.828s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:33:39
+Episodes 890001 -> 895001 Done (92.751s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:34:24
+Episodes 895001 -> 900001 Done (44.745s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 17:35:57
+Episodes 900001 -> 905001 Done (92.939s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:36:42
+Episodes 905001 -> 910001 Done (45.237s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 1.198726 std: 8.391232
+- Scores stats:
+ Mean: 1.980000 std: 13.860721
+
+ 2017-08-23 17:38:14
+Episodes 910001 -> 915001 Done (92.194s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:38:59
+Episodes 915001 -> 920001 Done (44.846s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:40:32
+Episodes 920001 -> 925001 Done (93.208s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:41:17
+Episodes 925001 -> 930001 Done (45.438s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:42:51
+Episodes 930001 -> 935001 Done (93.338s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:43:36
+Episodes 935001 -> 940001 Done (44.805s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 17:45:09
+Episodes 940001 -> 945001 Done (92.932s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:45:54
+Episodes 945001 -> 950001 Done (44.997s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:47:27
+Episodes 950001 -> 955001 Done (93.206s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:48:12
+Episodes 955001 -> 960001 Done (44.906s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:49:45
+Episodes 960001 -> 965001 Done (93.258s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:50:30
+Episodes 965001 -> 970001 Done (44.975s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.602897 std: 5.998749
+- Scores stats:
+ Mean: 1.000000 std: 9.949874
+
+ 2017-08-23 17:52:03
+Episodes 970001 -> 975001 Done (92.858s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:52:48
+Episodes 975001 -> 980001 Done (45.059s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:54:21
+Episodes 980001 -> 985001 Done (93.338s) ... 
+- Training loss: 0.0000
+
+ 2017-08-23 17:55:07
+Episodes 985001 -> 990001 Done (45.630s) ... 
+- Training loss: 0.0000
+Evaluation num episodes:  100
+Episode 0/100
+Episode 1/100
+Episode 2/100
+Episode 3/100
+Episode 4/100
+Episode 5/100
+Episode 6/100
+Episode 7/100
+Episode 8/100
+Episode 9/100
+Episode 10/100
+Episode 11/100
+Episode 12/100
+Episode 13/100
+Episode 14/100
+Episode 15/100
+Episode 16/100
+Episode 17/100
+Episode 18/100
+Episode 19/100
+Episode 20/100
+Episode 21/100
+Episode 22/100
+Episode 23/100
+Episode 24/100
+Episode 25/100
+Episode 26/100
+Episode 27/100
+Episode 28/100
+Episode 29/100
+Episode 30/100
+Episode 31/100
+Episode 32/100
+Episode 33/100
+Episode 34/100
+Episode 35/100
+Episode 36/100
+Episode 37/100
+Episode 38/100
+Episode 39/100
+Episode 40/100
+Episode 41/100
+Episode 42/100
+Episode 43/100
+Episode 44/100
+Episode 45/100
+Episode 46/100
+Episode 47/100
+Episode 48/100
+Episode 49/100
+Episode 50/100
+Episode 51/100
+Episode 52/100
+Episode 53/100
+Episode 54/100
+Episode 55/100
+Episode 56/100
+Episode 57/100
+Episode 58/100
+Episode 59/100
+Episode 60/100
+Episode 61/100
+Episode 62/100
+Episode 63/100
+Episode 64/100
+Episode 65/100
+Episode 66/100
+Episode 67/100
+Episode 68/100
+Episode 69/100
+Episode 70/100
+Episode 71/100
+Episode 72/100
+Episode 73/100
+Episode 74/100
+Episode 75/100
+Episode 76/100
+Episode 77/100
+Episode 78/100
+Episode 79/100
+Episode 80/100
+Episode 81/100
+Episode 82/100
+Episode 83/100
+Episode 84/100
+Episode 85/100
+Episode 86/100
+Episode 87/100
+Episode 88/100
+Episode 89/100
+Episode 90/100
+Episode 91/100
+Episode 92/100
+Episode 93/100
+Episode 94/100
+Episode 95/100
+Episode 96/100
+Episode 97/100
+Episode 98/100
+Episode 99/100
+# Evaluation of policy
+- Return stats:
+ Mean: 0.000000 std: 0.000000
+- Scores stats:
+ Mean: 0.000000 std: 0.000000
+
+ 2017-08-23 17:56:41
+Episodes 990001 -> 995001 Done (93.742s) ... 
+- Training loss: 0.0000

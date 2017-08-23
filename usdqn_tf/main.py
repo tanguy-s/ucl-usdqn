@@ -104,7 +104,7 @@ ENVS = {
         'learning_rate': 0.00025, #0.00025
         'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(200000, 32),
-        'epsilon': { 'start': 0.5, 'end': 0.05, 'decay': 800000 },
+        'epsilon': { 'start': 0.5, 'end': 0.01, 'decay': 800000 },
         'params': {
             'TRAINING_STEPS':1000000,
             'LOG_STEPS':5000,
