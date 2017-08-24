@@ -11,7 +11,7 @@ FRAME_WIDTH = 80
 FRAME_HEIGHT = 80
 FRAME_BUFFER_SIZE = 4
 
-def run_training_step(sess, q_target_net, loss_op, train_op, b_replay):
+def run_training_step(sess, q_target_net, loss_op, train_op, b_replay, states_pl, actions_pl, targets_pl):
     b_states, b_actions, b_reward, b_next_state, b_term_state = b_replay
     #Run training on batch
     q_out = sess.run(q_target_net, feed_dict={
@@ -184,9 +184,9 @@ def do_online_double_qlearning(env,
                     b_replay = replay_buffer.next_transitions()
 
                     if np.random.rand(1) > 0.50:
-                        loss = run_training_step(sess, q_output_1, loss_op_1, train_op_1, b_replay)
+                        loss = run_training_step(sess, q_output_1, loss_op_1, train_op_1, b_replay, states_pl, actions_pl, targets_pl)
                     else:
-                        loss = run_training_step(sess, q_output_2, loss_op_2, train_op_2, b_replay)
+                        loss = run_training_step(sess, q_output_2, loss_op_2, train_op_2, b_replay, states_pl, actions_pl, targets_pl)
                 
     
             if done:
