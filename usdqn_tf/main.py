@@ -12,6 +12,7 @@ import gym
 from models.models import UsdqnModel
 from core.buffers import ExperienceReplayBuffer
 from core.qlearning import do_online_qlearning
+from core.dqlearning import do_online_double_qlearning
 from core.testing import do_testing
 from core.utils import evaluate_random
 
@@ -68,7 +69,7 @@ ENVS = {
         'env_cls': Continuous_UsdqnOneDoFEnv,
         'sim_cls': UsdqnOneDoFSimulatorTwoActions,
         'learning_rate': 0.00015, #0.00025
-        'gpu_device': '/gpu:1',
+        'gpu_device': '/gpu:0',
         'exp_replay': ExperienceReplayBuffer(500000, 32),
         'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 800000 },
         'params': {
@@ -191,8 +192,19 @@ if __name__ == '__main__':
             results_file = os.path.join(
                     dumps_dir, 'results.csv')
 
-            loss, means = do_online_qlearning(env, test_env,
-                                model=UsdqnModel(env.action_space.n), 
+            # loss, means = do_online_qlearning(env, test_env,
+            #                     model=UsdqnModel(env.action_space.n), 
+            #                     params=tenv['params'],
+            #                     learning_rate=tenv['learning_rate'],
+            #                     epsilon_s=tenv['epsilon'], 
+            #                     gpu_device=tenv['gpu_device'],
+            #                     target_model=UsdqnModel(env.action_space.n, varscope='target'),
+            #                     replay_buffer=tenv['exp_replay'], # 10000 -> 100 lr 0.01
+            #                     dpaths=os.path.join(dumps_dir, FLAGS.env))
+
+            loss, means = do_online_double_qlearning(env, test_env,
+                                model_1=UsdqnModel(env.action_space.n, varscope='1'), 
+                                model_2=UsdqnModel(env.action_space.n, varscope='2'), 
                                 params=tenv['params'],
                                 learning_rate=tenv['learning_rate'],
                                 epsilon_s=tenv['epsilon'], 

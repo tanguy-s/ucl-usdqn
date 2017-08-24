@@ -11,10 +11,31 @@ FRAME_WIDTH = 80
 FRAME_HEIGHT = 80
 FRAME_BUFFER_SIZE = 4
 
+def run_training_step(sess, q_target_net, loss_op, train_op, b_replay):
+    b_states, b_actions, b_reward, b_next_state, b_term_state = b_replay
+    #Run training on batch
+    q_out = sess.run(q_target_net, feed_dict={
+            states_pl: b_next_state / 255
+        })
+    q_out_max = np.amax(q_out, axis=1)
+    q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
 
-def do_online_qlearning(env, 
+
+    # Run training Op on batch of replay experience
+    loss, _ = sess.run([loss_op, train_op], 
+        feed_dict={
+            states_pl: b_states / 255,
+            actions_pl: b_actions,
+            targets_pl: q_target.astype('float32')
+        })
+
+    return loss
+
+
+def do_online_double_qlearning(env, 
                         test_env,    
-                        model, 
+                        model_1,
+                        model_2, 
                         params,
                         learning_rate, 
                         epsilon_s,
@@ -35,42 +56,44 @@ def do_online_qlearning(env,
         targets_pl = tf.placeholder(tf.float32, shape=(None), name='targets')
 
         # Value function approximator network
-        q_output = model.graph(states_pl)
+        q_output_1 = model_1.graph(states_pl)
+        q_output_2 = model_2.graph(states_pl)
 
         # Build target network
-        q_target_net = target_model.graph(states_pl)
+        #q_target_net = target_model.graph(states_pl)
 
-        tf_train = tf.trainable_variables()
-        num_tf_train = len(tf_train)
-        target_net_vars = []
-        for i, var in enumerate(tf_train[0:num_tf_train // 2]):
-            target_net_vars.append(tf_train[i + num_tf_train // 2].assign(var.value()))
+        # tf_train = tf.trainable_variables()
+        # num_tf_train = len(tf_train)
+        # target_net_vars = []
+        # for i, var in enumerate(tf_train[0:num_tf_train // 2]):
+        #     target_net_vars.append(tf_train[i + num_tf_train // 2].assign(var.value()))
 
-        # Compute Q from current q_output and one hot actions
-        # Q = tf.reduce_sum(
-        #         tf.multiply(q_output, actions_pl), axis=1)
 
-        Q = tf.reduce_sum(
-                tf.multiply(q_output, 
+        Q1 = tf.reduce_sum(
+                tf.multiply(q_output_1, 
+                    tf.one_hot(actions_pl, env.action_space.n, dtype=tf.float32)
+                ), axis=1)
+        Q2 = tf.reduce_sum(
+                tf.multiply(q_output_2, 
                     tf.one_hot(actions_pl, env.action_space.n, dtype=tf.float32)
                 ), axis=1)
 
         # Loss operation 
-        loss_op = tf.reduce_mean(tf.square(targets_pl - Q) / 2)
-
-        # Loss operation 
-        #loss_op = tf.reduce_mean(tf.square(targets_pl - q_output) / 2)
+        loss_op_1 = tf.reduce_mean(tf.square(targets_pl - Q1) / 2)
+        loss_op_2 = tf.reduce_mean(tf.square(targets_pl - Q2) / 2)
 
         # Optimizer Op
         #optimizer = tf.train.RMSPropOptimizer(learning_rate=learning_rate)
         optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate)
 
         # Training Op
-        train_op = optimizer.minimize(loss_op)
+        train_op_1 = optimizer.minimize(loss_op_1)
+        train_op_2 = optimizer.minimize(loss_op_2)
 
         # Prediction Op
-        prediction = tf.argmax(q_output, 1)
-        #prediction = q_output
+        prediction_1 = tf.argmax(q_output_1, 1)
+        prediction_2 = tf.argmax(q_output_2, 1)
+        prediction = tf.argmax(q_output_1 + q_output_2, 1)
 
     # Model Saver
     saver = tf.train.Saver()
@@ -136,6 +159,8 @@ def do_online_qlearning(env,
                         states_pl: state.reshape(
                             [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32') / 255
                     })
+
+                 #action = np.argmax(q_out_1 + q_out_2, axis=1).astype('int32')
                 
                 # action for next observation
                 action = action.reshape([-1]).astype('int32')
@@ -156,27 +181,12 @@ def do_online_qlearning(env,
                 # If replay buffer is ready to be sampled
                 if replay_buffer.ready:
                     # Train model on replay buffer
-                    b_states, b_actions, b_reward, b_next_state, b_term_state = replay_buffer.next_transitions()
+                    b_replay = replay_buffer.next_transitions()
 
-                    #Run training on batch
-                    q_out = sess.run(q_target_net, feed_dict={
-                            states_pl: b_next_state / 255
-                        })
-                    # q_out = sess.run(q_output, feed_dict={
-                    #          states_pl: b_next_state / 255
-                    #      })
-                    q_out_max = np.amax(q_out, axis=1)
-                    q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
-
-
-                    # Run training Op on batch of replay experience
-                    loss, _ = sess.run([loss_op, train_op], 
-                        feed_dict={
-                            states_pl: b_states / 255,
-                            actions_pl: b_actions,
-                            targets_pl: q_target.astype('float32')
-                        })
-    
+                    if np.random.rand(1) > 0.50:
+                        loss = run_training_step(sess, q_output_1, loss_op_1, train_op_1, b_replay)
+                    else:
+                        loss = run_training_step(sess, q_output_2, loss_op_2, train_op_2, b_replay)
                 
     
             if done:
@@ -187,9 +197,9 @@ def do_online_qlearning(env,
                 epsilon -= (epsilon_s['start'] - epsilon_s['end']) / epsilon_s['decay']
 
             # Copy variables target network
-            if (step + 1) % params['TARGET_UPDATE'] == 0:
-                for var in target_net_vars:
-                    sess.run(var)
+            # if (step + 1) % params['TARGET_UPDATE'] == 0:
+                # for var in target_net_vars:
+                    # sess.run(var)
             
 
             if step % params['LOSS_STEPS'] == 0:

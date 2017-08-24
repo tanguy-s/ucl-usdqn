@@ -455,6 +455,8 @@ class UsdqnOneDoFSimulatorTwoActionsSlStay(object):
 
     def load_dataset(self):
 
+        print("Test set size:", np.load('../data/1dof/usdqn-labels-testing.npy'))
+
         self.raw_images = np.load('../data/1dof/usdqn-images-training.npy')
         self.raw_labels = np.load('../data/1dof/usdqn-labels-training.npy')
 
@@ -481,19 +483,9 @@ class UsdqnOneDoFSimulatorTwoActionsSlStay(object):
     def set_angle(self, action):
         action = self.discrete_actions[action]
         self.dist_to_goal_new = self.dist_to_goal_old + action
-        # action is -1 or 1
-        #print("action: ", action)
-        #self.labels = np.roll(self.labels, action)
-        #self.images = np.roll(self.images, action, axis=0)
         self.current_indx += action
-
         
     def is_done(self):
-        # if self.labels.take(self.current_indx, mode='wrap') == 1:
-        #     #print("## Done objective")
-        #     return True
-        # else:
-        #     return False
         if self.time_on_goal == 100:
             return True
         else:
@@ -528,9 +520,6 @@ class UsdqnOneDoFSimulatorTwoActionsSlStay(object):
     def get_reward(self):
         if self.current_indx is None:
             raise
-
-        # if self.is_done():
-        #     return 0
 
         if self.dist_to_goal_new == 0:
             self.time_on_goal += 1 
