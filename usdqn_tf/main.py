@@ -23,6 +23,7 @@ from envs.envs import (
     UsdqnOneDoFSimulatorTwoActionsSl,
     UsdqnOneDoFSimulatorTwoActionsSlStay,
     UsdqnOneDoFSimulatorSixActions,
+    UsdqnOneDoFSimulatorDiscreteActionsSemi
 )
 
 
@@ -44,6 +45,7 @@ ENVS = {
             'EVAL_STEPS':2000,
             'SAVE_STEPS':10000,
             'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':100,
         }
     },
     '1dof_6a': {
@@ -61,6 +63,7 @@ ENVS = {
             'EVAL_STEPS':10000,
             'SAVE_STEPS':50000,
             'TARGET_UPDATE':10000,
+            'EVAL_EPISODES':100,
         }
 
     },
@@ -79,6 +82,7 @@ ENVS = {
             'EVAL_STEPS':10000,
             'SAVE_STEPS':50000,
             'TARGET_UPDATE':10000,
+            'EVAL_EPISODES':100,
         }
     },
     '1dof_dbl_2a': {
@@ -96,6 +100,7 @@ ENVS = {
             'EVAL_STEPS':10000,
             'SAVE_STEPS':50000,
             'TARGET_UPDATE':10000,
+            'EVAL_EPISODES':100,
         }
     },
     '1dof_2a_sl': {
@@ -113,6 +118,7 @@ ENVS = {
             'EVAL_STEPS':10000,
             'SAVE_STEPS':50000,
             'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':100,
         }
     },
     '1dof_2a_slt': {
@@ -130,6 +136,7 @@ ENVS = {
             'EVAL_STEPS':10000,
             'SAVE_STEPS':50000,
             'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':100,
         }
     },
     '1dof_Da': {
@@ -147,6 +154,25 @@ ENVS = {
             'EVAL_STEPS':10000,
             'SAVE_STEPS':50000,
             'TARGET_UPDATE':10000,
+            'EVAL_EPISODES':100,
+        }
+    },
+    '1dof_Da_semi': {
+        'env_name': 'Continuous 1 DoF',
+        'env_cls': Continuous_UsdqnOneDoFEnv,
+        'sim_cls': UsdqnOneDoFSimulatorDiscreteActionsSemi,
+        'learning_rate': 0.00025, #0.00025
+        'gpu_device': '/gpu:0',
+        'exp_replay': ExperienceReplayBuffer(500000, 64),
+        'epsilon': { 'start': 1, 'end': 0.1, 'decay': 600000 },
+        'params': {
+            'TRAINING_STEPS':1000000,
+            'LOG_STEPS':5000,
+            'LOSS_STEPS':2000,
+            'EVAL_STEPS':10000,
+            'SAVE_STEPS':50000,
+            'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':100,
         }
     },
 }
@@ -209,19 +235,8 @@ if __name__ == '__main__':
             results_file = os.path.join(
                     dumps_dir, 'results.csv')
 
-            # loss, means = do_online_qlearning(env, test_env,
-            #                     model=UsdqnModel(env.action_space.n), 
-            #                     params=tenv['params'],
-            #                     learning_rate=tenv['learning_rate'],
-            #                     epsilon_s=tenv['epsilon'], 
-            #                     gpu_device=tenv['gpu_device'],
-            #                     target_model=UsdqnModel(env.action_space.n, varscope='target'),
-            #                     replay_buffer=tenv['exp_replay'], # 10000 -> 100 lr 0.01
-            #                     dpaths=os.path.join(dumps_dir, FLAGS.env))
-
-            loss, means = do_online_double_qlearning(env, test_env,
-                                model_1=UsdqnModel(env.action_space.n, varscope='1'), 
-                                model_2=UsdqnModel(env.action_space.n, varscope='2'), 
+            loss, means = do_online_qlearning(env, test_env,
+                                model=UsdqnModel(env.action_space.n), 
                                 params=tenv['params'],
                                 learning_rate=tenv['learning_rate'],
                                 epsilon_s=tenv['epsilon'], 
@@ -229,6 +244,17 @@ if __name__ == '__main__':
                                 target_model=UsdqnModel(env.action_space.n, varscope='target'),
                                 replay_buffer=tenv['exp_replay'], # 10000 -> 100 lr 0.01
                                 dpaths=os.path.join(dumps_dir, FLAGS.env))
+
+            # loss, means = do_online_double_qlearning(env, test_env,
+            #                     model_1=UsdqnModel(env.action_space.n, varscope='1'), 
+            #                     model_2=UsdqnModel(env.action_space.n, varscope='2'), 
+            #                     params=tenv['params'],
+            #                     learning_rate=tenv['learning_rate'],
+            #                     epsilon_s=tenv['epsilon'], 
+            #                     gpu_device=tenv['gpu_device'],
+            #                     target_model=UsdqnModel(env.action_space.n, varscope='target'),
+            #                     replay_buffer=tenv['exp_replay'], # 10000 -> 100 lr 0.01
+            #                     dpaths=os.path.join(dumps_dir, FLAGS.env))
 
             np.savetxt(losses_file, loss, delimiter=',')
             np.savetxt(results_file, means, delimiter=',')
