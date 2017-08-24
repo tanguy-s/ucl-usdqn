@@ -321,7 +321,6 @@ class UsdqnOneDoFSimulatorDiscreteActionsSemi(object):
 
         self.current_indx = 0
         self.dist_to_goal = self.get_dist_to_goal()
-        print('Dist to goal:', self.dist_to_goal)
 
 
     def get_image(self):
