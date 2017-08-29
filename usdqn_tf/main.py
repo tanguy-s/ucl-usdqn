@@ -17,162 +17,183 @@ from core.testing import do_testing
 from core.utils import evaluate_random
 
 from envs.envs import (
-    Continuous_UsdqnOneDoFEnv,
-    UsdqnOneDoFSimulatorDiscreteActions,
-    UsdqnOneDoFSimulatorTwoActions,
-    UsdqnOneDoFSimulatorTwoActionsSl,
-    UsdqnOneDoFSimulatorTwoActionsSlStay,
-    UsdqnOneDoFSimulatorSixActions,
-    UsdqnOneDoFSimulatorDiscreteActionsSemi
+    #Continuous_UsdqnOneDoFEnv,
+    # UsdqnOneDoFSimulatorDiscreteActions,
+    # UsdqnOneDoFSimulatorTwoActions,
+    # UsdqnOneDoFSimulatorTwoActionsSl,
+    # UsdqnOneDoFSimulatorTwoActionsSlStay,
+    # UsdqnOneDoFSimulatorSixActions,
+    # UsdqnOneDoFSimulatorDiscreteActionsSemi
+    UsdqnOneDoFEnv,
+    OneDoFSim_BinaryActions_Supervised,
+    OneDoFSim_DiscActions_Unsupervised,
+    OneDoFSim_DiscActions_Supervised,
 )
 
 
 NUM_RUNS = 1
 
 ENVS = {
-    '1dof': {
-        'env_name': 'Continuous 1 DoF',
-        'env_cls': Continuous_UsdqnOneDoFEnv,
-        'sim_cls': UsdqnOneDoFSimulatorSixActions,
+    '1dof_ba_s_0': {
+        'env_name': '1 DoF Binary Actions Supervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_BinaryActions_Supervised(0.02, is_training=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_BinaryActions_Supervised(0.02, is_training=False)),
         'learning_rate': 0.001,
         'gpu_device': '/gpu:1',
-        'exp_replay': ExperienceReplayBuffer(100000, 100),
-        'epsilon': { 'start': 0.5, 'end': 0.1, 'decay': 50000 },
+        'exp_replay': ExperienceReplayBuffer(100000, 32),
+        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':401000,
+            'TRAINING_STEPS':800000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
-            'EVAL_STEPS':2000,
+            'EVAL_STEPS':5000,
             'SAVE_STEPS':10000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':100,
+            'EVAL_EPISODES':20,
         }
     },
-    '1dof_6a': {
-        'env_name': 'Continuous 1 DoF',
-        'env_cls': Continuous_UsdqnOneDoFEnv,
-        'sim_cls': UsdqnOneDoFSimulatorSixActions,
+    '1dof_ba_s_1': {
+        'env_name': '1 DoF Binary Actions Supervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_BinaryActions_Supervised(0.02, is_training=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_BinaryActions_Supervised(0.02, is_training=False)),
         'learning_rate': 0.0001,
         'gpu_device': '/gpu:1',
-        'exp_replay': ExperienceReplayBuffer(500000, 32),
-        'epsilon': { 'start': 0.6, 'end': 0.1, 'decay': 400000 },
+        'exp_replay': ExperienceReplayBuffer(100000, 32),
+        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':1000000,
-            'LOG_STEPS':5000,
-            'LOSS_STEPS':2000,
-            'EVAL_STEPS':10000,
-            'SAVE_STEPS':50000,
-            'TARGET_UPDATE':10000,
-            'EVAL_EPISODES':100,
-        }
-
-    },
-    '1dof_2a': {
-        'env_name': 'Continuous 1 DoF',
-        'env_cls': Continuous_UsdqnOneDoFEnv,
-        'sim_cls': UsdqnOneDoFSimulatorTwoActions,
-        'learning_rate': 0.00015, #0.00025
-        'gpu_device': '/gpu:0',
-        'exp_replay': ExperienceReplayBuffer(500000, 32),
-        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 800000 },
-        'params': {
-            'TRAINING_STEPS':1000000,
-            'LOG_STEPS':5000,
-            'LOSS_STEPS':2000,
-            'EVAL_STEPS':10000,
-            'SAVE_STEPS':50000,
-            'TARGET_UPDATE':10000,
-            'EVAL_EPISODES':100,
-        }
-    },
-    '1dof_dbl_2a': {
-        'env_name': 'Continuous 1 DoF',
-        'env_cls': Continuous_UsdqnOneDoFEnv,
-        'sim_cls': UsdqnOneDoFSimulatorTwoActions,
-        'learning_rate': 0.00015, #0.00025
-        'gpu_device': '/gpu:0',
-        'exp_replay': ExperienceReplayBuffer(500000, 32),
-        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 800000 },
-        'params': {
-            'TRAINING_STEPS':1000000,
-            'LOG_STEPS':5000,
-            'LOSS_STEPS':2000,
-            'EVAL_STEPS':10000,
-            'SAVE_STEPS':50000,
-            'TARGET_UPDATE':10000,
-            'EVAL_EPISODES':100,
-        }
-    },
-    '1dof_2a_sl': {
-        'env_name': 'Continuous 1 DoF',
-        'env_cls': Continuous_UsdqnOneDoFEnv,
-        'sim_cls': UsdqnOneDoFSimulatorTwoActionsSl,
-        'learning_rate': 0.00025, #0.00025
-        'gpu_device': '/gpu:1',
-        'exp_replay': ExperienceReplayBuffer(200000, 32),
-        'epsilon': { 'start': 0.5, 'end': 0.05, 'decay': 800000 },
-        'params': {
-            'TRAINING_STEPS':100000,
-            'LOG_STEPS':5000,
-            'LOSS_STEPS':2000,
-            'EVAL_STEPS':10000,
-            'SAVE_STEPS':50000,
+            'TRAINING_STEPS':800000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':5000,
+            'SAVE_STEPS':10000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':100,
+            'EVAL_EPISODES':20,
         }
     },
-    '1dof_2a_slt': {
-        'env_name': 'Continuous 1 DoF',
-        'env_cls': Continuous_UsdqnOneDoFEnv,
-        'sim_cls': UsdqnOneDoFSimulatorTwoActionsSlStay,
-        'learning_rate': 0.00025, #0.00025
+    '1dof_ba_s_2': {
+        'env_name': '1 DoF Binary Actions Supervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_BinaryActions_Supervised(0.02, is_training=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_BinaryActions_Supervised(0.02, is_training=False)),
+        'learning_rate': 0.01,
         'gpu_device': '/gpu:1',
-        'exp_replay': ExperienceReplayBuffer(200000, 32),
-        'epsilon': { 'start': 0.5, 'end': 0.01, 'decay': 800000 },
+        'exp_replay': ExperienceReplayBuffer(100000, 32),
+        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':1000000,
-            'LOG_STEPS':5000,
-            'LOSS_STEPS':2000,
-            'EVAL_STEPS':10000,
-            'SAVE_STEPS':50000,
+            'TRAINING_STEPS':800000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':5000,
+            'SAVE_STEPS':10000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':100,
+            'EVAL_EPISODES':20,
         }
     },
-    '1dof_Da': {
-        'env_name': 'Continuous 1 DoF',
-        'env_cls': Continuous_UsdqnOneDoFEnv,
-        'sim_cls': UsdqnOneDoFSimulatorDiscreteActions,
-        'learning_rate': 0.00015, #0.00025
+    '1dof_da_u_0': {
+        'env_name': '1 DoF Discrete Actions Unupervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.02, is_training=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.02, is_training=False)),
+        'learning_rate': 0.001,
         'gpu_device': '/gpu:1',
-        'exp_replay': ExperienceReplayBuffer(500000, 64),
-        'epsilon': { 'start': 1, 'end': 0.1, 'decay': 600000 },
+        'exp_replay': ExperienceReplayBuffer(100000, 32),
+        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':1000000,
-            'LOG_STEPS':5000,
-            'LOSS_STEPS':2000,
-            'EVAL_STEPS':10000,
-            'SAVE_STEPS':50000,
-            'TARGET_UPDATE':10000,
-            'EVAL_EPISODES':100,
-        }
-    },
-    '1dof_Da_semi': {
-        'env_name': 'Continuous 1 DoF',
-        'env_cls': Continuous_UsdqnOneDoFEnv,
-        'sim_cls': UsdqnOneDoFSimulatorDiscreteActionsSemi,
-        'learning_rate': 0.00025, #0.00025
-        'gpu_device': '/gpu:1',
-        'exp_replay': ExperienceReplayBuffer(500000, 64),
-        'epsilon': { 'start': 1, 'end': 0.1, 'decay': 600000 },
-        'params': {
-            'TRAINING_STEPS':1000000,
-            'LOG_STEPS':5000,
-            'LOSS_STEPS':2000,
-            'EVAL_STEPS':10000,
-            'SAVE_STEPS':50000,
+            'TRAINING_STEPS':800000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':5000,
+            'SAVE_STEPS':10000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':100,
+            'EVAL_EPISODES':20,
+        }
+    },
+    '1dof_da_u_1': {
+        'env_name': '1 DoF Discrete Actions Unupervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.02, is_training=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.02, is_training=False)),
+        'learning_rate': 0.0001,
+        'gpu_device': '/gpu:1',
+        'exp_replay': ExperienceReplayBuffer(100000, 32),
+        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 500000 },
+        'params': {
+            'TRAINING_STEPS':800000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':5000,
+            'SAVE_STEPS':10000,
+            'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':20,
+        }
+    },
+    '1dof_da_u_2': {
+        'env_name': '1 DoF Discrete Actions Unupervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.04, is_training=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.04, is_training=False)),
+        'learning_rate': 0.0001,
+        'gpu_device': '/gpu:1',
+        'exp_replay': ExperienceReplayBuffer(100000, 32),
+        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 500000 },
+        'params': {
+            'TRAINING_STEPS':800000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':5000,
+            'SAVE_STEPS':10000,
+            'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':20,
+        }
+    },
+    '1dof_da_u_3': {
+        'env_name': '1 DoF Discrete Actions Unupervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.08, is_training=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.08, is_training=False)),
+        'learning_rate': 0.0001,
+        'gpu_device': '/gpu:1',
+        'exp_replay': ExperienceReplayBuffer(100000, 32),
+        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 500000 },
+        'params': {
+            'TRAINING_STEPS':800000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':5000,
+            'SAVE_STEPS':10000,
+            'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':20,
+        }
+    },
+    '1dof_da_s_0': {
+        'env_name': '1 DoF Discrete Actions Supervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Supervised(0.02, is_training=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Supervised(0.02, is_training=False)),
+        'learning_rate': 0.001,
+        'gpu_device': '/gpu:1',
+        'exp_replay': ExperienceReplayBuffer(100000, 32),
+        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 500000 },
+        'params': {
+            'TRAINING_STEPS':800000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':5000,
+            'SAVE_STEPS':10000,
+            'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':20,
+        }
+    },
+    '1dof_da_s_1': {
+        'env_name': '1 DoF Discrete Actions Supervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Supervised(0.02, is_training=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Supervised(0.02, is_training=False)),
+        'learning_rate': 0.0001,
+        'gpu_device': '/gpu:1',
+        'exp_replay': ExperienceReplayBuffer(100000, 32),
+        'epsilon': { 'start': 0.8, 'end': 0.1, 'decay': 500000 },
+        'params': {
+            'TRAINING_STEPS':800000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':5000,
+            'SAVE_STEPS':10000,
+            'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':20,
         }
     },
 }
@@ -213,8 +234,8 @@ if __name__ == '__main__':
     if not os.path.exists(main_dumps_dir):
         os.mkdir(main_dumps_dir)
 
-    env = tenv['env_cls'](simulator=tenv['sim_cls'], is_training=True)
-    test_env = tenv['env_cls'](simulator=tenv['sim_cls'], is_training=False)
+    env = tenv['train_env']
+    test_env = tenv['test_env']
 
     if not FLAGS.episodes:
         num_episodes = 100
@@ -263,7 +284,7 @@ if __name__ == '__main__':
         dpaths = [os.path.join(main_dumps_dir, '1'), 
             os.path.join(main_dumps_dir, '1', '%s.meta' % FLAGS.env)]
 
-        do_testing(env,
+        do_testing(test_env,
                     model=UsdqnModel(env.action_space.n), 
                     target_model=UsdqnModel(env.action_space.n, varscope='target'),
                     dpaths=dpaths, 

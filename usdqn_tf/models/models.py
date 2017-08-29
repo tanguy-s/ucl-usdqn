@@ -31,12 +31,12 @@ class UsdqnModel(object):
             out_conv2_flat = tf.reshape(out_conv2, [-1, conv2_dim])
 
         with tf.variable_scope('fully_connected'):
-            W_fc = weights([conv2_dim, 256], '%sfc' % self.varscope)
-            b_fc = biases([256], '%sfc' % self.varscope)
+            W_fc = weights([conv2_dim, 1024], '%sfc' % self.varscope)
+            b_fc = biases([1024], '%sfc' % self.varscope)
             out_fc = tf.nn.relu(tf.matmul(out_conv2_flat, W_fc) + b_fc)
 
         with tf.variable_scope('linear'):
-            W_lin = weights([256, self.dim_out], '%slin' % self.varscope)
+            W_lin = weights([1024, self.dim_out], '%slin' % self.varscope)
             b_lin = biases([self.dim_out], '%slin' % self.varscope)
             out = tf.matmul(out_fc, W_lin) + b_lin
             #out = tf.maximum(tf.minimum(-3.05, out1), 3.05)
