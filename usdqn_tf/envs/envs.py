@@ -80,8 +80,8 @@ class DiscretizedStateSpace(object):
                 self.cursor += dangle
             dangle = self.cursor
 
-        print(len(self.wheel_goal))
-        print(dangle)
+        # print(len(self.wheel_goal))
+        # print(dangle)
         # For rendering purposes
         self.wheel_angle = dangle
 
