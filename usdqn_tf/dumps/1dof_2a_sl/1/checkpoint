@@ -1,4 +1,0 @@
-model_checkpoint_path: "1dof_2a_sl"
-all_model_checkpoint_paths: "1dof_2a_sl-0"
-all_model_checkpoint_paths: "1dof_2a_sl-50000"
-all_model_checkpoint_paths: "1dof_2a_sl"

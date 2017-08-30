@@ -1,5 +1,0 @@
-model_checkpoint_path: "1dof_Da-150000"
-all_model_checkpoint_paths: "1dof_Da-0"
-all_model_checkpoint_paths: "1dof_Da-50000"
-all_model_checkpoint_paths: "1dof_Da-100000"
-all_model_checkpoint_paths: "1dof_Da-150000"

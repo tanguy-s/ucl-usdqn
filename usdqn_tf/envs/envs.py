@@ -5,7 +5,7 @@ from gym import spaces
 from gym.utils import seeding
 import numpy as np
 
-from envs.utils import digitize_indexes
+from envs.state import DiscretizedStateSpace
 
 from skimage.color import gray2rgb
 #import matplotlib.pyplot as plt
@@ -20,94 +20,7 @@ RAD2DEG = 57.29577951308232
 def is_sorted(l):
     return all(l[i] <= l[i+1] for i in range(len(l)-1))
 
-class DiscretizedStateSpace(object):
 
-    def __init__(self, step=0.02, is_training=True):
-        super(DiscretizedStateSpace, self).__init__()
-        self.dstep = step # Discretization step in radians
-        self.is_training = is_training
-        self.images, self.labels = None, None
-        self.wheel_data, self.wheel_goal, self.wheel_goal =  None, None, None
-        self.action_space_lim = None
-        self.is_done = False
-        self.cursor = 0
-        self._load_dataset()
-
-    def _load_dataset(self):
-        if self.is_training:
-            print("# Loading training set.")
-            self.images = np.load('../data/1dof/usdqn-images-training.npy')[:, 2:-2, 2:-2]
-            self.labels = np.load('../data/1dof/usdqn-labels-training.npy')
-        else:
-            print("# Loading testing set.")
-            self.images = np.load('../data/1dof/usdqn-images-testing.npy')[:, 2:-2, 2:-2]
-            self.labels = np.load('../data/1dof/usdqn-labels-testing.npy')
-
-        # Data specific information
-        data_min_angle = -3.05 #-175deg
-        data_max_angle = 3.051 #175deg
-        data_goal = [int((np.pi / 2) / self.dstep), int((np.pi / 2 + np.pi) / self.dstep)]
-
-        n, bins = np.histogram(self.labels, 
-            bins=np.arange(data_min_angle, data_max_angle, self.dstep))
-
-        self.action_space_lim = int((np.pi * len(bins)) / (2*(data_max_angle - data_min_angle)))
-
-        self.wheel_data = np.array(digitize_indexes(self.labels, bins))
-
-        self.wheel_goal = np.zeros([len(self.wheel_data)])
-        self.wheel_goal[data_goal] = 1
-
-        #self.wheel = np.stack([wheel_indexes, wheel_goal], axis=1)
-
-    def get_dist_to_goal(self, dangle):
-        # if the first objective is in the first quadrant then it is the closest
-        # otherwise the closest objective is in the 4 quadrant
-        wheel_goal = np.roll(self.wheel_goal, -dangle)
-        goals = np.argwhere(wheel_goal == 1)
-        if goals[0][0] <= self.action_space_lim:
-            return goals[0][0]
-        else:
-            return len(wheel_goal) - goals[1][0]
-
-    def rotate_wheel(self, dangle, keep=False):
-        
-        if keep:
-            # keep track of the rotation
-            if abs(self.cursor) == len(self.wheel_goal):
-                self.cursor = 0
-            else:
-                self.cursor += dangle
-            dangle = self.cursor
-
-        # print(len(self.wheel_goal))
-        # print(dangle)
-        # For rendering purposes
-        self.wheel_angle = dangle
-
-        # Sample random obs from current wheel box
-        obs_ind = np.random.choice(self.wheel_data[dangle], 1)[0]
-
-        if self.wheel_goal[dangle] == 1:
-            self.is_done = True
-
-        return (self.images[obs_ind, :, :], 
-            self.wheel_goal[dangle], self.get_dist_to_goal(dangle))
-
-    def reset_wheel(self):
-        # Reset state space at random angle
-        rnd_ind = np.random.randint(0, len(self.wheel_data))
-        self.wheel_data = np.roll(self.wheel_data, rnd_ind, axis=0)
-        self.wheel_goal = np.roll(self.wheel_goal, rnd_ind, axis=0)
-
-        return self.rotate_wheel(0)
-
-    def get_goal_angle(self):
-        goal = np.argwhere(self.wheel_goal == 1)[0][0]
-        return goal * self.dstep
-
-    def get_angle(self):
-        return self.wheel_angle * self.dstep
 
 
 class OneDoFSim_BinaryActions_Supervised(DiscretizedStateSpace):
