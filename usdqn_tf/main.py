@@ -281,7 +281,7 @@ if __name__ == '__main__':
         num_episodes = FLAGS.episodes
 
     if FLAGS.gpu:
-        tenv['gpu_device'] = '/gpu:%i' % FLAGS.gpu
+        tenv['gpu_device'] = '/gpu:%s' % FLAGS.gpu
 
     if FLAGS.train:
         for i in range(NUM_RUNS):
