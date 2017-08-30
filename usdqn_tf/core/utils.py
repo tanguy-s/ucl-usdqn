@@ -14,7 +14,8 @@ MAX_EPISODE = 700
 
 
 def reward_clip(reward):
-    return np.clip(reward, -1, 1)
+    #return np.clip(reward, -1, 1)
+    return reward
 
 def reward_value(done):
     # Reward function: 0 in all states except 
