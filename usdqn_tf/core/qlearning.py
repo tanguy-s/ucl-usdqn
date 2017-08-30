@@ -80,7 +80,8 @@ def do_online_qlearning(env,
 
     # Limit memory usage for multiple training at same time
     config = tf.ConfigProto()
-    config.gpu_options.per_process_gpu_memory_fraction = 0.50
+    #config.gpu_options.per_process_gpu_memory_fraction = 0.4
+    config.gpu_options.allow_growth = True
 
     # Start Session
     with tf.Session(config=config) as sess:
