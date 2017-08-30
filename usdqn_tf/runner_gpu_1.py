@@ -15,4 +15,4 @@ envs = [
 
 for env in envs:
     print("Starting :", env)
-    call(['python', 'main.py', '-e', env, '--train', '--gpu', 1])
+    call(['python', 'main.py', '-e', env, '--train', '--gpu', '1'])
