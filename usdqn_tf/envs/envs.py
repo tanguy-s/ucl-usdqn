@@ -93,6 +93,8 @@ class OneDoFSim_DiscActions_Supervised(DiscretizedStateSpace):
         action = self.actions[action]
         step = self.rotate_wheel(action)
         reward = -step[2]
+        #print("dist:", step[2])
+        #print("reward:", reward)
         return step[0], reward, bool(step[1]), {}
 
 

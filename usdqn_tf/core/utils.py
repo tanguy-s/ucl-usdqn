@@ -92,7 +92,7 @@ def evaluate(env,
 
     print('Evaluation num episodes: ', num_episodes)
 
-    res = np.zeros([num_episodes, 2])
+    res = np.zeros([num_episodes, 3])
     for i_episode in range(num_episodes):
         if not silent:
             print('Episode %d/%d' % (i_episode, num_episodes))
@@ -130,34 +130,9 @@ def evaluate(env,
                     states_pl: state.reshape(
                         [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
                 })
-                #print(action)
 
-                # test = sess.run(q_output, feed_dict={
-                #     states_pl: state.reshape(
-                #         [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
-                # })
-                # print("Test q is:", test)
-
-                # q_test = sess.run(q_output, feed_dict={
-                #     states_pl: state.reshape(
-                #         [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
-                # })
-
-                # print("Q output:", q_test.shape)
-                # print(q_test)
-
-                #print("Action:", action[0])
                 # action for next observation
                 observation, reward, done, info  = env.step(action[0])
-
-                
-                # axarr[0, 0].imshow(observation_buffer[0])
-                # # axarr[0, 1].imshow(observation_buffer[1])
-                # # axarr[1, 0].imshow(observation_buffer[2])
-                # # axarr[1, 1].imshow(observation_buffer[3])
-                # plt.pause(5)
-
-
 
                 # Clip reward
                 r = reward_clip(reward)
@@ -174,6 +149,7 @@ def evaluate(env,
 
         res[i_episode][0] = retval
         res[i_episode][1] = score
+        res[i_episode][2] = t
 
         if render:
             time.sleep(1)
@@ -188,6 +164,8 @@ def evaluate(env,
             (means[0], stds[0]))
         print('- Scores stats:\n Mean: %f std: %f' % 
             (means[1], stds[1]))
+        print('- Frames stats:\n Mean: %f std: %f' % 
+            (means[2], stds[2]))
 
     return means, stds
 

@@ -55,10 +55,7 @@ class DiscretizedStateSpace(object):
         
         if keep:
             # keep track of the rotation
-            if abs(self.cursor) == len(self.wheel_goal):
-                self.cursor = 0
-            else:
-                self.cursor += dangle
+            self.cursor += dangle
             dangle = self.cursor
 
         # print(len(self.wheel_goal))
@@ -67,16 +64,19 @@ class DiscretizedStateSpace(object):
         self.wheel_angle = dangle
 
         # Sample random obs from current wheel box
-        obs_ind = np.random.choice(self.wheel_data[dangle], 1)[0]
+        wheel_data = self.wheel_data.take(dangle, mode='wrap') 
+        wheel_goal = self.wheel_goal.take(dangle, mode='wrap') 
+        obs_ind = np.random.choice(wheel_data, 1)[0]
 
-        if self.wheel_goal[dangle] == 1:
+        if wheel_goal == 1:
             self.is_done = True
 
         return (self.images[obs_ind, :, :], 
-            self.wheel_goal[dangle], self.get_dist_to_goal(dangle))
+            wheel_goal, self.get_dist_to_goal(dangle))
 
     def reset_wheel(self):
         # Reset state space at random angle
+        self.is_done = False
         rnd_ind = np.random.randint(0, len(self.wheel_data))
         self.wheel_data = np.roll(self.wheel_data, rnd_ind, axis=0)
         self.wheel_goal = np.roll(self.wheel_goal, rnd_ind, axis=0)
