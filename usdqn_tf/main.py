@@ -43,11 +43,11 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
@@ -61,11 +61,11 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
@@ -79,11 +79,11 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
@@ -97,11 +97,11 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
@@ -115,11 +115,11 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
@@ -133,11 +133,11 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
@@ -151,11 +151,11 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
@@ -169,11 +169,11 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
@@ -187,11 +187,11 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
@@ -205,29 +205,29 @@ ENVS = {
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
     },
     '1dof_da_s_2': {
         'env_name': '1 DoF Discrete Actions Supervised',
-        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Supervised(0.1, is_training=True)),
-        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Supervised(0.1, is_training=False)),
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Supervised(0.08, is_training=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Supervised(0.08, is_training=False)),
         'learning_rate': 0.0002,
         'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(200000, 32),
         'epsilon': { 'start': 1, 'end': 0.1, 'decay': 500000 },
         'params': {
-            'TRAINING_STEPS':800000,
+            'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
-            'SAVE_STEPS':10000,
+            'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
             'EVAL_EPISODES':20,
         }
