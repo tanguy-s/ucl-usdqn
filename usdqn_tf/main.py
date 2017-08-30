@@ -280,7 +280,7 @@ if __name__ == '__main__':
     else:
         num_episodes = FLAGS.episodes
 
-    if FLAGS.gpu:
+    if FLAGS.gpu is not None:
         tenv['gpu_device'] = '/gpu:%s' % FLAGS.gpu
 
     if FLAGS.train:
