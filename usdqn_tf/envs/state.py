@@ -20,21 +20,24 @@ class DiscretizedStateSpace(object):
     def _load_dataset(self):
         if self.is_training:
             print("# Loading training set.")
-            self.images = np.load('../data/1dof/usdqn-images-training.npy')[:, 2:-2, 2:-2]
-            self.labels = np.load('../data/1dof/usdqn-labels-training.npy')
+            self.images = np.load('../data/1dof/usdqn-images-training-v2.npy')[:, 2:-2, 2:-2]
+            self.labels = np.load('../data/1dof/usdqn-labels-training-v2.npy')
         else:
             print("# Loading testing set.")
-            self.images = np.load('../data/1dof/usdqn-images-testing.npy')[:, 2:-2, 2:-2]
-            self.labels = np.load('../data/1dof/usdqn-labels-testing.npy')
+            self.images = np.load('../data/1dof/usdqn-images-testing-v2.npy')[:, 2:-2, 2:-2]
+            self.labels = np.load('../data/1dof/usdqn-labels-testing-v2.npy')
 
         # Data specific information
-        data_min_angle = -3.05 #-175deg
-        data_max_angle = 3.051 #175deg
+        #data_min_angle = -3.05 #-175deg
+        #data_max_angle = 3.051 #175deg
+        data_min_angle = -np.pi
+        data_max_angle = np.pi
         data_goal = [int((np.pi / 2) / self.dstep), int((np.pi / 2 + np.pi) / self.dstep)]
 
         n, bins = np.histogram(self.labels, 
             bins=np.arange(data_min_angle, data_max_angle, self.dstep))
 
+        self.bins = bins
         self.action_space_lim = int((np.pi * len(bins)) / (2*(data_max_angle - data_min_angle)))
 
         self.wheel_data = np.array(digitize_indexes(self.labels, bins))
@@ -49,12 +52,18 @@ class DiscretizedStateSpace(object):
         # otherwise the closest objective is in the 4 quadrant
         wheel_goal = np.roll(self.wheel_goal, -dangle)
         goals = np.argwhere(wheel_goal == 1)
-        if goals[0][0] <= self.action_space_lim:
-            return goals[0][0]
+        # print(goals)
+        # print(self.action_space_lim)
+        if goals[0] <= self.action_space_lim:
+            #print('1st quad')
+            return goals[0]
         else:
-            return len(wheel_goal) - goals[1][0]
+            #print('4th quad')
+            return len(wheel_goal) - goals[1]
 
     def rotate_wheel(self, dangle, keep=False):
+        # print("Size of state space:", len(self.bins))
+        # print("Action space lim:", self.action_space_lim)
         
         if keep:
             # keep track of the rotation

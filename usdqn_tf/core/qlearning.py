@@ -104,6 +104,7 @@ def do_online_qlearning(env,
         # Save results
         losses = list()
         means = list()
+        stds = list()
 
         #init epsilon
         epsilon = epsilon_s['start']
@@ -216,6 +217,7 @@ def do_online_qlearning(env,
 
                 # Save means
                 means.append(cur_means)
+                stds.append(cur_stds)
             
 
             # Save models

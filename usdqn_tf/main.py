@@ -39,18 +39,18 @@ ENVS = {
         'env_name': '1 DoF Binary Actions Supervised',
         'train_env': UsdqnOneDoFEnv(OneDoFSim_BinaryActions_Supervised(0.04, is_training=True, sample=True)),
         'test_env': UsdqnOneDoFEnv(OneDoFSim_BinaryActions_Supervised(0.04, is_training=False, sample=True)),
-        'learning_rate': 0.0001,
+        'learning_rate': 0.00025,
         'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(200000, 64),
-        'epsilon': { 'start': 0.6, 'end': 0.1, 'decay': 500000 },
+        'epsilon': { 'start': 0.7, 'end': 0.1, 'decay': 500000 },
         'params': {
             'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
-            'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'TARGET_UPDATE':7000,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_ba_s_1': {
@@ -68,7 +68,7 @@ ENVS = {
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_ba_s_2': {
@@ -86,7 +86,7 @@ ENVS = {
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_ba_s_3': {
@@ -104,25 +104,25 @@ ENVS = {
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_ba_u_0': {
         'env_name': '1 DoF Binary Actions Unsupervised',
         'train_env': UsdqnOneDoFEnv(OneDoFSim_BinaryActions_Unsupervised(0.04, is_training=True, sample=True)),
         'test_env': UsdqnOneDoFEnv(OneDoFSim_BinaryActions_Unsupervised(0.04, is_training=False, sample=True)),
-        'learning_rate': 0.0001,
+        'learning_rate': 0.00025,
         'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(200000, 64),
-        'epsilon': { 'start': 0.6, 'end': 0.1, 'decay': 500000 },
+        'epsilon': { 'start': 0.7, 'end': 0.1, 'decay': 500000 },
         'params': {
             'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
-            'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'TARGET_UPDATE':7000,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_ba_u_1': {
@@ -140,14 +140,14 @@ ENVS = {
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_da_u_0': {
         'env_name': '1 DoF Discrete Actions Unupervised',
         'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.04, is_training=True, sample=True)),
         'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.04, is_training=False, sample=True)),
-        'learning_rate': 0.0001,
+        'learning_rate': 0.00025,
         'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(200000, 64),
         'epsilon': { 'start': 0.7, 'end': 0.1, 'decay': 500000 },
@@ -157,8 +157,8 @@ ENVS = {
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
-            'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'TARGET_UPDATE':7000,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_da_u_1': {
@@ -176,7 +176,7 @@ ENVS = {
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_da_u_2': {
@@ -194,7 +194,7 @@ ENVS = {
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_da_u_3': {
@@ -212,25 +212,25 @@ ENVS = {
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_da_s_0': {
         'env_name': '1 DoF Discrete Actions Supervised',
         'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Supervised(0.04, is_training=True)),
         'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Supervised(0.04, is_training=False)),
-        'learning_rate': 0.001,
+        'learning_rate': 0.0001,
         'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(200000, 64),
-        'epsilon': { 'start': 0.6, 'end': 0.1, 'decay': 500000 },
+        'epsilon': { 'start': 0.7, 'end': 0.1, 'decay': 500000 },
         'params': {
             'TRAINING_STEPS':500000,
             'LOG_STEPS':2000,
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
-            'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'TARGET_UPDATE':7000,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_da_s_1': {
@@ -248,7 +248,7 @@ ENVS = {
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'EVAL_EPISODES':40,
         }
     },
     '1dof_da_s_2': {
@@ -266,7 +266,7 @@ ENVS = {
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
             'TARGET_UPDATE':5000,
-            'EVAL_EPISODES':20,
+            'EVAL_EPISODES':40,
         }
     },
 }
@@ -334,7 +334,10 @@ if __name__ == '__main__':
             results_file = os.path.join(
                     dumps_dir, 'results.csv')
 
-            loss, means = do_online_qlearning(env, test_env,
+            stds_file = os.path.join(
+                    dumps_dir, 'stds.csv')
+
+            loss, means, stds = do_online_qlearning(env, test_env,
                                 model=UsdqnModel(env.action_space.n), 
                                 params=tenv['params'],
                                 learning_rate=tenv['learning_rate'],
@@ -357,6 +360,7 @@ if __name__ == '__main__':
 
             np.savetxt(losses_file, loss, delimiter=',')
             np.savetxt(results_file, means, delimiter=',')
+            np.savetxt(stds_file, stds, delimiter=',')
 
     elif FLAGS.test:
         dpaths = [os.path.join(main_dumps_dir, '1'), 
