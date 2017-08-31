@@ -95,8 +95,8 @@ def evaluate(env,
 
     res = np.zeros([num_episodes, 3])
     for i_episode in range(num_episodes):
-        if not silent:
-            print('Episode %d/%d' % (i_episode, num_episodes))
+        # if not silent:
+        #     print('Episode %d/%d' % (i_episode, num_episodes))
         #Observation Buffer
         observation_buffer = list()
 
