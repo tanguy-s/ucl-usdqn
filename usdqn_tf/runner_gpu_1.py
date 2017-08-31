@@ -13,6 +13,7 @@ envs = [
     '1dof_da_u_0', 
     #'1dof_da_u_2', 
     #'1dof_da_u_3']
+]
 
 for env in envs:
     print("Starting :", env)
