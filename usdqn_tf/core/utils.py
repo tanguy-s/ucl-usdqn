@@ -9,7 +9,7 @@ from skimage.transform import resize
 
 FRAME_WIDTH = 80
 FRAME_HEIGHT = 80
-FRAME_BUFFER_SIZE = 4
+FRAME_BUFFER_SIZE = 1
 MAX_EPISODE = 700
 
 

@@ -38,14 +38,14 @@ class ExperienceReplayBuffer(object):
     def next_transitions(self):
         batch_transitions = random.sample(self.transitions, self.batch_size)
 
-        states = np.stack(
-            [batch_transitions[i][0] for i in range(len(batch_transitions))], axis=0).astype('float32')
+        states = (np.stack(
+            [batch_transitions[i][0] for i in range(len(batch_transitions))], axis=0) / 255).astype('float32')
         actions = np.stack(
             [batch_transitions[i][1] for i in range(len(batch_transitions))], axis=0).reshape([-1])
         reward = np.stack(
             [batch_transitions[i][2] for i in range(len(batch_transitions))], axis=0).reshape([-1])
-        next_state = np.stack(
-            [batch_transitions[i][3] for i in range(len(batch_transitions))], axis=0).astype('float32')
+        next_state = (np.stack(
+            [batch_transitions[i][3] for i in range(len(batch_transitions))], axis=0) / 255).astype('float32')
         term_state = np.stack(
             [batch_transitions[i][4] for i in range(len(batch_transitions))], axis=0).reshape([-1])
 

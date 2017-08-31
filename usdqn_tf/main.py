@@ -147,7 +147,7 @@ ENVS = {
         'env_name': '1 DoF Discrete Actions Unupervised',
         'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.04, is_training=True, sample=True)),
         'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.04, is_training=False, sample=True)),
-        'learning_rate': 0.00025,
+        'learning_rate': 0.00025, #0.00025
         'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(200000, 64),
         'epsilon': { 'start': 0.7, 'end': 0.1, 'decay': 500000 },

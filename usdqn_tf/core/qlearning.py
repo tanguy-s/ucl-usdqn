@@ -7,13 +7,15 @@ import tensorflow as tf
 from core.utils import evaluate, reward_value, do_obs_processing, reward_clip
 
 
-#import matplotlib.pyplot as plt
+# import matplotlib.pyplot as plt
 #f, axarr = plt.subplots(2, 2)
+
+# f, (ax1, ax2) = plt.subplots(1, 2)
 
 GAMMA = 0.99
 FRAME_WIDTH = 80
 FRAME_HEIGHT = 80
-FRAME_BUFFER_SIZE = 4
+FRAME_BUFFER_SIZE = 1
 
 
 
@@ -161,6 +163,15 @@ def do_online_qlearning(env,
 
                 next_state = np.stack(observation_buffer, axis=-1)
 
+                #ax1.imshow(state[:,:,0])
+                #ax2.imshow(next_state[:,:,0])
+                # axarr[0, 0].imshow(b_next_state[1,:,:,0])
+                # axarr[0, 1].imshow(b_next_state[1,:,:,1])
+                # axarr[1, 0].imshow(b_next_state[1,:,:,2])
+                # axarr[1, 1].imshow(b_next_state[1,:,:,3])
+
+                #plt.pause(1)
+
                 # axarr[0, 0].imshow(next_state[:,:,0])
                 # axarr[0, 1].imshow(next_state[:,:,1])
                 # axarr[1, 0].imshow(next_state[:,:,2])
@@ -169,7 +180,7 @@ def do_online_qlearning(env,
                 # plt.pause(0.001)
 
                 # Add transition to replay buffer
-                replay_buffer.add((state, action, r, next_state, done))
+                replay_buffer.add(((state * 255).astype('uint8'), action, r, (next_state * 255).astype('uint8'), done))
                 
                 # If replay buffer is ready to be sampled
                 if replay_buffer.ready:
@@ -178,35 +189,63 @@ def do_online_qlearning(env,
 
                     #print(b_term_state)
                     #Run training on batch
-                    
-                    # axarr[0, 0].imshow(b_next_state[1,:,:,0])
-                    # axarr[0, 1].imshow(b_next_state[1,:,:,1])
-                    # axarr[1, 0].imshow(b_next_state[1,:,:,2])
-                    # axarr[1, 1].imshow(b_next_state[1,:,:,3])
+                    # ax1.imshow(b_next_state[1,:,:,0])
+                    # ax2.imshow(b_next_state[10,:,:,0])
+                    # plt.pause(0.03)
+                    # # axarr[0, 0].imshow(b_next_state[1,:,:,0])
+                    # # axarr[0, 1].imshow(b_next_state[1,:,:,1])
+                    # # axarr[1, 0].imshow(b_next_state[1,:,:,2])
+                    # # axarr[1, 1].imshow(b_next_state[1,:,:,3])
 
-                    # plt.pause(0.001)
+                    # plt.pause(1)
+
+                    # axarr[0, 0].imshow(b_next_state[4,:,:,0])
+                    # axarr[0, 1].imshow(b_next_state[4,:,:,1])
+                    # axarr[1, 0].imshow(b_next_state[4,:,:,2])
+                    # axarr[1, 1].imshow(b_next_state[4,:,:,3])
+
+                    # plt.pause(1)
                     # print("Mean:", np.mean(np.mean(np.mean(b_next_state, axis=3), axis=2), axis=1))
-                    # q_out, q_out_target = sess.run([q_output, q_target_net], feed_dict={
-                    #         states_pl: b_next_state 
-                    #     })
+                    q_out, q_out_target = sess.run([q_output, q_target_net], feed_dict={
+                            states_pl: b_next_state 
+                        })
 
+                    #print(np.max(b_next_state[1,:,:,:]))
+                    # q_out1 = sess.run(q_output, feed_dict={
+                    #           states_pl: b_next_state[1,:,:,:].reshape([1,80,80,1]) 
+                    #       })
+
+                    # q_out2 = sess.run(q_output, feed_dict={
+                    #           states_pl: b_next_state[10,:,:,:].reshape([1,80,80,1])  
+                    #       })
+                    # print("Q out 1: ", np.argmax(q_out1))
+                    # print("Q out 2: ", np.argmax(q_out2))
                     #print(b_next_state.shape)
                     #print(q_out)
                     #print(q_out_target.shape)
-                    q_out = sess.run(q_output, feed_dict={
-                             states_pl: b_next_state 
-                         })
-                    q_out_max = np.amax(q_out, axis=1)
-                    q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
+                    # q_out = sess.run(q_output, feed_dict={
+                    #          states_pl: b_next_state 
+                    #      })
+                    #q_out_max = np.amax(q_out, axis=1)
+                    #q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
+
+                    #q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
 
 
                     #q_out_max = np.amax(q_out, axis=1)
                     #print(q_out_max)
                     
-                    # q_out_argmax = np.argmax(q_out, axis=1)
+                    q_out_argmax = np.unravel_index(np.argmax(q_out, axis=1), q_out.shape)
+                    #print(q_out_argmax)
+                    #print(q_out_target[q_out_argmax])
                     # print("Q_out_target_max:", q_out_target[:, q_out_argmax])
                     # print(q_out_argmax)
-                    # q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_target[:, q_out_argmax]
+                    #q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_target[q_out_argmax]
+                    #print(q_out_argmax.reshape([-1,1]))
+                    # print("Target:", q_out_target[q_out_argmax])
+                    # print("Cn:", q_out_max)
+
+                    q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_target[q_out_argmax]
 
 
 
@@ -252,7 +291,8 @@ def do_online_qlearning(env,
             if step % params['EVAL_STEPS'] == 0:
                 silent = (step % params['LOG_STEPS'] != 0)
                 cur_means, cur_stds = evaluate(test_env, sess, prediction, 
-                                        states_pl, params['EVAL_EPISODES'], GAMMA, silent)
+                                        states_pl, 1, GAMMA, silent)
+                                        #states_pl, params['EVAL_EPISODES'], GAMMA, silent)
 
                 # Save means
                 means.append(cur_means)

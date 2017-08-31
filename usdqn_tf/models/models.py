@@ -13,7 +13,7 @@ class UsdqnModel(object):
     def graph(self, state):
 
         with tf.variable_scope('conv1'):
-            W_conv1 = weights([6, 6, 4, 16], '%sconv1' % self.varscope)
+            W_conv1 = weights([6, 6, 1, 16], '%sconv1' % self.varscope)
             b_conv1 = biases([16], '%sconv1' % self.varscope)
             out_conv1 = tf.nn.relu(
                             tf.nn.conv2d(state, W_conv1, 
