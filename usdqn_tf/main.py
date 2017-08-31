@@ -49,7 +49,7 @@ ENVS = {
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
-            'TARGET_UPDATE':7000,
+            'TARGET_UPDATE':5000,
             'EVAL_EPISODES':40,
         }
     },
@@ -121,7 +121,7 @@ ENVS = {
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
-            'TARGET_UPDATE':7000,
+            'TARGET_UPDATE':5000,
             'EVAL_EPISODES':40,
         }
     },
@@ -157,7 +157,7 @@ ENVS = {
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
-            'TARGET_UPDATE':7000,
+            'TARGET_UPDATE':5000,
             'EVAL_EPISODES':40,
         }
     },
@@ -229,7 +229,7 @@ ENVS = {
             'LOSS_STEPS':1000,
             'EVAL_STEPS':6000,
             'SAVE_STEPS':100000,
-            'TARGET_UPDATE':7000,
+            'TARGET_UPDATE':5000,
             'EVAL_EPISODES':40,
         }
     },
@@ -347,16 +347,6 @@ if __name__ == '__main__':
                                 replay_buffer=tenv['exp_replay'], # 10000 -> 100 lr 0.01
                                 dpaths=os.path.join(dumps_dir, FLAGS.env))
 
-            # loss, means = do_online_double_qlearning(env, test_env,
-            #                     model_1=UsdqnModel(env.action_space.n, varscope='1'), 
-            #                     model_2=UsdqnModel(env.action_space.n, varscope='2'), 
-            #                     params=tenv['params'],
-            #                     learning_rate=tenv['learning_rate'],
-            #                     epsilon_s=tenv['epsilon'], 
-            #                     gpu_device=tenv['gpu_device'],
-            #                     target_model=UsdqnModel(env.action_space.n, varscope='target'),
-            #                     replay_buffer=tenv['exp_replay'], # 10000 -> 100 lr 0.01
-            #                     dpaths=os.path.join(dumps_dir, FLAGS.env))
 
             np.savetxt(losses_file, loss, delimiter=',')
             np.savetxt(results_file, means, delimiter=',')

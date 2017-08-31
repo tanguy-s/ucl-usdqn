@@ -19,11 +19,11 @@ class DiscretizedStateSpace(object):
 
     def _load_dataset(self):
         if self.is_training:
-            print("# Loading training set.")
+            #print("# Loading training set.")
             self.images = np.load('../data/1dof/usdqn-images-training-v2.npy')[:, 2:-2, 2:-2]
             self.labels = np.load('../data/1dof/usdqn-labels-training-v2.npy')
         else:
-            print("# Loading testing set.")
+            #print("# Loading testing set.")
             self.images = np.load('../data/1dof/usdqn-images-testing-v2.npy')[:, 2:-2, 2:-2]
             self.labels = np.load('../data/1dof/usdqn-labels-testing-v2.npy')
 

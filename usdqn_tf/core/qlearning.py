@@ -6,10 +6,15 @@ import tensorflow as tf
 
 from core.utils import evaluate, reward_value, do_obs_processing, reward_clip
 
+
+#import matplotlib.pyplot as plt
+#f, axarr = plt.subplots(2, 2)
+
 GAMMA = 0.99
 FRAME_WIDTH = 80
 FRAME_HEIGHT = 80
 FRAME_BUFFER_SIZE = 4
+
 
 
 def do_online_qlearning(env, 
@@ -136,12 +141,14 @@ def do_online_qlearning(env,
                     # Use model predicted action 
                     action = sess.run(prediction, feed_dict={
                         states_pl: state.reshape(
-                            [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32') / 255
+                            [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32') 
                     })
                 
                 # action for next observation
                 action = action.reshape([-1]).astype('int32')
                 observation, reward, done, info  = env.step(action[0])
+
+                #print(type(observation))
 
                 # Clip reward
                 r = reward_clip(reward)
@@ -150,31 +157,63 @@ def do_online_qlearning(env,
                 observation_buffer.append(observation)
                 observation_buffer[0:1] = []
 
+                #print("max:", np.max(observation))
+
                 next_state = np.stack(observation_buffer, axis=-1)
 
+                # axarr[0, 0].imshow(next_state[:,:,0])
+                # axarr[0, 1].imshow(next_state[:,:,1])
+                # axarr[1, 0].imshow(next_state[:,:,2])
+                # axarr[1, 1].imshow(next_state[:,:,3])
+
+                # plt.pause(0.001)
+
                 # Add transition to replay buffer
-                replay_buffer.add((state.astype('uint8'), action, r, next_state.astype('uint8'), done))
+                replay_buffer.add((state, action, r, next_state, done))
                 
                 # If replay buffer is ready to be sampled
                 if replay_buffer.ready:
                     # Train model on replay buffer
                     b_states, b_actions, b_reward, b_next_state, b_term_state = replay_buffer.next_transitions()
 
+                    #print(b_term_state)
                     #Run training on batch
-                    q_out = sess.run(q_target_net, feed_dict={
-                            states_pl: b_next_state / 255
-                        })
-                    # q_out = sess.run(q_output, feed_dict={
-                    #          states_pl: b_next_state / 255
-                    #      })
+                    
+                    # axarr[0, 0].imshow(b_next_state[1,:,:,0])
+                    # axarr[0, 1].imshow(b_next_state[1,:,:,1])
+                    # axarr[1, 0].imshow(b_next_state[1,:,:,2])
+                    # axarr[1, 1].imshow(b_next_state[1,:,:,3])
+
+                    # plt.pause(0.001)
+                    # print("Mean:", np.mean(np.mean(np.mean(b_next_state, axis=3), axis=2), axis=1))
+                    # q_out, q_out_target = sess.run([q_output, q_target_net], feed_dict={
+                    #         states_pl: b_next_state 
+                    #     })
+
+                    #print(b_next_state.shape)
+                    #print(q_out)
+                    #print(q_out_target.shape)
+                    q_out = sess.run(q_output, feed_dict={
+                             states_pl: b_next_state 
+                         })
                     q_out_max = np.amax(q_out, axis=1)
                     q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
+
+
+                    #q_out_max = np.amax(q_out, axis=1)
+                    #print(q_out_max)
+                    
+                    # q_out_argmax = np.argmax(q_out, axis=1)
+                    # print("Q_out_target_max:", q_out_target[:, q_out_argmax])
+                    # print(q_out_argmax)
+                    # q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_target[:, q_out_argmax]
+
 
 
                     # Run training Op on batch of replay experience
                     loss, _ = sess.run([loss_op, train_op], 
                         feed_dict={
-                            states_pl: b_states / 255,
+                            states_pl: b_states,
                             actions_pl: b_actions,
                             targets_pl: q_target.astype('float32')
                         })
@@ -230,4 +269,4 @@ def do_online_qlearning(env,
             saver.save(sess, dpaths)
 
     # Return Q-learning Experience results
-    return losses, means
+    return losses, means, stds
