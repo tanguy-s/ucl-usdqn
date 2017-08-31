@@ -1,11 +1,14 @@
 import numpy as np
 from envs.utils import digitize_indexes
 
+#import matplotlib.pyplot as plt
+
 class DiscretizedStateSpace(object):
 
-    def __init__(self, step=0.02, is_training=True):
+    def __init__(self, step=0.02, is_training=True, sample=True):
         super(DiscretizedStateSpace, self).__init__()
         self.dstep = step # Discretization step in radians
+        self.sample = sample
         self.is_training = is_training
         self.images, self.labels = None, None
         self.wheel_data, self.wheel_goal, self.wheel_goal =  None, None, None
@@ -64,10 +67,18 @@ class DiscretizedStateSpace(object):
         # Sample random obs from current wheel box
         wheel_data = self.wheel_data.take(dangle, mode='wrap') 
         wheel_goal = self.wheel_goal.take(dangle, mode='wrap') 
-        obs_ind = np.random.choice(wheel_data, 1)[0]
+
+        if self.sample:
+            # sample from the bin of images
+            obs_ind = np.random.choice(wheel_data, 1)[0]
+        else:
+            # always take the same image
+            obs_ind = wheel_data[0]
 
         if wheel_goal == 1:
             self.is_done = True
+            # plt.imshow(self.images[obs_ind, :, :])
+            # plt.pause(0.01)
 
         return (self.images[obs_ind, :, :], 
             wheel_goal, self.get_dist_to_goal(dangle))
@@ -75,6 +86,7 @@ class DiscretizedStateSpace(object):
     def reset_wheel(self):
         # Reset state space at random angle
         self.is_done = False
+        self.cursor = 0
         rnd_ind = np.random.randint(0, len(self.wheel_data))
         self.wheel_data = np.roll(self.wheel_data, rnd_ind, axis=0)
         self.wheel_goal = np.roll(self.wheel_goal, rnd_ind, axis=0)

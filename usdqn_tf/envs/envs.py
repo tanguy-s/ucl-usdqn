@@ -25,8 +25,8 @@ def is_sorted(l):
 
 class OneDoFSim_BinaryActions_Supervised(DiscretizedStateSpace):
 
-    def __init__(self, step=0.02, is_training=False):
-        super(OneDoFSim_BinaryActions_Supervised, self).__init__(step, is_training)
+    def __init__(self, step=0.02, is_training=False, sample=True):
+        super(OneDoFSim_BinaryActions_Supervised, self).__init__(step, is_training, sample)
         self.actions = np.array([-1,1])
         self.dist_to_goal = None
 
@@ -47,8 +47,8 @@ class OneDoFSim_BinaryActions_Supervised(DiscretizedStateSpace):
 
 class OneDoFSim_BinaryActions_Unsupervised(DiscretizedStateSpace):
 
-    def __init__(self, step=0.02, is_training=False):
-        super(OneDoFSim_BinaryActions_Unsupervised, self).__init__(step, is_training)
+    def __init__(self, step=0.02, is_training=False, sample=True):
+        super(OneDoFSim_BinaryActions_Unsupervised, self).__init__(step, is_training, sample)
         self.actions = np.array([-1,1])
 
     def reset(self):
@@ -64,8 +64,8 @@ class OneDoFSim_BinaryActions_Unsupervised(DiscretizedStateSpace):
 
 class OneDoFSim_DiscActions_Unsupervised(DiscretizedStateSpace):
 
-    def __init__(self, step=0.02, is_training=False):
-        super(OneDoFSim_DiscActions_Unsupervised, self).__init__(step, is_training)
+    def __init__(self, step=0.02, is_training=False, sample=True):
+        super(OneDoFSim_DiscActions_Unsupervised, self).__init__(step, is_training, sample)
         self.actions = np.arange(-self.action_space_lim, self.action_space_lim, 1)
 
     def reset(self):
@@ -74,15 +74,15 @@ class OneDoFSim_DiscActions_Unsupervised(DiscretizedStateSpace):
 
     def step(self, action):
         action = self.actions[action]
-        step = self.rotate_wheel(action)
+        step = self.rotate_wheel(action, keep=True)
         reward = 0 if step[1] == 1 else -1
         return step[0], reward, bool(step[1]), {}
 
 
 class OneDoFSim_DiscActions_Supervised(DiscretizedStateSpace):
 
-    def __init__(self, step=0.02, is_training=False):
-        super(OneDoFSim_DiscActions_Supervised, self).__init__(step, is_training)
+    def __init__(self, step=0.02, is_training=False, sample=True):
+        super(OneDoFSim_DiscActions_Supervised, self).__init__(step, is_training, sample)
         self.actions = np.arange(-self.action_space_lim, self.action_space_lim, 1)
 
     def reset(self):
@@ -91,7 +91,7 @@ class OneDoFSim_DiscActions_Supervised(DiscretizedStateSpace):
 
     def step(self, action):
         action = self.actions[action]
-        step = self.rotate_wheel(action)
+        step = self.rotate_wheel(action, keep=True)
         reward = -step[2]
         #print("dist:", step[2])
         #print("reward:", reward)
