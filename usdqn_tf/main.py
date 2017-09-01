@@ -341,6 +341,28 @@ ENVS = {
             'EVAL_EPISODES':100,
         }
     },
+    '1dof_da_u_4_m': {
+        'env_name': '1 DoF Discrete Actions Unupervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.04, is_training=True, sample=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.04, is_training=False, sample=True)),
+        'learning_rate': 0.0008, #0.00025
+        'gpu_device': '/gpu:1',
+        'exp_replay': ExperienceReplayBuffer(200000, 64),
+        'epsilon': { 'start': 0.7, 'end': 0.1, 'decay': 500000 },
+        'params': {
+            'NUM_RUNS': 10,
+            #'TRAINING_STEPS':400000,
+            'TRAINING_STEPS':10000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':2000,
+            'EVAL_STEPS_START':100,
+            'EVAL_STEPS_STOP':10000,
+            'SAVE_STEPS':100000,
+            'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':100,
+        }
+    },
 }
 
 if __name__ == '__main__':
@@ -393,6 +415,11 @@ if __name__ == '__main__':
         tenv['gpu_device'] = '/gpu:%s' % FLAGS.gpu
 
     if FLAGS.train:
+
+        if 'NUM_RUNS' in tenv['params']:
+            NUM_RUNS = tenv['params']['NUM_RUNS']
+
+        m_loss, m_means, m_stds = None, None, None
         for i in range(NUM_RUNS):
             print('Running %s run %d/%d ...' % (tenv['env_name'], (i+1), NUM_RUNS))
 
@@ -401,13 +428,13 @@ if __name__ == '__main__':
                 os.mkdir(dumps_dir)
 
             losses_file = os.path.join(
-                dumps_dir, 'losses.csv')
+                dumps_dir, 'losses_%s.csv' % (i+1))
 
             results_file = os.path.join(
-                    dumps_dir, 'results.csv')
+                    dumps_dir, 'results_%s.csv' % (i+1))
 
             stds_file = os.path.join(
-                    dumps_dir, 'stds.csv')
+                    dumps_dir, 'stds_%s.csv' % (i+1))
 
             loss, means, stds = do_online_qlearning(env, test_env,
                                 model=UsdqnModel(env.action_space.n), 
@@ -423,6 +450,22 @@ if __name__ == '__main__':
             np.savetxt(losses_file, loss, delimiter=',')
             np.savetxt(results_file, means, delimiter=',')
             np.savetxt(stds_file, stds, delimiter=',')
+
+            if m_loss is None:
+                m_loss = loss
+                m_means = means
+                m_stds = stds
+            else:
+                m_loss = np.concatenate([m_loss, loss], axis=1)
+                m_means = np.concatenate([m_means, means], axis=1)
+                m_stds = np.concatenate([m_stds, stds], axis=1)
+
+        np.savetxt(os.path.join(
+                    dumps_dir, 'losses.csv'), m_loss, delimiter=',')
+        np.savetxt(os.path.join(
+                    dumps_dir, 'results.csv'), m_means, delimiter=',')
+        np.savetxt(os.path.join(
+                    dumps_dir, 'stds.csv'), m_stds, delimiter=',')
 
     elif FLAGS.test:
         dpaths = [os.path.join(main_dumps_dir, '1'), 

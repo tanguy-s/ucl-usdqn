@@ -288,6 +288,18 @@ def do_online_qlearning(env,
                 sys.stdout.flush()
             
 
+            if 'EVAL_STEPS_START' in params:
+                if (step % params['EVAL_STEPS_START'] == 0 
+                    and step <= params['EVAL_STEPS_STOP'] and step != 0):
+
+                    silent = (step % params['LOG_STEPS'] != 0)
+                    cur_means, cur_stds = evaluate(test_env, sess, prediction, 
+                                        #states_pl, 1, GAMMA, silent)
+                                        states_pl, params['EVAL_EPISODES'], GAMMA, silent)
+
+                    means.append(cur_means)
+                    stds.append(cur_stds)
+
             if step % params['EVAL_STEPS'] == 0:
                 silent = (step % params['LOG_STEPS'] != 0)
                 cur_means, cur_stds = evaluate(test_env, sess, prediction, 
