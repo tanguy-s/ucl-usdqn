@@ -2525,3 +2525,291 @@ Evaluation num episodes:  100
  2017-09-01 19:14:49
 Episodes 414001 -> 416001 Done (70.512s) ... 
 - Training loss: 11.0884
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -42.754795 std: 46.953624
+- Scores stats:
+ Mean: -295.260000 std: 343.568934
+- Frames stats:
+ Mean: 296.840000 std: 343.075377
+
+ 2017-09-01 19:15:34
+Episodes 416001 -> 418001 Done (45.539s) ... 
+- Training loss: 46.0447
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -52.715621 std: 47.055597
+- Scores stats:
+ Mean: -365.340000 std: 347.284702
+- Frames stats:
+ Mean: 366.820000 std: 346.785103
+
+ 2017-09-01 19:16:24
+Episodes 418001 -> 420001 Done (49.855s) ... 
+- Training loss: 12.7841
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -95.974193 std: 13.640768
+- Scores stats:
+ Mean: -685.030000 std: 97.790026
+- Frames stats:
+ Mean: 686.040000 std: 97.720102
+
+ 2017-09-01 19:17:35
+Episodes 420001 -> 422001 Done (71.013s) ... 
+- Training loss: 5.1827
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -49.027941 std: 46.981062
+- Scores stats:
+ Mean: -337.620000 std: 347.203335
+- Frames stats:
+ Mean: 339.140000 std: 346.703736
+
+ 2017-09-01 19:18:23
+Episodes 422001 -> 424001 Done (47.904s) ... 
+- Training loss: 88.7542
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -95.974193 std: 13.640768
+- Scores stats:
+ Mean: -685.030000 std: 97.790026
+- Frames stats:
+ Mean: 686.040000 std: 97.720102
+
+ 2017-09-01 19:19:34
+Episodes 424001 -> 426001 Done (70.942s) ... 
+- Training loss: 23.4659
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -95.983896 std: 13.573372
+- Scores stats:
+ Mean: -685.040000 std: 97.720102
+- Frames stats:
+ Mean: 686.060000 std: 97.580102
+
+ 2017-09-01 19:20:45
+Episodes 426001 -> 428001 Done (71.005s) ... 
+- Training loss: 7.7435
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -94.045041 std: 18.997802
+- Scores stats:
+ Mean: -671.080000 std: 136.779580
+- Frames stats:
+ Mean: 672.120000 std: 136.583621
+
+ 2017-09-01 19:21:55
+Episodes 428001 -> 430001 Done (70.008s) ... 
+- Training loss: 21.8194
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -94.035338 std: 19.045026
+- Scores stats:
+ Mean: -671.070000 std: 136.828524
+- Frames stats:
+ Mean: 672.110000 std: 136.632565
+
+ 2017-09-01 19:23:05
+Episodes 430001 -> 432001 Done (70.044s) ... 
+- Training loss: 32.5321
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -90.215749 std: 26.137107
+- Scores stats:
+ Mean: -643.210000 std: 189.193250
+- Frames stats:
+ Mean: 644.280000 std: 188.955978
+
+ 2017-09-01 19:24:13
+Episodes 432001 -> 434001 Done (68.185s) ... 
+- Training loss: 31.1937
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -94.045041 std: 18.997802
+- Scores stats:
+ Mean: -671.080000 std: 136.779580
+- Frames stats:
+ Mean: 672.120000 std: 136.583621
+
+ 2017-09-01 19:25:23
+Episodes 434001 -> 436001 Done (70.133s) ... 
+- Training loss: 4.2156
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -93.085415 std: 21.086067
+- Scores stats:
+ Mean: -664.110000 std: 152.082010
+- Frames stats:
+ Mean: 665.160000 std: 151.864066
+
+ 2017-09-01 19:26:33
+Episodes 436001 -> 438001 Done (69.469s) ... 
+- Training loss: 30.7000
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -96.972731 std: 9.453560
+- Scores stats:
+ Mean: -692.040000 std: 69.251126
+- Frames stats:
+ Mean: 693.050000 std: 69.151627
+
+ 2017-09-01 19:27:44
+Episodes 438001 -> 440001 Done (71.443s) ... 
+- Training loss: 11.5425
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -96.943621 std: 9.743200
+- Scores stats:
+ Mean: -692.010000 std: 69.549622
+- Frames stats:
+ Mean: 693.010000 std: 69.549622
+
+ 2017-09-01 19:28:56
+Episodes 440001 -> 442001 Done (71.436s) ... 
+- Training loss: 15.4690
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -94.054647 std: 18.951420
+- Scores stats:
+ Mean: -671.090000 std: 136.730691
+- Frames stats:
+ Mean: 672.120000 std: 136.583841
+
+ 2017-09-01 19:30:06
+Episodes 442001 -> 444001 Done (70.100s) ... 
+- Training loss: 5.5796
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -94.044846 std: 18.999744
+- Scores stats:
+ Mean: -671.080000 std: 136.779727
+- Frames stats:
+ Mean: 672.110000 std: 136.632858
+
+ 2017-09-01 19:31:16
+Episodes 444001 -> 446001 Done (69.993s) ... 
+- Training loss: 3.6389
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -56.429645 std: 46.815123
+- Scores stats:
+ Mean: -393.090000 std: 345.113694
+- Frames stats:
+ Mean: 394.530000 std: 344.617308
+
+ 2017-09-01 19:32:07
+Episodes 446001 -> 448001 Done (51.623s) ... 
+- Training loss: 37.5924
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -90.147827 std: 26.366655
+- Scores stats:
+ Mean: -643.140000 std: 189.430516
+- Frames stats:
+ Mean: 644.220000 std: 189.159223
+
+ 2017-09-01 19:33:15
+Episodes 448001 -> 450001 Done (68.173s) ... 
+- Training loss: 11.1874
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -89.188201 std: 27.774566
+- Scores stats:
+ Mean: -636.170000 std: 199.786689
+- Frames stats:
+ Mean: 637.250000 std: 199.532372
+
+ 2017-09-01 19:34:23
+Episodes 450001 -> 452001 Done (67.719s) ... 
+- Training loss: 1.6682
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -95.983994 std: 13.571985
+- Scores stats:
+ Mean: -685.040000 std: 97.720000
+- Frames stats:
+ Mean: 686.060000 std: 97.580000
+
+ 2017-09-01 19:35:34
+Episodes 452001 -> 454001 Done (71.033s) ... 
+- Training loss: 8.2305
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -94.064350 std: 18.903953
+- Scores stats:
+ Mean: -671.100000 std: 136.681711
+- Frames stats:
+ Mean: 672.130000 std: 136.534879
+
+ 2017-09-01 19:36:44
+Episodes 454001 -> 456001 Done (70.062s) ... 
+- Training loss: 28.6382
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -43.060543 std: 46.692671
+- Scores stats:
+ Mean: -295.580000 std: 343.296495
+- Frames stats:
+ Mean: 297.160000 std: 342.802938
+
+ 2017-09-01 19:37:30
+Episodes 456001 -> 458001 Done (45.238s) ... 
+- Training loss: 38.5942
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -93.104433 std: 21.005028
+- Scores stats:
+ Mean: -664.130000 std: 151.995109
+- Frames stats:
+ Mean: 665.180000 std: 151.777164
+
+ 2017-09-01 19:38:39
+Episodes 458001 -> 460001 Done (69.633s) ... 
+- Training loss: 1.7576
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -93.065911 std: 21.171085
+- Scores stats:
+ Mean: -664.090000 std: 152.169188
+- Frames stats:
+ Mean: 665.130000 std: 151.994911
+
+ 2017-09-01 19:39:49
+Episodes 460001 -> 462001 Done (69.608s) ... 
+- Training loss: 5.2844
+Evaluation num episodes:  100
+# Evaluation of policy
+- Return stats:
+ Mean: -93.094923 std: 21.045606
+- Scores stats:
+ Mean: -664.120000 std: 152.038566
+- Frames stats:
+ Mean: 665.160000 std: 151.864329
+
+ 2017-09-01 19:40:58
+Episodes 462001 -> 464001 Done (69.609s) ... 
+- Training loss: 31.5883
