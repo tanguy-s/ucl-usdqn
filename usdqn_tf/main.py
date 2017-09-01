@@ -12,7 +12,6 @@ import gym
 from models.models import UsdqnModel
 from core.buffers import ExperienceReplayBuffer
 from core.qlearning import do_online_qlearning
-from core.dqlearning import do_online_double_qlearning
 from core.testing import do_testing
 from core.utils import evaluate_random
 
@@ -274,6 +273,61 @@ ENVS = {
         'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.04, is_training=True, sample=True)),
         'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.04, is_training=False, sample=True)),
         'learning_rate': 0.00005, #0.00025
+        'gpu_device': '/gpu:1',
+        'exp_replay': ExperienceReplayBuffer(200000, 64),
+        'epsilon': { 'start': 0.7, 'end': 0.1, 'decay': 500000 },
+        'params': {
+            'TRAINING_STEPS':700000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':2000,
+            'SAVE_STEPS':100000,
+            'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':100,
+        }
+    },
+
+    '1dof_da_u_4_1': {
+        'env_name': '1 DoF Discrete Actions Unupervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.01, is_training=True, sample=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.01, is_training=False, sample=True)),
+        'learning_rate': 0.0008, #0.00025
+        'gpu_device': '/gpu:1',
+        'exp_replay': ExperienceReplayBuffer(200000, 64),
+        'epsilon': { 'start': 0.7, 'end': 0.1, 'decay': 500000 },
+        'params': {
+            'TRAINING_STEPS':700000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':2000,
+            'SAVE_STEPS':100000,
+            'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':100,
+        }
+    },
+    '1dof_da_u_4_2': {
+        'env_name': '1 DoF Discrete Actions Unupervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.02, is_training=True, sample=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.02, is_training=False, sample=True)),
+        'learning_rate': 0.0008, #0.00025
+        'gpu_device': '/gpu:1',
+        'exp_replay': ExperienceReplayBuffer(200000, 64),
+        'epsilon': { 'start': 0.7, 'end': 0.1, 'decay': 500000 },
+        'params': {
+            'TRAINING_STEPS':700000,
+            'LOG_STEPS':2000,
+            'LOSS_STEPS':1000,
+            'EVAL_STEPS':2000,
+            'SAVE_STEPS':100000,
+            'TARGET_UPDATE':5000,
+            'EVAL_EPISODES':100,
+        }
+    },
+    '1dof_da_u_4_3': {
+        'env_name': '1 DoF Discrete Actions Unupervised',
+        'train_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.08, is_training=True, sample=True)),
+        'test_env': UsdqnOneDoFEnv(OneDoFSim_DiscActions_Unsupervised(0.08, is_training=False, sample=True)),
+        'learning_rate': 0.0008, #0.00025
         'gpu_device': '/gpu:1',
         'exp_replay': ExperienceReplayBuffer(200000, 64),
         'epsilon': { 'start': 0.7, 'end': 0.1, 'decay': 500000 },

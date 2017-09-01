@@ -14,10 +14,12 @@ envs = [
     #'1dof_da_s_0'
     #'1dof_da_u_2', 
     #'1dof_da_u_3']
-    '1dof_da_u_3', 
-    '1dof_da_u_4', 
-    '1dof_da_u_5', 
-    '1dof_da_u_6', 
+
+    # '1dof_da_u_3', 
+    # '1dof_da_u_4', 
+    # '1dof_da_u_5', 
+    # '1dof_da_u_6', 
+    '1dof_da_u_4_2', 
 ]
 
 for env in envs:

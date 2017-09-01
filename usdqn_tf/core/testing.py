@@ -11,12 +11,12 @@ GAMMA = 0.99
 TEST_STEPS = 100
 FRAME_WIDTH = 80
 FRAME_HEIGHT = 80
-FRAME_BUFFER_SIZE = 4
+FRAME_BUFFER_SIZE = 1
 
 
 def do_testing(env, model, target_model=None, dpaths=None, render=False, num_episodes=100):
 
-    print("Is on test mode ?", not env.is_training)
+    #print("Is on test mode ?", not env.is_training)
     tf.reset_default_graph()
 
 
