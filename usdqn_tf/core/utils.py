@@ -156,8 +156,11 @@ def evaluate(env,
             time.sleep(1)
             #break
 
+
     means = np.mean(res, axis=0)
     stds = np.std(res, axis=0)
+    vmin = np.min(res, axis=0)
+    vmax = np.max(res, axis=0)
 
     if not silent:
         print('# Evaluation of policy')
@@ -168,7 +171,7 @@ def evaluate(env,
         print('- Frames stats:\n Mean: %f std: %f' % 
             (means[2], stds[2]))
 
-    return means, stds
+    return means, stds#, vmin, vmax
 
 
 def do_obs_processing(frame, width, height):
@@ -176,4 +179,5 @@ def do_obs_processing(frame, width, height):
         warnings.simplefilter('ignore')
         #return resize(frame, (110, 84))[13:110 - 13, :]
         return resize(frame, (width, height))
+
 

@@ -62,8 +62,24 @@ def do_testing(env, model, target_model=None, dpaths=None, render=False, num_epi
             new_saver = tf.train.import_meta_graph(dpaths[1])
             new_saver.restore(sess, tf.train.latest_checkpoint(dpaths[0]))
 
-            means, stds = evaluate(env, sess, prediction, 
-                                    states_pl, num_episodes, GAMMA, False, render)
+            data_stats = None
+            if env.usdqn_sim.data_testing:
+                for i in range(len(env.usdqn_sim.wheel_data)):
+                    print('i:%s/%s' % (i, len(env.usdqn_sim.wheel_data)))
+                    means, stds, vmin, vmax = evaluate(env, sess, prediction, 
+                                states_pl, env.usdqn_sim.data_testing, GAMMA, False, render)
+
+                    stats = np.concatenate([np.array([i]), means, stds, vmin, vmax], axis=-1).reshape([1, -1])
+                    if data_stats is None:
+                        data_stats = stats
+                    else:
+                        data_stats = np.concatenate([data_stats, stats], axis=0)
+
+                np.savetxt(os.path.join(dpaths[0], 'testing.csv'), data_stats, delimiter=',')
+
+            else:
+                means, stds = evaluate(env, sess, prediction, 
+                                states_pl, num_episodes, GAMMA, False, render)
 
             # Save means
             print(means)

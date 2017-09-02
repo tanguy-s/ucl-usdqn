@@ -65,9 +65,6 @@ def do_online_qlearning(env,
         # Loss operation 
         loss_op = tf.reduce_mean(tf.square(targets_pl - Q) / 2)
 
-        # Loss operation 
-        #loss_op = tf.reduce_mean(tf.square(targets_pl - q_output) / 2)
-
         # Optimizer Op
         #optimizer = tf.train.RMSPropOptimizer(learning_rate=learning_rate)
         optimizer = tf.train.AdamOptimizer(learning_rate=learning_rate)
@@ -77,7 +74,6 @@ def do_online_qlearning(env,
 
         # Prediction Op
         prediction = tf.argmax(q_output, 1)
-        #prediction = q_output
 
     # Model Saver
     saver = tf.train.Saver()
@@ -150,8 +146,6 @@ def do_online_qlearning(env,
                 action = action.reshape([-1]).astype('int32')
                 observation, reward, done, info  = env.step(action[0])
 
-                #print(type(observation))
-
                 # Clip reward
                 r = reward_clip(reward)
 
@@ -159,27 +153,10 @@ def do_online_qlearning(env,
                 observation_buffer.append(observation)
                 observation_buffer[0:1] = []
 
-                #print("max:", np.max(observation))
-
                 next_state = np.stack(observation_buffer, axis=-1)
 
-                #ax1.imshow(state[:,:,0])
-                #ax2.imshow(next_state[:,:,0])
-                # axarr[0, 0].imshow(b_next_state[1,:,:,0])
-                # axarr[0, 1].imshow(b_next_state[1,:,:,1])
-                # axarr[1, 0].imshow(b_next_state[1,:,:,2])
-                # axarr[1, 1].imshow(b_next_state[1,:,:,3])
-
-                #plt.pause(1)
-
-                # axarr[0, 0].imshow(next_state[:,:,0])
-                # axarr[0, 1].imshow(next_state[:,:,1])
-                # axarr[1, 0].imshow(next_state[:,:,2])
-                # axarr[1, 1].imshow(next_state[:,:,3])
-
-                # plt.pause(0.001)
-
                 # Add transition to replay buffer
+                # Store state as uint8 for memory optim
                 replay_buffer.add(((state * 255).astype('uint8'), action, r, (next_state * 255).astype('uint8'), done))
                 
                 # If replay buffer is ready to be sampled
@@ -187,67 +164,15 @@ def do_online_qlearning(env,
                     # Train model on replay buffer
                     b_states, b_actions, b_reward, b_next_state, b_term_state = replay_buffer.next_transitions()
 
-                    #print(b_term_state)
-                    #Run training on batch
-                    # ax1.imshow(b_next_state[1,:,:,0])
-                    # ax2.imshow(b_next_state[10,:,:,0])
-                    # plt.pause(0.03)
-                    # # axarr[0, 0].imshow(b_next_state[1,:,:,0])
-                    # # axarr[0, 1].imshow(b_next_state[1,:,:,1])
-                    # # axarr[1, 0].imshow(b_next_state[1,:,:,2])
-                    # # axarr[1, 1].imshow(b_next_state[1,:,:,3])
-
-                    # plt.pause(1)
-
-                    # axarr[0, 0].imshow(b_next_state[4,:,:,0])
-                    # axarr[0, 1].imshow(b_next_state[4,:,:,1])
-                    # axarr[1, 0].imshow(b_next_state[4,:,:,2])
-                    # axarr[1, 1].imshow(b_next_state[4,:,:,3])
-
-                    # plt.pause(1)
-                    # print("Mean:", np.mean(np.mean(np.mean(b_next_state, axis=3), axis=2), axis=1))
                     q_out, q_out_target = sess.run([q_output, q_target_net], feed_dict={
                             states_pl: b_next_state 
                         })
 
-                    #print(np.max(b_next_state[1,:,:,:]))
-                    # q_out1 = sess.run(q_output, feed_dict={
-                    #           states_pl: b_next_state[1,:,:,:].reshape([1,80,80,1]) 
-                    #       })
-
-                    # q_out2 = sess.run(q_output, feed_dict={
-                    #           states_pl: b_next_state[10,:,:,:].reshape([1,80,80,1])  
-                    #       })
-                    # print("Q out 1: ", np.argmax(q_out1))
-                    # print("Q out 2: ", np.argmax(q_out2))
-                    #print(b_next_state.shape)
-                    #print(q_out)
-                    #print(q_out_target.shape)
-                    # q_out = sess.run(q_output, feed_dict={
-                    #          states_pl: b_next_state 
-                    #      })
                     #q_out_max = np.amax(q_out, axis=1)
                     #q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
-
-                    #q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_max
-
-
-                    #q_out_max = np.amax(q_out, axis=1)
-                    #print(q_out_max)
                     
                     q_out_argmax = np.unravel_index(np.argmax(q_out, axis=1), q_out.shape)
-                    #print(q_out_argmax)
-                    #print(q_out_target[q_out_argmax])
-                    # print("Q_out_target_max:", q_out_target[:, q_out_argmax])
-                    # print(q_out_argmax)
-                    #q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_target[q_out_argmax]
-                    #print(q_out_argmax.reshape([-1,1]))
-                    # print("Target:", q_out_target[q_out_argmax])
-                    # print("Cn:", q_out_max)
-
                     q_target = b_reward + GAMMA * (1 - b_term_state) * q_out_target[q_out_argmax]
-
-
 
                     # Run training Op on batch of replay experience
                     loss, _ = sess.run([loss_op, train_op], 
@@ -255,9 +180,7 @@ def do_online_qlearning(env,
                             states_pl: b_states,
                             actions_pl: b_actions,
                             targets_pl: q_target.astype('float32')
-                        })
-    
-                
+                        }) 
     
             if done:
                 observation = env.reset()

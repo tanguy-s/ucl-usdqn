@@ -5,11 +5,14 @@ from envs.utils import digitize_indexes
 
 class DiscretizedStateSpace(object):
 
-    def __init__(self, step=0.02, is_training=True, sample=True):
+    def __init__(self, step=0.02, is_training=True, sample=True, data_testing=10):
         super(DiscretizedStateSpace, self).__init__()
         self.dstep = step # Discretization step in radians
         self.sample = sample
         self.is_training = is_training
+        self.data_testing = data_testing
+        self.data_testing_i = -2
+        self.data_testing_a = 0
         self.images, self.labels = None, None
         self.wheel_data, self.wheel_goal, self.wheel_goal =  None, None, None
         self.action_space_lim = None
@@ -96,7 +99,20 @@ class DiscretizedStateSpace(object):
         # Reset state space at random angle
         self.is_done = False
         self.cursor = 0
-        rnd_ind = np.random.randint(0, len(self.wheel_data))
+        if self.data_testing:
+            if self.data_testing_i < 0:
+                rnd_ind = 0
+            if self.data_testing_i < self.data_testing - 1:
+                rnd_ind = self.data_testing_a
+            elif self.data_testing_i >= self.data_testing -1:
+                self.data_testing_i = -1
+                self.data_testing_a += 1
+                rnd_ind = self.data_testing_a
+
+            self.data_testing_i +=1
+        else:
+            rnd_ind = np.random.randint(0, len(self.wheel_data))
+
         self.wheel_data = np.roll(self.wheel_data, rnd_ind, axis=0)
         self.wheel_goal = np.roll(self.wheel_goal, rnd_ind, axis=0)
 
