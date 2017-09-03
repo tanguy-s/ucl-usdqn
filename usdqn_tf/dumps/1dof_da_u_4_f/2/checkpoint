@@ -1,0 +1,6 @@
+model_checkpoint_path: "1dof_da_u_4_f-2700000"
+all_model_checkpoint_paths: "1dof_da_u_4_f-2300000"
+all_model_checkpoint_paths: "1dof_da_u_4_f-2400000"
+all_model_checkpoint_paths: "1dof_da_u_4_f-2500000"
+all_model_checkpoint_paths: "1dof_da_u_4_f-2600000"
+all_model_checkpoint_paths: "1dof_da_u_4_f-2700000"
