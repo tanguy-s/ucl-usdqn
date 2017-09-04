@@ -92,6 +92,7 @@ def evaluate(env,
                 render=False):
 
     print('Evaluation num episodes: ', num_episodes)
+    timings = list()
 
     res = np.zeros([num_episodes, 3])
     for i_episode in range(num_episodes):
@@ -107,7 +108,6 @@ def evaluate(env,
         retval = 0 # Value function
         score = 0
         t = 0
-        timings = list()
         #f, axarr = plt.subplots(2, 2)
 
         while not done and t < MAX_EPISODE:
@@ -173,7 +173,7 @@ def evaluate(env,
             (means[1], stds[1]))
         print('- Frames stats:\n Mean: %f std: %f' % 
             (means[2], stds[2]))
-        print('- timing is: %s std:%s' % (np.mean(timings), np.std(timings)))
+        print('- timing is: %s std:%s' % (np.mean(timings[10:]), np.std(timings[10:])))
 
     return means, stds#, vmin, vmax
 
