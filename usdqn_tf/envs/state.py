@@ -18,6 +18,9 @@ class DiscretizedStateSpace(object):
         self.action_space_lim = None
         self.is_done = False
         self.cursor = 0
+        self.cur_history = list()
+        self.history3 = list()
+        self.history4 = list()
         self._load_dataset()
 
     def _load_dataset(self):
@@ -40,6 +43,7 @@ class DiscretizedStateSpace(object):
         n, bins = np.histogram(self.labels, 
             bins=np.arange(data_min_angle, data_max_angle, self.dstep))
 
+        #print("N for step %s training:%s:" % (self.dstep, self.is_training), n)
         self.bins = bins
         self.action_space_lim = int((np.pi * len(bins)) / (2*(data_max_angle - data_min_angle)))
 
@@ -92,6 +96,8 @@ class DiscretizedStateSpace(object):
             # plt.imshow(self.images[obs_ind, :, :])
             # plt.pause(0.01)
 
+        self.cur_history.append(obs_ind)
+
         return (self.images[obs_ind, :, :], 
             wheel_goal, self.get_dist_to_goal(dangle))
 
@@ -116,6 +122,13 @@ class DiscretizedStateSpace(object):
         self.wheel_data = np.roll(self.wheel_data, rnd_ind, axis=0)
         self.wheel_goal = np.roll(self.wheel_goal, rnd_ind, axis=0)
 
+        if len(self.cur_history) > 0:
+            if len(self.cur_history) == 3:
+                self.history3.append(self.cur_history)
+            elif len(self.cur_history) == 4:
+                self.history4.append(self.cur_history)
+            self.cur_history = list()
+
         return self.rotate_wheel(0)
 
     def get_goal_angle(self):
@@ -124,3 +137,7 @@ class DiscretizedStateSpace(object):
 
     def get_angle(self):
         return self.wheel_angle * self.dstep
+
+    def save_history(self):
+        np.save('history3.npy', np.array(self.history3))
+        np.save('history4.npy', np.array(self.history4))

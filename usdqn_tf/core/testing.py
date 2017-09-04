@@ -81,5 +81,6 @@ def do_testing(env, model, target_model=None, dpaths=None, render=False, num_epi
                 means, stds = evaluate(env, sess, prediction, 
                                 states_pl, num_episodes, GAMMA, False, render)
 
+                #env.usdqn_sim.save_history()
             # Save means
             print(means)

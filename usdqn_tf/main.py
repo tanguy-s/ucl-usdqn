@@ -31,7 +31,7 @@ from envs.envs import (
 )
 
 
-NUM_RUNS = 3
+NUM_RUNS = 1
 
 ENVS = {
     # '1dof_ba_s_0': {

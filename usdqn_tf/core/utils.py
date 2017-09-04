@@ -102,11 +102,12 @@ def evaluate(env,
 
         # Reset environement variables
         observation = env.reset()
+        observation_buffer.append(observation)
         done = False
         retval = 0 # Value function
         score = 0
         t = 0
-
+        timings = list()
         #f, axarr = plt.subplots(2, 2)
 
         while not done and t < MAX_EPISODE:
@@ -127,11 +128,13 @@ def evaluate(env,
                 # Stack observation buffer
                 state = np.stack(observation_buffer, axis=-1)
 
+                start_time = time.time()
                 action = sess.run(prediction_op, feed_dict={
                     states_pl: state.reshape(
                         [-1, FRAME_WIDTH, FRAME_HEIGHT, FRAME_BUFFER_SIZE]).astype('float32')
                 })
-
+                end_time = time.time() - start_time
+                timings.append(end_time)
                 # action for next observation
                 observation, reward, done, info  = env.step(action[0])
 
@@ -170,6 +173,7 @@ def evaluate(env,
             (means[1], stds[1]))
         print('- Frames stats:\n Mean: %f std: %f' % 
             (means[2], stds[2]))
+        print('- timing is: %s std:%s' % (np.mean(timings), np.std(timings)))
 
     return means, stds#, vmin, vmax
 
