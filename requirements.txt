@@ -5,7 +5,7 @@ chardet==3.0.4
 cycler==0.10.0
 decorator==4.1.2
 -e git+https://github.com/openai/gym@797a25d1b1a8823b305fdb575c4378a5c288b432#egg=gym
-html5lib==0.9999999
+html5lib==0.999999999
 idna==2.5
 Markdown==2.6.8
 matplotlib==2.0.2
